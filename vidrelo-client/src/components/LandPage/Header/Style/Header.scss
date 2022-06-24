@@ -1,0 +1,78 @@
+header{
+   height: 17rem;
+   margin: 2.2rem 12.06rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   img#logo{
+    
+   } 
+   nav{
+        display: flex;
+        align-content: center;
+        height: 100%;
+        
+
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 4.5rem;
+            font-family: "mavenpro_sb";    
+            
+            li a{
+                font-size: 1.95rem;
+                color: var(--blue-1);
+                transition: all 0.2s;
+                &:hover{
+                    color: var(--purple-2);
+                }
+            }
+    
+        }
+   }
+   .nav-buttons{
+    display: flex;
+    align-content: center;
+    height: 100%;
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 3.2rem;
+            font-family: "mavenpro_sb";
+
+            li:nth-child(1) a{
+                border: 1px solid var(--blue-2);
+                border-radius: 0.6rem;
+                padding: 1.65rem 4.37rem;
+                transition: all 0.2s;
+                background-color: var(--blue-2);
+                color: #FFFFFF;
+                &:hover{
+                    border-color: var(--purple-2);
+                    background-color: var(--purple-2);
+                }
+            }
+            li:nth-child(2) a{
+                border: 1px solid var(--blue-2);
+                border-radius: 0.6rem;
+                padding: 1.65rem 4.37rem;
+                transition: all 0.2s;
+                background-color: var(--white-1);
+                &:hover{
+                    border-color: var(--purple-2);
+                }
+            }
+            li:nth-child(3) {
+                border: 1px solid var(--blue-2);
+                border-radius: 0.6rem;
+                padding: 1.05rem 2.25rem;
+                transition: all 0.2s;
+                background-color: var(--blue-2);
+                &:hover{
+                   background-color: var(--purple-2);
+                   border-color: var(--purple-2);
+                }
+            }
+        }
+    }
+}
