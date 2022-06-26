@@ -12,15 +12,15 @@ export default function Footer() {
                 </div>
                 <div className="copy">
                     <div className="terms">
-                        <p>Termos de Uso</p>
-                        <p>Política de privacidade</p>
+                        <a href='#'>Termos de Uso</a>
+                        <a href='#'>Política de privacidade</a>
                     </div>
                     <p>&copy; Vidrelo. Todos os direitos reservados</p>
                     <p>CNPJ: 23.760.933/0001-82</p>
                 </div>
                 <div className="social-media">
-                    <FaFacebook size={34} color="#fff" />
-                    <FaInstagram size={34} color="#fff" />
+                    <a href='#'><FaFacebook size={34} color="#fff" /></a>
+                    <a href='#'><FaInstagram size={34} color="#fff" /></a>
                 </div>
             </div>
         </footer>

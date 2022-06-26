@@ -26,6 +26,9 @@ footer {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
+                a{
+                    color: var(--white-1);
+                }
             }
         }
         .social-media {
