@@ -1,0 +1,17 @@
+@import "../../../../styles/globals.scss";
+footer {
+   @media screen and (max-width: $desktop-small) {
+       .content-footer{
+           flex-direction: column;
+           justify-content: space-evenly;
+           gap: 2rem;
+       }
+       .img-logo, .copy, .social-media{
+           width: 100% !important;
+       }
+   }
+
+   @media screen and(max-width: $small) {
+       font-size: 1.6rem;
+   }
+}
