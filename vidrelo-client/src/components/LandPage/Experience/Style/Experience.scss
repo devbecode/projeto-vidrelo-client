@@ -1,0 +1,59 @@
+section#experience{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+    height: 62.2rem;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1000;
+    h2{
+        font-family: "mavenpro-semibold";
+        font-size: 3.8rem;
+        color: var(--gray-1);
+        text-align: center;
+    }
+
+    h4{
+        font-family: "mavenpro-bold";
+        font-size: 1.8rem;
+        color: var(--purple-2);
+        text-align: center;
+    }
+    .experience-cards{
+        display: flex;
+        justify-content: center;
+		gap: 8.4rem;
+        height: 35rem;
+        margin-top: 10%;
+        z-index: 100;
+        .experience-card{
+            width: 23%;
+            padding: 2%;
+            box-shadow: 0px 0px 1.5rem #00000033;
+            border-radius: 4.5rem;
+            background: var(--white-1);
+            .card-title{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2.2rem;
+                    .experience-icon{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            width: 100%;
+                            align-items: center; 
+                        }    
+                    }
+                } 
+            p{
+                margin-top: 5%;
+                color: var(--purple-2);
+                font-family: "mavenpro-regular";
+                text-align: center;
+                font-size: 1.8rem;  
+            }
+        }
+    }
+}

@@ -1,18 +1,18 @@
-import ClientFeedback from "../components/LandPage/ClientFeedbacks/ClientFeedback"
-import Contacts from "../components/LandPage/Contacts/Contacts"
-import Footer from "../components/LandPage/Footer/Footer"
-import Header from "../components/LandPage/Header/Header"
+
+import Banner from "../components/LandPage/BannerHome/BannerHome"
+import Experience from "../components/LandPage/Experience/Experience"
 import Step from "../components/LandPage/Steps/Step"
-export default function Home() {
-    return (
+import Products from "../components/LandPage/Products/Products"
+export default function Home(){
+    return(
         <>
-            <Header />
-            <main>
-                <Step />
-                <ClientFeedback />
-                <Contacts />
-            </main>
-            <Footer />
+           {/* <Header/>
+           <main>
+            <Banner/>
+            <Experience/>
+           </main> */}
+            {/* <Step/>           */}
+            <Products/>
         </>
     )
 }

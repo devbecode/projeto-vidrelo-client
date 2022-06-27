@@ -39,7 +39,7 @@ export default function Header(){
                     </ul>
                 </nav>
             </div>
-               
+
         </header>
     )
 }
