@@ -11,8 +11,8 @@ export default function Home(){
             <Banner/>
             <Experience/>
            </main> */}
-            {/* <Step/>           */}
-            <Products/>
+            <Step/>           
+            {/* <Products/> */}
         </>
     )
 }

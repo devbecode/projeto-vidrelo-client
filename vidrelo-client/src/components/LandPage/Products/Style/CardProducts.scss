@@ -1,0 +1,32 @@
+#card-product{
+    width: 100%;
+    height: 16rem;
+    max-height: max-content;
+    display: flex;
+    align-content: space-around;
+    .card-content{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        widh
+        .image-product-content{
+            width: 40%;
+    
+        }
+        .card-product-content{
+            .h4{
+                font-family: "mavenpro-semibold";
+                font-size: 2.5rem;
+
+            }
+            .p{
+                font-family: "mavepro-regular";
+                font-size: 1.5rem;
+
+            }
+        }
+        .btn-action{
+            
+        }
+    }
+}
