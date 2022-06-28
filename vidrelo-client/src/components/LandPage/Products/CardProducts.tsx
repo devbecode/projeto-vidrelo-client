@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom"
 import './Style/CardProducts.scss'
 export default function CardProducts(
-    { nameProduct, descriptionProduct, imgProduct }: { nameProduct: String, descriptionProduct: String, imgProduct: string }
-) {
+    { nameProduct, descriptionProduct, imgProduct }: { nameProduct: string, descriptionProduct: string, imgProduct: string }
+): JSX.Element {
 
 
     return (
         <>
             <div id="card-product">
                 <div className="card-content">
-                    <div className="image-product-content">
-                        <img src={imgProduct} alt="produto" />
+                    <div className="img-product-content">
+                        <img src={imgProduct} alt={nameProduct} />
                     </div>
                     <div className="card-product-content">
                         <h4>{nameProduct}</h4>
@@ -20,7 +20,6 @@ export default function CardProducts(
                         <Link to="/"> Orçar </Link>
                     </div>
                 </div>
-
             </div>
         </>
     )

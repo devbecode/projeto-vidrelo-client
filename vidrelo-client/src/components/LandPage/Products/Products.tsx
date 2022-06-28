@@ -1,37 +1,43 @@
 import CardProducts from "./CardProducts";
+import Box from '../../../assets/images/products/product-box.png'
+import Espelho from '../../../assets/images/products/product-mirror.png'
+import Prateleira from '../../../assets/images/products/product-prateleira.png'
+import Mesa from '../../../assets/images/products/product-table.png'
+
 import './Style/Products.scss'
+
 interface Products {
     id: number,
     img: string,
-    name: String,
-    description: String
+    name: string,
+    description: string
 
 }
 //Mock 
 const productList: Array<Products> = [
     {
         id: 1,
-        img: "../../../assets/images/products/product-box.png",
+        img: Box,
         name: "Box",
-        description: "lorem"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
     },
     {
         id: 2,
-        img: "../../../assets/images/products/product-mirror.png",
+        img: Espelho,
         name: "Espelho",
-        description: "Lore"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
     },
     {
         id: 3,
-        img: "../../../assets/images/products/product-prateleira.png",
-        name: "Prateleiras",
-        description: "lorem"
+        img: Prateleira,
+        name: "Prateleira",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
     },
     {
         id: 4,
-        img: "../../../assets/images/products/product-table.png",
+        img: Mesa,
         name: "Mesas",
-        description: "lorem"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
     }
 
 ]
@@ -48,18 +54,16 @@ export default function Products() {
                 </h3>
             </div>
             <div className="products-carousel-content">
-                <div className="cards-products">
-                    {
-                        productList.map((product, _) => {
-                            return <CardProducts
-                                key={product.id}
-                                imgProduct={product.img}
-                                nameProduct={product.name}
-                                descriptionProduct={product.description}
-                            />
-                        }
-                        )}
-                </div>
+                {
+                    productList.map((product) => {
+                        return <CardProducts
+                            key={product.id}
+                            imgProduct={product.img}
+                            nameProduct={product.name}
+                            descriptionProduct={product.description}
+                        />
+                    }
+                    )}
             </div>
         </section>
     )
