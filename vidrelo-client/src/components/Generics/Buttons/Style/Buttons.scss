@@ -1,0 +1,48 @@
+.btn{
+    border: 2px solid var(--purple-2);
+    border-radius: 20px;
+    width: 45%;
+    height: 7.2vh;
+    min-width: 160px;
+    max-width: 200px;
+    min-height: 30px;
+    max-height: 42px;
+    background: var(--white-1);
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: var(--purple-2);
+    transition: all .4s;
+    cursor: pointer;
+
+    &:hover{
+        border: 2px solid var(--purple-2);
+        background-color: var(--purple-2);
+        color: var(--white-1);
+    }
+
+    &:nth-child(2n){
+
+        background-color: var(--purple-2);
+        color: var(--white-1);
+
+        &:hover{
+            border: 2px solid var(--purple-2);
+            background-color: var(--white-1);
+            color: var(--purple-2)
+        }
+    }
+
+}
+
+//parte responsiva
+
+@media (max-width: 540px)  {
+
+    .btn{
+                margin: 0.08rem;
+                max-width: none;
+                width: 100% !important;
+            }
+            
+    
+}

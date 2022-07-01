@@ -1,0 +1,21 @@
+    .input-part{     
+        margin-top: 3%; 
+           input{
+                font-size: 1.4rem;
+                margin-top: 1.5%;
+                padding: 0.8rem;
+                border-radius: 20px;
+                width: 100%;
+                border: 1px solid #909599;
+
+                &:focus {
+                    border: 1px solid #291868;
+                    outline: none;
+                    }
+            }
+
+            label{
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }       
