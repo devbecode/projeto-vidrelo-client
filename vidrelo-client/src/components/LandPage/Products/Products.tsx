@@ -5,6 +5,8 @@ import Prateleira from '../../../assets/images/products/product-prateleira.png'
 import Mesa from '../../../assets/images/products/product-table.png'
 
 import './Style/Products.scss'
+import { SwiperProps, SwiperSlide } from "swiper/react";
+import Slider from "../../Commons/Swiper/Slider";
 
 interface Products {
     id: number,
@@ -38,11 +40,16 @@ const productList: Array<Products> = [
         img: Mesa,
         name: "Mesas",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
-    }
-
+    },
 ]
 
 export default function Products() {
+
+    const settings: SwiperProps = {
+        slidesPerView: 4,
+        navigation: true,
+    };
+
     return (
         <section id='products'>
             <div className="products-title">
@@ -53,17 +60,21 @@ export default function Products() {
                     Transparência na experiência, agilidade na solução
                 </h3>
             </div>
-            <div className="products-carousel-content">
-                {
-                    productList.map((product) => {
-                        return <CardProducts
-                            key={product.id}
-                            imgProduct={product.img}
-                            nameProduct={product.name}
-                            descriptionProduct={product.description}
-                        />
-                    }
-                    )}
+            <div className="swiperContent">
+                <Slider settings={settings}>
+                    {
+                        productList.map((product) => {
+                            return <SwiperSlide>
+                                <CardProducts
+                                    key={product.id}
+                                    imgProduct={product.img}
+                                    nameProduct={product.name}
+                                    descriptionProduct={product.description}
+                                />
+                            </SwiperSlide>
+                        }
+                        )}
+                </Slider>
             </div>
         </section>
     )

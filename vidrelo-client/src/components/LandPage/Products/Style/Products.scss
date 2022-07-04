@@ -3,8 +3,6 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    
-    
     .products-title {
         display: flex;
         flex-direction: column;
@@ -26,11 +24,25 @@
             color: var(--gray-1);
         }
     }
-
-    .products-carousel-content {
+    .swiperContent{
         display: flex;
-        width: 100%;   
-        padding: 0% 10%;
-        margin: 0% 9%;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        .swiper {
+            display: flex;
+            justify-content:center;
+            overflow: initial;
+            width: 100%;
+            .swiper-wrapper{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .swiper-slide{
+                    width: 80%;
+                    max-width: 30.4rem;
+                }
+            }
+        }
     }
 }
