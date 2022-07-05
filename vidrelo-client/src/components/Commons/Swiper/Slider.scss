@@ -1,20 +1,16 @@
 .swiper {
     display: flex;
     justify-content: center;
-    width: 90%; 
+    width: 100%; 
     padding: 0% 10%;
     margin: 0% 5%;
     .swiper-slide {
         display: flex;
         justify-content: center;
     }
-    .swiper-button-prev {
-        color: gray;
-    }
-    .swiper-button-next {
-        color: gray;
+    .swiper-button-next{
     }
     .swiper-pagination-bullet-active {
-        background-color: gray;
+        background-color:var(--blue-2);
     }
 }

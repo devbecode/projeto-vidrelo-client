@@ -1,17 +1,22 @@
 #banner-home{
     width: 100%;
-    height: auto;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    background: url(../../../../assets/images/illustrations/secao1-1.svg) 50% 0% no-repeat ;
     #banner-content-home{
-        width: 90%;
+        width: 100%;
+        height: auto;
         display: flex;
-        align-items: flex-start;
-        margin-left: 10%;
+        justify-content: center;
+        align-items: center;
         .banner-content-action{
-            width: 50%;
+            width: 40%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             align-self: center;
+            padding: 0% 0% 10% 10%;
             h1{
                 font-family: "mavenpro-bold";
                 font-size: 7.8rem;
@@ -29,6 +34,7 @@
             }
             a {
                 display: flex;
+                justify-content: center;
                 align-items: center;
                 width: 35.6rem;
                 height: 5.3rem;
@@ -46,12 +52,13 @@
                 }
             }
         }
-        .banner-content-img{  
-            height: 100%;
+        .banner-content-img{
+            display: flex;
+            width: 60%;
             img{
-                width: 135%;
-                mask-image: linear-gradient(to right, transparent 5%, black 10%);
+                width: 100%;
+                mask-image: linear-gradient(to right, transparent 15% , black 30%);         
             }
-        }       
+        }
     }
 }

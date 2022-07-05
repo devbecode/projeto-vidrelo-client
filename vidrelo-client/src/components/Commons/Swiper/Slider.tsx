@@ -13,7 +13,6 @@ interface SliderProps {
     children: ReactNode,
 }
 
-
 export default function Slider({ settings, children }: SliderProps) {
     return (
         <Swiper modules={[Navigation, Pagination, A11y]} {...settings}>

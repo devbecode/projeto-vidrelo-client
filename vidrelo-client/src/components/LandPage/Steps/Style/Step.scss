@@ -1,21 +1,62 @@
 #step {
     width: 100%;
-    padding: 4.8rem;
-    background: var(--white-3);
-    .step {
+    padding: 8rem;
+    background: url(../../../../assets/images/illustrations/ondinha-secao-2.svg) 100% 0%  no-repeat;
+    .step-content {
         width: 90%;
-        margin: 2rem auto;
-    }
-    h3 {
-        font-family: "mavenpro-bold";
-        font-size: 3.8rem;
-        max-width: 96.6rem;
-        margin: 0 auto 3.7rem auto;
-        text-align: center;
-        color: var(--gray-1);
+        margin: 0 auto;
+        h3 {
+            font-family: "mavenpro-bold";
+            font-size: 3.8rem;
+            max-width: 96.6rem;
+            margin: 0 auto 3.7rem auto;
+            text-align: center;
+            color: var(--gray-1);
 
-        span {
-            color: var(--purple-1);
+            span {
+                color: var(--purple-1);
+            }
+        }
+        .swiper {
+            width: 100%;
+            .swiper-pagination{
+                left: 25%;
+                bottom: 15%;
+                .swiper-pagination-bullet {
+                    background-color: var(--white-1);
+                    width: 4.1rem;
+                    height: 1.6rem;
+                    border: 1px solid var(--blue-2);
+                    border-radius: 26px;
+                }
+                .swiper-pagination-bullet-active {
+                    width: 6.8rem;
+                    background-color: var(--blue-2);
+                }
+            }
+            .swiper-button-next {
+                color: var(--white-1);
+                background: var(--blue-2) 0% 0% no-repeat padding-box;
+                box-shadow: 0px 2px 2px #00000073;
+                border: 30px solid var(--blue-2);
+                border-radius: 4rem;
+                right: 210px;
+                &:after{
+                    font-size: 30px;
+                }
+            }
+            .swiper-button-prev {
+                color: var(--white-1);
+                width: 3%;
+                background: var(--blue-2) 0% 0% no-repeat padding-box;
+                box-shadow: 0px 2px 2px #00000073;
+                border: 30px solid var(--blue-2);
+                border-radius: 4rem;
+                left: 210px;
+                &:after{
+                    font-size: 30px;
+                }
+            }
         }
     }
 }

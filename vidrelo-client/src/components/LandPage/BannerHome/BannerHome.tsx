@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
-import  ImgBanner from '../../../assets/images/illustrations/img_bannerhome.svg'
-import  Waves   from '../../../assets/images/illustrations/img_waves.svg'
-import '../../../assets/images/illustrations/secao1-1.svg'
- import './Style/BannerHome.scss'
+import  ImgBanner from '../../../assets/images/illustrations/img-com-ondinhas.svg'
+import Elo from '../../../assets/images/illustrations/secao1-1.svg'
+import './Style/BannerHome.scss'
 export default function Banner(){
     return(
         <section id='banner-home'>
@@ -16,9 +15,6 @@ export default function Banner(){
                 <div className='banner-content-img'>
                     <img src={ImgBanner} alt="imagem banner" />
                 </div>     
-           </div>
-           <div>
-                <img src={Waves} alt="" />
            </div>
         </section>
     )
