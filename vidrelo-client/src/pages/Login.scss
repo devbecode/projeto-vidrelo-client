@@ -3,3 +3,9 @@
     background-size: 80%;
     
 }
+
+@media(max-width: 650px){
+    .body{
+        background: none;
+    }
+}

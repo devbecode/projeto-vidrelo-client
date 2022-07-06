@@ -18,4 +18,22 @@
                 font-size: 1.2rem;
                 font-weight: bold;
             }
-        }       
+        }   
+        
+        
+        @media (min-width: 1500px){
+
+            .input-part{
+                margin-top: 4%;
+
+            input{
+                font-size: 1.5rem;
+                margin-top: 1.5%;
+                padding: 0.8rem;
+            }
+
+            label{
+                font-size: 1.55rem;
+            }
+        }
+    }

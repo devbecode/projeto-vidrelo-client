@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react"
+import { InputHTMLAttributes, useState } from "react"
 import "./Style/InputText.scss"
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
@@ -7,7 +7,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
 }
 
 export default function InputText({name, label, ...rest}: InputProps){
-    
+
     return(
         <>
         <div className="input-part">

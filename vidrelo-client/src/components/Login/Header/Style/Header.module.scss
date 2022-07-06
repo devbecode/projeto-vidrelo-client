@@ -12,3 +12,31 @@
     width: 13rem;
    }
 }
+
+@media (max-width: 550px)  {
+    .header{
+        justify-content: center;
+    }     
+    
+}
+
+@media (min-width: 1400px){
+
+    .header{
+        height: 12vh;
+        min-height: 50px;
+        background-color: transparent;
+    
+       img{
+        margin-left: 5%;
+        width: 18rem;
+       }
+    }
+}
+
+@media(max-width: 650px){
+    .header{
+        background: var(--purple-2);
+        margin-bottom: 2rem;
+    }
+}

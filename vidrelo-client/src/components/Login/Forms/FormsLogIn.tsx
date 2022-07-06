@@ -1,11 +1,12 @@
 import styles from "../../Login/Forms/Style/FormsLogIn.module.scss";
 // a parte responsiva nao esta funcionando
 //importando os icons
-import { FaFacebookF } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaFacebookF } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 //
 import InputText from "../../Generics/InputText/InputText";
 import Buttons from "../../Generics/Buttons/Buttons";
+import { useState } from "react";
 
 export default function Forms(){
 

@@ -58,10 +58,6 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-evenly;
-
-                .teste{
-                    background-color: red;
-                }
                 }
             }
             .informations-main{
@@ -180,5 +176,119 @@
         }
     }
   }
+//extra-large 1536
+      @media (min-width: 1500px){
+        .main{
 
+            .form-card{
+                margin-top: 4rem;
+                height: 87vh;
+                min-height: 580px;
+                min-width: 700px;
+
+                h2{
+                    margin-top: 6%;
+                    font-size: 2.2rem;
+                }
+
+                .form{
+
+                    .input-texts{
+                        width: 95%;
+                        margin-top: 3.4%;
+                    }
+                    .informations-main{
+                        margin-top: 4rem;
+
+                        a{
+                            font-size: 1.5rem;
+                        }
+        
+                        .space-between{
+                            margin-top: 2.5rem;
+                            width:4.3rem;
+                        }
+        
+                        .share-main{
+        
+                            margin-top: 2.5rem;
+        
+                            p{
+                                font-size:1.3rem;
+                            }
+        
+                            .img-share{
+                                margin-top: 2rem;
+        
+                                button {
+                                    width: 3.2rem;
+                                    height: 3.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     
+  }
+    
+
+  // extra extra large
+
+  @media (min-width: 1700px){
+    .main{
+
+        .form-card{
+            border-radius: 25px;
+            margin-top: 4rem;
+            min-height: 600px;
+            min-width: 750px;
+
+            h2{
+                margin-top: 6%;
+                font-size: 2.3rem;
+            }
+
+            .form{
+                .informations-main{
+                    margin-top: 4rem;
+
+                    a{
+                        font-size: 1.6rem;
+                    }
+    
+                    .space-between{
+                        margin-top: 2.5rem;
+                        width:4.3rem;
+                    }
+    
+                    .share-main{
+    
+                        margin-top: 2.5rem;
+    
+                        p{
+                            font-size:1.2rem;
+                        }
+    
+                        .img-share{
+                            margin-top: 2rem;
+    
+                            button {
+                                width: 3.2rem;
+                                height: 3.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(min-height: 1000px){
+        .form-card{
+            margin-top: 10rem;
+        }
+    }
+
+}
