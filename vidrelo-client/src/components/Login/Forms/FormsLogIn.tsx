@@ -5,7 +5,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 //
 import InputText from "../../Generics/InputText/InputText";
-//import FormCard from "../../Generics/FormCard/FormCard";
 import Buttons from "../../Generics/Buttons/Buttons";
 
 export default function Forms(){

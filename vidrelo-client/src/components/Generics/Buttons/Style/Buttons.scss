@@ -11,13 +11,11 @@
     font-size: 1.35rem;
     font-weight: bold;
     color: var(--purple-2);
-    transition: all .4s;
+    transition: all .6s;
     cursor: pointer;
 
     &:hover{
-        border: 2px solid var(--purple-2);
-        background-color: var(--purple-2);
-        color: var(--white-1);
+        background-color: #ece9fb;
     }
 
     &:nth-child(2n){
@@ -26,9 +24,9 @@
         color: var(--white-1);
 
         &:hover{
-            border: 2px solid var(--purple-2);
-            background-color: var(--white-1);
-            color: var(--purple-2)
+            border: 2px solid #3c2c74;
+            background-color: #3c2c74;
+            color: var(--white-1)
         }
     }
 
@@ -36,7 +34,7 @@
 
 //parte responsiva
 
-@media (max-width: 540px)  {
+@media (max-width: 550px)  {
 
     .btn{
                 margin: 0.08rem;

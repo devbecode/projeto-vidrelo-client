@@ -18,6 +18,7 @@
 
 // parte forms card
     .form-card{
+    //margin-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,9 +27,9 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 
     // parte width e height do forms
-    //45 ou 40, eis a question
+    //45 ou 40
     width: 45%;
-    height: 82vh;
+    height: 84vh;
     min-width: 350px;
     max-width: 500px;
     min-height: 400px;
@@ -57,6 +58,10 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-evenly;
+
+                .teste{
+                    background-color: red;
+                }
                 }
             }
             .informations-main{
@@ -64,7 +69,6 @@
                 flex-direction: column;
                 align-items: center;
                 margin-top: 1.8rem;
-                //background-color: purple;
 
                 a{
                     color: var(--purple-2) ;
@@ -84,7 +88,6 @@
                 .share-main{
 
                     margin-top: 1.6rem;
-                    //background-color: blue;
                     //width: 100%;
 
                     p{
@@ -97,20 +100,19 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-evenly;
-                        //background-color: yellow;
 
                         button {
                             background-color: var(--white-1);
                             border: none;
-                            width: 2.7rem;
-                            height: 2.7rem;
+                            width: 3rem;
+                            height: 3rem;
                             border-radius: 50%;
                             box-shadow: 2px 1.7px 8px rgba(107, 107, 107, 0.297);
                             cursor: pointer;
                             transition: all .4s;
 
                             &:hover{//rgba(73, 73, 73, 0.529)
-                                box-shadow: 1.8px 1.5px 4px var(--purple-2);
+                                box-shadow: 1.8px 1.5px 4px rgba(73, 73, 73, 0.529);
                                 //transition: all .4s;
                             }
                         }
@@ -160,4 +162,23 @@
                 }
             }
       }
+
+      //media big screens
+
+      @media (min-width: 1200px)  {
+
+        @media(min-height: 800px) {
+        .main{
+
+            .form-card{
+                margin-top: 4rem;
+                height: 87vh;
+                min-height: 460px;
+                max-height: 460px;
+                min-width: 550px;
+            }
+        }
+    }
+  }
+
     

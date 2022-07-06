@@ -1,4 +1,6 @@
-
+body{
+    background-color: #F5F8FA;
+}
 .main{
     display: flex;
     justify-content: center;
@@ -6,6 +8,7 @@
     //height: 120vh;
     min-height: 120vh;
     font-family: "mavenpro-regular";
+    
 
     .form-card{
         margin-top: 5rem;
@@ -21,7 +24,7 @@
         width: 43%;
         height: 100vh;
         min-width: 430px;
-        max-width: 500px;
+        max-width: 460px;
         max-height: 500px;
         min-height: 470px;
 
@@ -152,7 +155,6 @@
                 margin-top: 1rem ;
 
                 .div-cpf-cell{
-                    //background-color: aqua;
                     margin-top: 0;
                 }
             }
