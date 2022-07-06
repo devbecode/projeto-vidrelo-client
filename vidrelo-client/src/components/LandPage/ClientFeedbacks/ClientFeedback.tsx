@@ -19,7 +19,7 @@ export default function ClientFeedback() {
         },
         {
             id: 2,
-            name: "Sheila",
+            name: "Sheila de Lima",
             profession: "Economista",
             message: "\"Sou muito prática, precisava de uma solução rápida para a reforma da minha filha. Encontrei o site e resolvi ligar. Como fui muito bem atendida, rapidamente já marcamos a instalação.\""
         },

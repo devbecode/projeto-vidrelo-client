@@ -9,11 +9,10 @@ import Slider from "../../Commons/Swiper/Slider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
 
 interface Products {
-    id: number,
+    id: number;
     img: string,
     name: string,
     description: string
-
 }
 //Mock 
 const productList: Array<Products> = [
@@ -82,3 +81,4 @@ export default function Products() {
         </section>
     )
 }
+
