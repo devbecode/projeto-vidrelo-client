@@ -1,9 +1,7 @@
 import styles from "../../Login/Forms/Style/FormsLogIn.module.scss";
-// a parte responsiva nao esta funcionando
 //importando os icons
-import { FaEye, FaEyeSlash, FaFacebookF } from "react-icons/fa";
+import { FaEye, FaEyeDropper, FaEyeSlash, FaFacebookF } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
-//
 import InputText from "../../Generics/InputText/InputText";
 import Buttons from "../../Generics/Buttons/Buttons";
 import { useState } from "react";
@@ -13,6 +11,15 @@ export default function Forms(){
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
+    }
+
+    //parte para mostrar a senha
+
+    const [ImgOn, setImgOn] = useState(false);
+
+    const toggleBtn = () => {
+
+        setImgOn(prevState => !prevState)
     }
 
     return(
@@ -28,12 +35,20 @@ export default function Forms(){
             label='E-mail'
             type={"email"}
             />
+            <div className="password-input">
             <InputText
             name = 'password'
             id='password'
             label='Senha'
-            type={"password"}
+            type={ImgOn ? "text" : "password"}
             />
+            <button className="btn-input-eye" onClick={toggleBtn}>
+                {ImgOn ? 
+                <FaEyeSlash/> :
+                <FaEye/>
+                }
+            </button>
+            </div>
             </div>
             <div className={styles['btn-forms']}>
                 <Buttons 

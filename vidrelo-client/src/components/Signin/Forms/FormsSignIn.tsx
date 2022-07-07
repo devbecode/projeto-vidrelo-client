@@ -1,11 +1,24 @@
 import styles from "../../Signin/Forms/Style/FormsSignIn.module.scss";
 import InputText from "../../Generics/InputText/InputText";
+import { FaEye, FaEyeDropper, FaEyeSlash, FaFacebookF } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
+import { useState } from "react";
 
 export default function Forms(){
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
+    }
+
+    const [ImgPass, setImgPass] = useState(false);
+    const [ImgConfirm, setImgConfirm] = useState(false);
+
+    const toggleBtn = () => {
+
+        setImgPass(prevState => !prevState)
+    }
+    const toggleBtnConfirm = () => {
+        setImgConfirm(prevState => !prevState)
     }
 
     return(
@@ -45,20 +58,33 @@ export default function Forms(){
                 label='E-mail'
                 type={"email"}
                 />
-
+            <div className="btn-input-eye">
             <InputText
                 name = 'password'
                 id='password'
                 label='Senha'
-                type={"password"}
+                type={ImgPass ? "text" : "password"}
                 />
+                <button className="btn-input-eye" onClick={toggleBtn}>
+                {ImgPass ? 
+                <FaEyeSlash/> :
+                <FaEye/>
+                }
+                </button>
 
             <InputText
                 name = 'confirmpassword'
                 id='confirmpassword'
                 label='Confirmação de senha'
-                type={"password"}
+                type={ImgConfirm ? "text" : "password"}
                 />
+                <button className="btn-input-eye" onClick={toggleBtnConfirm}>
+                {ImgConfirm ? 
+                <FaEyeSlash/> :
+                <FaEye/>
+                }
+                </button>
+                </div>
             </div>
             <div className={styles['btn-forms']}>
                 <Buttons 
