@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: #f5f8fa;
+  margin-top: 4rem;
+  font-family: 'Maven Pro', sans-serif;
+  padding: 0px 70px;
+}
+
+.container_products {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  padding: 20px;
+}
+
+.products_img {
+  display: flex;
+  align-items: center;
+  width: auto;
+  justify-content: center;
+}
+.img-box {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.products_img img {
+  width: 480px;
+  height: 480px;
+}
+
+.products_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 67px 100px;
+}
+
+.products_title {
+  color: #291868;
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: normal;
+
+  line-height: 81.29px;
+  margin-bottom: 25px;
+}
+
+.products_subtitle {
+  color: #657787;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+
+  line-height: 40.29px;
+  letter-spacing: -1.5%;
+  margin-bottom: 45px;
+}
+
+.products_subtitle span {
+  font-weight: 700;
+}
+
+.products_description {
+  font-style: normal;
+
+  color: #25282b;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.container_btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.polygon {
+  height: 36px;
+  width: 36px;
+}
+.polygon2 {
+  height: 36px;
+  width: 36px;
+  opacity: 0.5;
+  margin-left: -24px;
+}
+
+.products_btn {
+  width: 258px;
+  height: 48px;
+  margin-left: 20px;
+  background-color: #291868;
+  border-radius: 25.4px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.143rem;
+  line-height: 22px;
+  /* identical to box height */
+
+  letter-spacing: -0.015em;
+
+  color: #ffffff;
+}
