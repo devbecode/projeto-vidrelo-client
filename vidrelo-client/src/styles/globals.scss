@@ -1,0 +1,82 @@
+$extra-large: 1536px;
+$large: 1280px;
+$desktop-small: 1045px;
+$large-2: 1024px;
+$medium: 934px;
+$medium-2: 600px;
+$small: 425px;
+$small-2: 340px;
+
+@font-face {
+  font-family: mavenpro-semibold;
+  src: url('../assets/fonts/MavenPro-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: mavenpro-regular;
+  src: url('../assets/fonts/MavenPro-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: mavenpro-medium;
+  src: url('../assets/fonts/MavenPro-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: mavenpro-bold;
+  src: url('../assets/fonts/MavenPro-Bold.ttf');
+  font-weight: 700;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  --white-1: #ffffff;
+  --white-2: #f1f1f1;
+  --white-3: #f5f5f5;
+  --gray-1: #787878;
+  --gray-2: #707070;
+  --gray-3: #595959;
+  --gray-4: #535353;
+  --green-1: #72ff2b;
+  --green-2: #48ff41;
+  --green-3: #26d366;
+  --blue-1: #50cfe8;
+  --blue-2: #05c3de;
+  --purple-1: #291868;
+  --purple-2: #211551;
+
+  font-family: 'mavenpro_rg', 'mavenpro_me', 'mavenpro_sb', sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  body {
+    height: 100%;
+    overflow-x: hidden;
+    #root {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.inative {
+  transform: translate(100%);
+  transition: transform 0.3s ease-in;
+}
+
+.active {
+  transform: translate(0);
+  transition: transform 0.3cls ease-in;
+}
+
+@media screen and(max-width: $large-2) {
+}
