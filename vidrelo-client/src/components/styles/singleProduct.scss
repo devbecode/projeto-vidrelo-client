@@ -1,34 +1,17 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  text-decoration: none;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
 
 body {
-  background-color: #f5f8fa;
-  margin-top: 4rem;
+  background-color: white;
   font-family: 'Maven Pro', sans-serif;
-  padding: 0px 5%;
 }
 
 .container_products {
-  // display: grid;
-  // grid-template-columns: 1fr 2fr;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
+  background-color: var(--white-2);
   padding: 5%;
 }
-
-// @media (min-width: 800) {
-//   .container_products {
-//     display: flex;
-//     flex-direction: column;
-//   }
-// }
 
 .products_img {
   display: flex;
@@ -53,7 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 10% 8%;
+  padding: 5%;
 }
 
 .products_title {
@@ -118,4 +101,91 @@ body {
   letter-spacing: -0.015em;
 
   color: var(--white-1);
+}
+
+//Info
+.product_info {
+  padding-left: 5%;
+  padding-right: 5%;
+
+  h3 {
+    font-family: mavenpro-semibold;
+    font-size: 2.4rem;
+    color: var(--gray-4);
+    letter-spacing: 0.015rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
+
+.container_info {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  padding: 3% 5%;
+  height: 40rem;
+  margin-bottom: 8rem;
+
+  background: white;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  ul {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 21rem;
+    width: 28.2rem;
+    li {
+      width: 28.2rem;
+      background-color: white;
+      height: 15rem;
+      h4 {
+        font-family: 'mavenpro_sb';
+        font-size: 1.8rem;
+        color: var();
+        padding-top: 5%;
+        padding-bottom: 3%;
+        padding-left: 5%;
+      }
+      p {
+        font-family: 'mavenpro_rg';
+        font-size: 1.6rem;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+  }
+}
+
+//Imagem Background
+.img_elo {
+  display: block;
+  min-height: 100%;
+  background-image: url(../../assets/images/bg/bgelo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  
+}
+
+.question_info{
+  margin-top: 4.8rem;
+}
+
+// Responsivo
+
+@media (max-width: 900px) {
+  .container_products {
+    display: flex;
+    flex-direction: column;
+    .products_body {
+      padding-top: 10%;
+      padding-left: 11%;
+    }
+  }
 }
