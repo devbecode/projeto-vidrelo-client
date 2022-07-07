@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import SingleProduct from './components/SingleProduct'
+// import Header from './components/LandPage/Header/Header'
+// import Footer from './components/LandPage/Footer/Footer'
+import SingleProduct from './pages/SingleProduct'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/singleproduct' element={<SingleProduct />} />
-      </Routes>
-    </Router>
+<div>
+  <SingleProduct />
+</div>
   )
 }
 

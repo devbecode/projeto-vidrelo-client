@@ -79,4 +79,12 @@ html {
 }
 
 @media screen and(max-width: $large-2) {
+  .container_products {
+    display: flex;
+    flex-direction: column;
+    .products_body {
+      padding-top: 10%;
+      padding-left: 11%;
+    }
+  }
 }

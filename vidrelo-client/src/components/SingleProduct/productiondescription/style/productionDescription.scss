@@ -1,0 +1,164 @@
+@import '../../../../styles/globals.scss';
+
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+.container_product {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--white-2);
+  padding: 5%;
+}
+
+.product_img {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.img-box {
+  padding: 2rem;
+  border-radius: 0.8rem;
+  background-color: var(--white-1);
+}
+
+.product_img img {
+  display: block;
+  width: 48rem;
+  height: 48rem;
+}
+
+.product_body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5%;
+}
+
+.product_title {
+  color: #291868;
+  font-size: 8rem;
+  font-family: 'mavenpro-bold';
+  line-height: 81.29px;
+  margin-bottom: 1.5rem;
+}
+
+.product_subtitle {
+  color: #25282b;
+  font-size: 2.4rem;
+  font-family: mavenpro-regular;
+  font-weight: 300;
+  line-height: 40.29px;
+  letter-spacing: -1.5%;
+  margin-bottom: 4rem;
+}
+
+.product_subtitle span {
+  color: var(--gray-3);
+
+  font-family: mavenpro-bold;
+}
+
+.product_description {
+  font-family: mavenpro-regular;
+  color: #25282b;
+  font-size: 1.8rem;
+  margin-bottom: 6rem;
+}
+
+.container_btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.polygon {
+  height: 3.6rem;
+  width: 3.6rem;
+}
+.polygon2 {
+  height: 3.6rem;
+  width: 3.6rem;
+  opacity: 0.5;
+  margin-left: -2.4rem;
+}
+
+.product_btn {
+  width: 25.8rem;
+  height: 4.8rem;
+  border: 0.2rem solid var(--white-1);
+  margin-left: 2rem;
+  background-color: var(--purple-1);
+  border-radius: 2.54rem;
+  color: var(--white-1);
+
+  font-family: 'mavenpro-bold';
+  font-size: 1.829rem;
+  line-height: 2.2rem;
+  /* identical to box height */
+
+  letter-spacing: -0.015em;
+
+  color: var(--white-1);
+}
+
+@media screen and(max-width: $medium) {
+  .container_product {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    h1 {
+      font-size: 6rem;
+    }
+    .product_body {
+      width: 100%;
+      padding: 5%;
+    }
+    .product_img {
+      flex: 1;
+      width: 100%;
+      padding: 0rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: $small) {
+  .container_product {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    h1 {
+      font-size: 5rem;
+      margin: 0;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.08rem;
+    }
+    p {
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .product_img {
+      flex: 1;
+      width: 100%;
+      padding: 0rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
