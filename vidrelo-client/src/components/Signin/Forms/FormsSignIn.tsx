@@ -1,8 +1,6 @@
 import styles from "../../Signin/Forms/Style/FormsSignIn.module.scss";
 import InputText from "../../Generics/InputText/InputText";
-import { FaEye, FaEyeDropper, FaEyeSlash, FaFacebookF } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
-import { useState } from "react";
 
 export default function Forms(){
 

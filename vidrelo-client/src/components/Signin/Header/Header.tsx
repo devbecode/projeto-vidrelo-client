@@ -1,5 +1,6 @@
 import styles from "./Style/Header.module.scss";
 import logo from '../../../assets/images/illustrations/vidrelo-logo-branca.svg'
+import { Link } from "react-router-dom";
 
 export default function Header(){
     return(
@@ -9,7 +10,7 @@ export default function Header(){
                 <img src={logo} alt="Logo" />
             </div>
             <div className={styles['div-button']}>
-                <button className={styles['btn-header']}>Entrar</button>
+                <Link to="/login" className={styles['btn-header']}>Entrar</Link>
             </div>
         </div>
         </>
