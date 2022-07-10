@@ -5,7 +5,7 @@ import Prateleira from '../../../assets/images/products/product-prateleira.png'
 import Mesa from '../../../assets/images/products/product-table.png'
 import './Style/Products.scss'
 
-import Slider from "../../Commons/Swiper/Slider";
+import Slider from "../../Generic/Swiper/Slider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
 
 interface Products {

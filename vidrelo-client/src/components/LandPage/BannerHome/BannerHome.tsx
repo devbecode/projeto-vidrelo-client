@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import  ImgBanner from '../../../assets/images/illustrations/img-com-ondinhas.svg'
-import Elo from '../../../assets/images/illustrations/secao1-1.svg'
 import './Style/BannerHome.scss'
 export default function Banner(){
     return(
