@@ -1,3 +1,5 @@
+@import "../../../../styles/globals.scss";
+
 *{
     font-family: "mavenpro-regular";
         -webkit-touch-callout: none;  
@@ -52,9 +54,6 @@
                 margin-top: 3.5%;
                 margin-bottom: 1%;
 
-                .btn-input-eye button{
-                    background-color: red;
-                }
             }
 
             .btn-forms{
@@ -122,50 +121,80 @@
         }
 
 
-        //Responsive Parts
-        @media (max-width: 540px)  {
+
+//responsive part for buttons
+        @media (max-width: $medium-2){//934px
+            .btn-forms{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    width: 100%;
+                
+                                button{
+                                    margin: 0.08rem;
+                                    max-width: none;
+                                    width: 100% !important;
+                                }
+                                }
+    }
+                    
+//responsive parts for cellphones
+        @media (max-width: $small-2)  { // 340px
             .main{
     
                 .form-card{
-                    min-width: 320px;
-                    max-width: 350px;
-                    min-height: 420px;
-                    max-height: 430px;
-    
-                    .btn-forms{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        width: 100%;
-    
-                    button{
-                        margin: 0.08rem;
-                        max-width: none;
-                        width: 100% !important;
-                    }
-                    }
-                }
-            }
-      }
-    
-    
-      //media para 320px
-      @media (max-width: 350px)  {
-            .main{
-    
-                .form-card{
-                    min-width: 270px;
+
+                    min-width: 285px;
                     max-width: 300px;
                     h2{
                         margin-top: 1.5rem;
                     }
                 }
             }
-      }
+    }
 
-      //media big screens
+        @media (max-width: $small-medium){ // 380px
+                
+        .form-card{
+            min-width: 325px;
+            max-width: 350px;
 
-      @media (min-width: 1200px)  {
+        }
+
+       
+    }
+
+        @media (max-width: $small)  { // 425px
+            .main{
+    
+                .form-card{
+                    min-height: 420px;
+                    max-height: 430px;
+            }
+
+        }
+        @media(min-height: 700px){
+            .form-card{
+                margin-top: 3rem;
+                min-height: 440px;
+                max-height: 445px;
+    
+            }
+        }
+        
+    }
+
+//responsive parts for laptop screens
+        @media (min-width: $large-2)  { // 1024px 
+        @media(min-height: 800px){
+        .form-card{
+            margin-top: 3%;
+        }
+    }
+    }
+    
+//responsive parts for big screens
+        @media (min-width: $large)  { // 1280px
 
         @media(min-height: 800px) {
         .main{
@@ -173,15 +202,34 @@
             .form-card{
                 margin-top: 4rem;
                 height: 87vh;
-                min-height: 460px;
-                max-height: 460px;
-                min-width: 550px;
+                min-height: 480px;
+                max-height: 485px;
+                min-width: 600px;
+
+                h2{
+                    margin-top: 6%;
+                    font-size: 2.1rem;
+                }
+                .form{
+        
+                    .informations-main{
+                        margin-top: 2rem;
+                    }
+                    .share-main{
+    
+                            button {
+                                width: 3.1rem;
+                                height: 3.1rem;
+                            }
+                        }
+                    }
             }
         }
     }
-  }
-//extra-large 1536
-      @media (min-width: 1500px){
+    }
+  
+// extra-large 1536
+        @media (min-width: $extra-large){ // 1536px
         .main{
 
             .form-card{
@@ -235,12 +283,10 @@
             }
         }
     
-  }
+    }
     
-
-  // extra extra large
-
-  @media (min-width: 1700px){
+ // extra extra large
+        @media (min-width: $extra-large-2){ // 1700px
     .main{
 
         .form-card{
@@ -256,10 +302,10 @@
 
             .form{
                 .informations-main{
-                    margin-top: 4rem;
+                    margin-top: 3.5rem;
 
                     a{
-                        font-size: 1.6rem;
+                        font-size: 1.8rem;
                     }
     
                     .space-between{
@@ -272,11 +318,11 @@
                         margin-top: 2.5rem;
     
                         p{
-                            font-size:1.2rem;
+                            font-size:1.4rem;
                         }
     
                         .img-share{
-                            margin-top: 2rem;
+                            margin-top: 1.5rem;
     
                             button {
                                 width: 3.2rem;
@@ -289,10 +335,11 @@
         }
     }
 
+    // padding for big heights
     @media(min-height: 1000px){
         .form-card{
             margin-top: 10rem;
         }
     }
 
-}
+    }

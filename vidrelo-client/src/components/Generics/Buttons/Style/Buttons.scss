@@ -1,3 +1,4 @@
+@import "../../../../styles/globals.scss";
 .btn{
     border: 2px solid var(--purple-2);
     border-radius: 20px;
@@ -5,8 +6,8 @@
     height: 7.2vh;
     min-width: 160px;
     max-width: 200px;
-    min-height: 30px;
-    max-height: 42px;
+    min-height: 35px;
+    max-height: 38px;
     background: var(--white-1);
     font-size: 1.35rem;
     font-weight: bold;
@@ -32,26 +33,38 @@
 
 }
 
-//parte responsiva
-
-@media (max-width: 550px)  {
+//responsive part for mobile
+@media (max-width: $medium-2)  {
 
     .btn{
                 margin: 0.08rem;
-                max-width: none;
                 width: 100% !important;
             }
             
     
 }
 
-@media (min-width: 1500px){
+//responsive part for big screens
+@media (min-width: $large){ //1280px
 
     .btn{
+    border-radius: 30px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 40px;
+    max-height: 45px;
+    font-size: 1.6rem;
+} 
+}
+
+@media (min-width: $extra-large){ //1280px
+
+    .btn{
+    border-radius: 30px;
     min-width: 250px;
     max-width: 300px;
     min-height: 45px;
-    max-height: 45px;
+    max-height: 50px;
     font-size: 1.6rem;
 } 
 }

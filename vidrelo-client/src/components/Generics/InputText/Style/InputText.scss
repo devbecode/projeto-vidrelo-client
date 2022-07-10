@@ -1,3 +1,4 @@
+@import "../../../../styles/globals.scss";
     .input-part{     
         margin-top: 3%; 
            input{
@@ -19,17 +20,16 @@
                 font-weight: bold;
             }
         }   
+
         
-        
-        @media (min-width: 1500px){
+        @media (min-width: $extra-large){
 
             .input-part{
                 margin-top: 4%;
 
             input{
                 font-size: 1.5rem;
-                margin-top: 1.5%;
-                padding: 0.8rem;
+                padding: 1rem;
             }
 
             label{
@@ -37,3 +37,19 @@
             }
         }
     }
+
+    @media (min-width: $extra-large-2){
+
+        .input-part{
+            margin-top: 4%;
+
+        input{
+            font-size: 1.6rem;
+            padding: 1.1rem;
+        }
+
+        label{
+            font-size: 1.6rem;
+        }
+    }
+}

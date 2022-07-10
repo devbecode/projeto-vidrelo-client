@@ -15,12 +15,12 @@ export default function Forms(){
 
     //parte para mostrar a senha
 
-    const [ImgOn, setImgOn] = useState(false);
+    // const [ImgOn, setImgOn] = useState(false);
 
-    const toggleBtn = () => {
+    // const toggleBtn = () => {
 
-        setImgOn(prevState => !prevState)
-    }
+    //     setImgOn(prevState => !prevState)
+    // }
 
     return(
         <>
@@ -40,14 +40,15 @@ export default function Forms(){
             name = 'password'
             id='password'
             label='Senha'
-            type={ImgOn ? "text" : "password"}
+            type={"password"}
             />
-            <button className="btn-input-eye" onClick={toggleBtn}>
+            {/* type={ImgOn ? "text" : "password"}
+              <button className="btn-input-eye" onClick={toggleBtn}>
                 {ImgOn ? 
                 <FaEyeSlash/> :
                 <FaEye/>
                 }
-            </button>
+            </button> */}
             </div>
             </div>
             <div className={styles['btn-forms']}>

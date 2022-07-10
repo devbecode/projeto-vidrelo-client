@@ -10,16 +10,16 @@ export default function Forms(){
         e.preventDefault();
     }
 
-    const [ImgPass, setImgPass] = useState(false);
-    const [ImgConfirm, setImgConfirm] = useState(false);
+    // const [ImgPass, setImgPass] = useState(false);
+    // const [ImgConfirm, setImgConfirm] = useState(false);
 
-    const toggleBtn = () => {
+    // const toggleBtn = () => {
 
-        setImgPass(prevState => !prevState)
-    }
-    const toggleBtnConfirm = () => {
-        setImgConfirm(prevState => !prevState)
-    }
+    //     setImgPass(prevState => !prevState)
+    // }
+    // const toggleBtnConfirm = () => {
+    //     setImgConfirm(prevState => !prevState)
+    // }
 
     return(
         <>
@@ -63,27 +63,29 @@ export default function Forms(){
                 name = 'password'
                 id='password'
                 label='Senha'
-                type={ImgPass ? "text" : "password"}
+                type={"password"}
                 />
+                {/* type={ImgConfirm ? "text" : "password"} 
                 <button className="btn-input-eye" onClick={toggleBtn}>
                 {ImgPass ? 
                 <FaEyeSlash/> :
                 <FaEye/>
                 }
-                </button>
+                </button> */}
 
             <InputText
                 name = 'confirmpassword'
                 id='confirmpassword'
                 label='Confirmação de senha'
-                type={ImgConfirm ? "text" : "password"}
+                type={"password"}
                 />
-                <button className="btn-input-eye" onClick={toggleBtnConfirm}>
+                {/* type={ImgConfirm ? "text" : "password"}
+                 <button className="btn-input-eye" onClick={toggleBtnConfirm}>
                 {ImgConfirm ? 
                 <FaEyeSlash/> :
                 <FaEye/>
                 }
-                </button>
+                </button> */}
                 </div>
             </div>
             <div className={styles['btn-forms']}>

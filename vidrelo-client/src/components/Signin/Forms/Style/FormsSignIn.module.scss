@@ -1,3 +1,5 @@
+@import "../../../../styles/globals.scss";
+
 body{
     background-color: #F5F8FA;
 }
@@ -23,7 +25,7 @@ body{
         // parte medidas
         width: 43%;
         height: 100vh;
-        min-width: 430px;
+        min-width: 365px;
         max-width: 460px;
         max-height: 500px;
         min-height: 470px;
@@ -82,94 +84,144 @@ body{
     }
     
 }
+
 //Responsive Parts
 
-//Responsive Part DeskTop
-@media (min-height: 800px )  {
-
-    @media (min-width: 1000px ){
+//height responsive part
+@media(min-width:$medium){
+@media(min-height: 600px){
     .main{
-
-        min-height: 93%;
-        max-height: 95%;
-        
-        .form-card{
-            margin-top: 8rem;
-        }
+        min-height: 100vh;
+        max-height: 100vh;
     }
 }
-
 }
 
-//Responsive Part halfScreen
-@media (max-width: 550px){
+//cellphone parts   
+@media (max-width: $small-medium){// 380px
     .main{
-        .form-card{
-            min-width: 370px;
-            max-width: 500px;
-            max-height: 600px;
-            min-height: 590px;
-            .form{
-                .input-texts{
-                    .div-cpf-cell{
-                        flex-direction: column;
 
-                        .cpf-cell{
-                            width: 100%;
-                        }
-                    
-                        .phone-cell{
-                            width: 100%;
-                        }
-
+                .form-card{
+                    min-width: 325px;
+                    max-width: 345px;
+                    h2{
+                        margin-top: 2rem;
+                        font-size: 1.7rem;
                     }
-                }
-
-                .btn-forms{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
+                    .form{
+                        margin-top: 1.2rem ;
+                        
                 }
             }
         }
-    }
 }
 
-//Respondive Part CellPhone
-@media (max-width: 410px){
+@media (max-width: $small-2){// 340px
     .main{
-        .form-card{
-            min-width: 335px;
-            max-width: 330px;
-            
+
+                .form-card{
+                    min-width: 285px;
+                    max-width: 300px;
+                    min-height: 580px;
+                    max-height: 600px;
+                    h2{
+                        margin-top: 2rem;
+                        font-size: 1.7rem;
+                    }
+                    .form{
+                        margin-top: 1.2rem ;
+                        
+                }
+            }
         }
-    }
 }
 
-@media (max-width: 370px){
-    .main{
-        .form-card{
-            min-width: 280px;
-            max-width: 300px;
-            .form{
-                margin-top: 1rem ;
 
-                .div-cpf-cell{
+//half screen part
+@media (max-width: $small){ //425px
+    .main{
+     .form-card{
+        min-height: 580px;
+     .form{
+         .input-texts{
+
+            .div-cpf-cell{
+                flex-direction: column;
+
+                .cpf-cell{
                     margin-top: 0;
+                    width: 100%;
                 }
+            
+                .phone-cell{
+                    width: 100%;
+                }
+
             }
         }
-    }
-}
+     .btn-forms{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
 
+     button{
+         margin: 0.08rem;
+         max-width: none;
+         width: 100% !important;
+     }
+  
+ }
+}
+}
+}
+}
 
 // desktop parts
-
-@media (min-width: 1500px){
+@media (min-width: $large){//1280px
     .main{
 
         .form-card{
-            margin-top: 4rem;
+            margin-top: 4.3rem;
+            min-height: 590px;
+            max-height: 600px;
+            min-width: 580px;
+            max-width: 590px;
+
+            h2{
+                margin-top: 3rem;
+                font-size: 2.1rem;
+            }
+            .form{
+                margin-top: 1rem;
+                .input-texts{
+                    margin-top: 1rem;
+                }
+            
+            }
+    
+            .btn-forms{
+                margin-top: 3.2rem;
+                gap: 10px;
+            }
+    
+            .div-link{
+                margin-top: 2.8rem;
+                text-align: center;
+                a{
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: $extra-large){//1536px
+    .main{
+
+        .form-card{
+            margin-top: 6.5rem;
             height: 87vh;
             min-height: 640px;
             min-width: 600px;
