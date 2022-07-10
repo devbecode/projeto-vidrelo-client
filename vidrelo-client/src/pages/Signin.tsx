@@ -1,11 +1,13 @@
-import Header from "../Components/Signin/Header/Header";
-import Forms from "../Components/Signin/Forms/FormsSignIn";
+import Header from "../components/Signin/Header/Header";
+import Forms from "../components/Signin/Forms/FormsSignIn";
+import Footer from "../components/LandPage/Footer/Footer";
 
-export default function Signin(){
-    return(
+export default function Signin() {
+    return (
         <>
-        <Header />
-        <Forms />
+            <Header />
+            <Forms />
+            <Footer />
         </>
     )
 }
