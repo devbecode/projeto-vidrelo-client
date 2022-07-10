@@ -14,17 +14,19 @@
         padding: 2rem;
         .card-carousel {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-around;
             .img-container {
-                position: absolute;
-                left: 23%;
-                top: 20%;
+                display: flex;
                 height: 42.8rem;
-                width: 25.9rem;
-                background: transparent url("../../../../assets/images/steps/step1.png") 0% 0% no-repeat;
-                background-size: cover;
+                width: 26rem;
                 box-shadow: 0px 3px 6px #0000005e;
                 border-radius: 46px;
+                position: relative;
+                bottom: 10rem;
+                img{
+                    width: 100%;
+                    border-radius: 46px;
+                }
             }
             .card-content {
                 display: flex;
