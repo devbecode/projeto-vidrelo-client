@@ -1,0 +1,90 @@
+.carousel-step {
+    width: 70%;
+    height: 45rem;
+    padding: 2.9rem 2.9rem;
+    border-radius: 2.4rem;
+    background: var(--white-1);
+    box-shadow: 0px 3px 6px #00000059;
+    margin: 15rem auto;
+    .card-border {
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='18%2c 18' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        border-radius: 2.4rem;
+        padding: 2rem;
+        .card-carousel {
+            display: flex;
+            justify-content: flex-end;
+            .img-container {
+                position: absolute;
+                left: 23%;
+                top: 20%;
+                height: 42.8rem;
+                width: 25.9rem;
+                background: transparent url("../../../../assets/images/steps/step1.png") 0% 0% no-repeat;
+                background-size: cover;
+                box-shadow: 0px 3px 6px #0000005e;
+                border-radius: 46px;
+            }
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                flex-grow: 0.6;
+                h4 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: "mavenpro-bold";
+                    font-size: 2.8rem;
+                    max-width: 50.6rem;
+                    margin: 0 auto 1.7rem auto;
+                    text-align: left;
+                    color: var(--purple-1);
+                    gap: 2.1rem;
+
+                    span {
+                        font-size: 10.1rem;
+                        color: var(--blue-2);
+                    }
+                }
+                p {
+                    display: flex;
+                    font-family: "mavenpro-regular";
+                    font-size: 1.8rem;
+                    max-width: 50.6rem;
+                    margin: 0 auto;
+                    gap: 2.1rem;
+                    &::before {
+                        content: "";
+                        width: 25rem;
+                    }
+                }
+                .btn-field {
+                    a.btn-budget {
+                        font-size: 1.8rem;
+                        font-family: "mavenpro-bold";
+                        color: var(--white-1);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 2px solid var(--purple-1);
+                        border-radius: 1rem;
+                        height: 5rem;
+                        width: 32rem;
+                        margin: 2rem auto 0 auto;
+                        transition: all 0.2s;
+                        background-color: var(--blue-2);
+                        &:hover {
+                            background-color: var(--purple-1);
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        width: 25rem;
+                    }
+                }
+            }
+        }
+    }
+}

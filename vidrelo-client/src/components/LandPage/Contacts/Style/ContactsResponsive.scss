@@ -1,0 +1,61 @@
+@import "../../../../styles/globals.scss";
+#contacts-section {
+    @media screen and (max-width: $large){
+        .contacts-content{
+            h3{
+                font-size: 3.5rem;
+            }
+            .contact-action{
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media screen and (max-width: $medium){
+        padding: 4.8rem 0;
+        .contacts-content{
+            h3{
+                font-size: 3rem;
+            }
+        }
+    }
+    @media screen and (max-width: $small){
+        padding: 4.8rem 0;
+        .contacts-content{
+            width: 100%;
+            h3{
+                font-size: 2.8rem;
+            }
+            .contact-action{
+                a{
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $small-2){
+        padding: 4.8rem 0;
+        .contacts-content{
+            width: 100%;
+            h3{
+                width: 90%;
+                font-size: 2.2rem;
+            }
+            .service-time{
+                font-size: 1.8rem;
+                
+            }
+            .contact-action{
+                a{
+                    font-size: 1.3rem;
+                    svg{
+                        width: 100%;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

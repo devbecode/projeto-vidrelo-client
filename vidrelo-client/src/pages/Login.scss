@@ -1,0 +1,13 @@
+@import "../styles/globals.scss";
+.body{
+    background: url(../assets/images/illustrations/img_login.svg) 0% 0% no-repeat;
+    background-size: 80%;
+    
+}
+
+
+@media(max-width: $medium-2 ){ //934px
+    .body{
+        background: none;
+    }
+}

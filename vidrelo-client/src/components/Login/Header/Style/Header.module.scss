@@ -1,0 +1,40 @@
+@import "../../../../styles/globals.scss";
+
+.header{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    height: 12vh;
+    min-height: 50px;
+    max-height: 75px;
+    background-color: transparent;
+
+   img{
+    margin-left: 5%;
+    width: 13rem;
+   }
+}
+
+@media (max-width: $medium-2)  {//600px
+    .header{
+        justify-content: center;
+        background: var(--purple-2);
+            margin-bottom: 2rem;
+    }  
+}
+
+@media (min-width: 1400px){
+
+    .header{
+        height: 12vh;
+        min-height: 50px;
+        background-color: transparent;
+    
+       img{
+        margin-left: 5%;
+        width: 18rem;
+       }
+    }
+}
+

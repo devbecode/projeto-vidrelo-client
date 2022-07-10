@@ -1,0 +1,88 @@
+@import "../../../../styles/globals.scss";
+.header{
+    min-height: 60px;
+    max-height: 70px;
+    height: 13%;
+    width: 100%;
+    background-color: var(--purple-2);
+    display: flex;
+    justify-content: space-around;
+
+    .div-logo{
+        display: flex;
+        align-items: center;
+        width: 40%;
+        justify-content: start;
+
+        img{
+            width: 13rem;
+            margin-left: 2rem;
+        }
+
+    }
+    .div-button{
+        display: flex;
+        align-items: center;
+        width: 40%;
+        justify-content: end;
+
+        button{
+            margin-right: 3rem;
+            border: 2px solid var(--white-1);
+            background-color: var(--purple-2);
+            color: var(--white-1);
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            transition: all .4s;
+            font-weight: 600;
+
+            &:hover{
+             background-color: var(--white-1);
+             color: var(--purple-2);
+             
+            }
+        }
+    }
+}
+
+
+//Responsive Part
+@media (max-width: $medium-2){
+    .header{
+        .div-logo{
+            justify-content: center;
+
+            img{
+               text-align: center;
+            }
+        }
+        .div-button{
+            display: none;
+        }
+    }
+
+}
+
+//Responsive Part DeskTop
+@media (min-height: $medium )  {
+
+    @media (min-width: 1000px ){
+
+        .header{
+            min-height: 70px;
+            max-height: 80px;
+        }
+    
+}
+
+}
+
+    @media (min-width: 1500px ){
+
+        .header{
+            min-height: 80px;
+            max-height: 85px;
+        }
+    
+}
+
