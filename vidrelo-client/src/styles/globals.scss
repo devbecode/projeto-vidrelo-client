@@ -1,4 +1,5 @@
 $extra-large-2: 1700px;
+$desktop-full: 1920px;
 $extra-large: 1536px;
 $large: 1280px;
 $desktop-small: 1045px;
@@ -64,7 +65,7 @@ html{
             height: 100%;
             overflow-x: hidden;
             #root{
-                height: 100vh;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
             }
