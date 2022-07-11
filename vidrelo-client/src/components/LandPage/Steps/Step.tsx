@@ -69,7 +69,7 @@ export default function Step() {
                                 else if(steps.id ===4){
 
                                 }
-                                return <SwiperSlide>
+                                return <SwiperSlide key={steps.id}>
                                     <CarouselStep
                                         key={steps.id}
                                         numberStep={steps.number}

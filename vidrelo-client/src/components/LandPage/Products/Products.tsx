@@ -7,52 +7,27 @@ import './Style/Products.scss'
 
 import Slider from "../../Generic/Swiper/Slider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
-
-interface Products {
-    id: number;
-    img: string,
-    name: string,
-    description: string
-}
-//Mock 
-const productList: Array<Products> = [
-    {
-        id: 1,
-        img: Box,
-        name: "Box",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
-    },
-    {
-        id: 2,
-        img: Espelho,
-        name: "Espelho",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
-    },
-    {
-        id: 3,
-        img: Prateleira,
-        name: "Prateleira",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
-    },
-    {
-        id: 4,
-        img: Mesa,
-        name: "Mesas",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
-    },
-    {
-        id: 5,
-        img: Mesa,
-        name: "Mesas",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
-    }
-]
-
+import IProduct from "../../../interfaces/IProduct";
+import { useEffect, useState } from "react";
+import http from "../../../api";
+import IGallery from "../../../interfaces/IGallery";
 
 export default function Products() {
+
+    const [products, setProducts] = useState<IProduct[]>([])
+    
+    useEffect(() => {
+        fetchProducts()
+    }, [])
+
+
+    async function fetchProducts() {
+        let res = await http.get("public/products?offset=1&limit=10")
+        setProducts(res.data.products)
+    }
     const settings: SwiperProps = {
         slidesPerView: 4,
-        navigation:true
+        navigation: true
     }
     return (
         <section id='products'>
@@ -66,13 +41,13 @@ export default function Products() {
             </div>
             <Slider settings={settings}>
                 {
-                    productList.map((product) => {
-                        return <SwiperSlide>
+                    products.map((product) => {
+                        return <SwiperSlide key={product.id}>
                             <CardProducts
                                 key={product.id}
-                                imgProduct={product.img}
+                                id={product.id}
                                 nameProduct={product.name}
-                                descriptionProduct={product.description}
+                                descriptionProduct={product.short_description}
                             />
                         </SwiperSlide>
                     }
