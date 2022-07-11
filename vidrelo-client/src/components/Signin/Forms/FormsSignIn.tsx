@@ -26,14 +26,16 @@ export default function Forms(){
          <h2>Quero me cadastrar</h2>
          <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles['input-texts']}>
+            <div className={styles["space-between"]}>
             <InputText
             name = 'name'
             id='name'
             label='Nome'
             type={"text"}
             />
-            <div className={styles['div-cpf-cell']}>
-                <div className={styles['cpf-cell']}>
+            </div>
+            <div className={styles['div-half-cell']}>
+                <div className={styles['cell']}>
                 <InputText
                 name = 'cpf'
                 id='cpf'
@@ -41,7 +43,7 @@ export default function Forms(){
                 type={"number"}
                 />
                 </div>
-                <div className={styles['phone-cell']}>
+                <div className={styles['cell']}>
                 <InputText
                 name = 'phone'
                 id='phone'
@@ -50,13 +52,69 @@ export default function Forms(){
                 />
                 </div>
             </div>
+            <div className={styles['div-half-cell']}>
+                <div className={styles['cell']}>
+                <InputText
+                name = 'state'
+                id='state'
+                label='Estado'
+                type={"text"}
+                />
+                </div>
+                <div className={styles['cell']}>
+                <InputText
+                name = 'city'
+                id='city'
+                label='Cidade'
+                type={"text"}
+                />
+                </div>
+            </div>
+            <div className={styles['div-half-cell']}>
+                <div className={styles['cell']}>
+                <InputText
+                name = 'street'
+                id='street'
+                label='Rua'
+                type={"text"}
+                />
+                </div>
+                <div className={styles['cell']}>
+                <InputText
+                name = 'district'
+                id='district'
+                label='Bairro'
+                type={"text"}
+                />
+                </div>
+            </div>
+            <div className={styles['div-half-cell']}>
+                <div className={styles['cell']}>
+                <InputText
+                name = 'number'
+                id='number'
+                label='Número'
+                type={"number"}
+                />
+                </div>
+                <div className={styles['cell']}>
+                <InputText
+                name = 'complement'
+                id='complement'
+                label='Complemento'
+                type={"text"}
+                />
+                </div>
+            </div>
+            <div className={styles["space-between"]}>
             <InputText
                 name = 'email'
                 id='email'
                 label='E-mail'
                 type={"email"}
                 />
-            <div className="btn-input-eye">
+                </div>
+            <div className={styles["space-between"]}>
             <InputText
                 name = 'password'
                 id='password'
@@ -70,7 +128,8 @@ export default function Forms(){
                 <FaEye/>
                 }
                 </button> */}
-
+                </div>
+                <div className={styles["space-between"]}>
             <InputText
                 name = 'confirmpassword'
                 id='confirmpassword'

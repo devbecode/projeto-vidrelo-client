@@ -21,36 +21,32 @@ body {
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 
         // parte medidas
-        width: 43%;
+        width: 48%;
         height: 100vh;
-        min-width: 365px;
+        min-width: 500px;
         max-width: 460px;
-        max-height: 500px;
-        min-height: 470px;
+        min-height: 815px;
+        max-height: 850px;
 
         h2 {
-            margin-top: 2rem;
-            font-size: 1.6rem;
+            margin-top: 2.5rem;
+            font-size: 1.8rem;
         }
         .form {
+            margin-top: 2rem;
             .input-texts {
-                .div-cpf-cell {
+                .space-between{
+                    margin-top: 2rem;
+                }
+                .div-half-cell {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
-                    margin-top: 1.6%;
+                    margin-top: 2rem;
 
-                    .cpf-cell {
-                        display: flex;
-                        flex-direction: column;
-                        width: 40%;
-                    }
-
-                    .phone-cell {
-                        display: flex;
-                        flex-direction: column;
-                        width: 55%;
+                    .cell {
+                        width: 48%;
                     }
                 }
             }
@@ -61,7 +57,7 @@ body {
             align-items: center;
             justify-content: space-evenly;
             width: 100%;
-            margin-top: 1.8rem;
+            margin-top: 2rem;
         }
 
         .div-link {
@@ -80,12 +76,12 @@ body {
 //Responsive Parts
 
 //cellphone parts
-@media (max-width: $small-medium) {
-    // 380px
+@media (max-width: $small-medium) {// 380px
     .main {
         .form-card {
             min-width: 325px;
             max-width: 345px;
+            //background-color: blue;
             h2 {
                 margin-top: 2rem;
                 font-size: 1.7rem;
@@ -97,14 +93,13 @@ body {
     }
 }
 
-@media (max-width: $small-2) {
-    // 340px
+@media (max-width: $small-2) {// 340px
     .main {
         .form-card {
             min-width: 285px;
             max-width: 300px;
-            min-height: 580px;
-            max-height: 600px;
+            //background-color: aqua;
+            min-height: 1000px;
             h2 {
                 margin-top: 2rem;
                 font-size: 1.7rem;
@@ -117,22 +112,19 @@ body {
 }
 
 //half screen part
-@media (max-width: $small) {
-    //425px
+@media (max-width: $medium-2) {//600px
     .main {
         .form-card {
-            min-height: 580px;
+            min-height: 1130px;
+            max-width: 420px;
+            min-width: 400px;
             .form {
                 .input-texts {
-                    .div-cpf-cell {
+                    .div-half-cell {
                         flex-direction: column;
 
-                        .cpf-cell {
+                        .cell {
                             margin-top: 0;
-                            width: 100%;
-                        }
-
-                        .phone-cell {
                             width: 100%;
                         }
                     }
@@ -155,15 +147,14 @@ body {
 }
 
 // desktop parts
-@media (min-width: $large) {
-    //1280px
+@media (min-width: $large) {//1280px
     .main {
         .form-card {
             margin-top: 4.3rem;
-            min-height: 590px;
-            max-height: 600px;
             min-width: 580px;
-            max-width: 590px;
+            max-width: 600px;
+            min-height: 840px;
+            max-height: 850px;
 
             h2 {
                 margin-top: 3rem;
@@ -192,14 +183,13 @@ body {
     }
 }
 
-@media (min-width: $extra-large) {
-    //1536px
+@media (min-width: $extra-large) {//1536px
     .main {
         .form-card {
             margin-top: 6.5rem;
-            height: 100%;
-            min-height: 660px;
-            min-width: 600px;
+            min-height: 960px;
+            // min-width: 590px;
+            // max-width: 600px;
 
             h2 {
                 margin-top: 3rem;
@@ -225,4 +215,13 @@ body {
             }
         }
     }
+}
+
+@media (min-width: $extra-large-2) {
+    //1700px
+    .main {
+        .form-card {
+            min-height: 990px;
+    }
+}
 }
