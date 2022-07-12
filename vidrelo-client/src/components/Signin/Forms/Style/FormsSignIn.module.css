@@ -1,0 +1,257 @@
+@font-face {
+  font-family: mavenpro-semibold;
+  src: url("../assets/fonts/MavenPro-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: mavenpro-regular;
+  src: url("../assets/fonts/MavenPro-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: mavenpro-medium;
+  src: url("../assets/fonts/MavenPro-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: mavenpro-bold;
+  src: url("../assets/fonts/MavenPro-Bold.ttf");
+  font-weight: 700;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  --white-1: #ffffff;
+  --white-2: #f1f1f1;
+  --white-3: #f5f5f5;
+  --gray-1: #787878;
+  --gray-2: #707070;
+  --gray-3: #595959;
+  --gray-4: #535353;
+  --green-1: #72FF2B;
+  --green-2: #48FF41;
+  --green-3: #26D366;
+  --blue-1: #50CFE8;
+  --blue-2: #05C3DE;
+  --purple-1: #291868;
+  --purple-2: #211551;
+  font-family: "mavenpro_rg", "mavenpro_me", "mavenpro_sb", sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+html body {
+  height: 100%;
+  overflow-x: hidden;
+}
+html body #root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inative {
+  transform: translate(100%);
+  transition: transform 0.3s ease-in;
+}
+
+.active {
+  transform: translate(0);
+  transition: transform 0.3cls ease-in;
+}
+
+body {
+  background-color: #f5f8fa;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: "mavenpro-regular";
+  margin: 3rem auto;
+  position: relative;
+}
+.main .link-arrow {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 3.5rem;
+  color: var(--purple-2);
+  left: 10rem;
+  text-align: center;
+}
+.main .form-card {
+  margin: 3.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0 3rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  width: 48%;
+  height: 100vh;
+  min-width: 500px;
+  max-width: 460px;
+  min-height: 815px;
+  max-height: 850px;
+}
+.main .form-card h2 {
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+}
+.main .form-card .form {
+  margin-top: 2rem;
+}
+.main .form-card .form .input-texts .space-between {
+  margin-top: 2rem;
+}
+.main .form-card .form .input-texts .div-half-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.main .form-card .form .input-texts .div-half-cell .cell {
+  width: 48%;
+}
+.main .form-card .btn-forms {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 2rem;
+}
+.main .form-card .div-link {
+  margin-top: 1.9rem;
+  text-align: center;
+}
+.main .form-card .div-link a {
+  color: var(--purple-2);
+  font-weight: 600;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 380px) {
+  .main .form-card {
+    min-width: 325px;
+    max-width: 345px;
+  }
+  .main .form-card h2 {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+  }
+  .main .form-card .form {
+    margin-top: 1.2rem;
+  }
+}
+@media (max-width: 340px) {
+  .main .form-card {
+    min-width: 285px;
+    max-width: 300px;
+    min-height: 1000px;
+  }
+  .main .form-card h2 {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+  }
+  .main .form-card .form {
+    margin-top: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .main .link-arrow {
+    display: none;
+  }
+  .main .form-card {
+    min-height: 1130px;
+    max-width: 420px;
+    min-width: 400px;
+  }
+  .main .form-card .form .input-texts .div-half-cell {
+    flex-direction: column;
+  }
+  .main .form-card .form .input-texts .div-half-cell .cell {
+    margin-top: 0;
+    width: 100%;
+  }
+  .main .form-card .form .btn-forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .main .form-card .form .btn-forms button {
+    margin: 0.08rem;
+    max-width: none;
+    width: 100% !important;
+  }
+}
+@media (min-width: 1280px) {
+  .main .form-card {
+    margin-top: 4.3rem;
+    min-width: 580px;
+    max-width: 600px;
+    min-height: 865px;
+    max-height: 880px;
+  }
+  .main .form-card h2 {
+    margin-top: 3rem;
+    font-size: 2.1rem;
+  }
+  .main .form-card .form {
+    margin-top: 1rem;
+  }
+  .main .form-card .form .input-texts {
+    margin-top: 1rem;
+  }
+  .main .form-card .btn-forms {
+    margin-top: 3.2rem;
+    gap: 10px;
+  }
+  .main .form-card .div-link {
+    margin-top: 2.8rem;
+    text-align: center;
+  }
+  .main .form-card .div-link a {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1536px) {
+  .main .form-card {
+    margin-top: 6.5rem;
+    min-height: 960px;
+  }
+  .main .form-card h2 {
+    margin-top: 3rem;
+    font-size: 2.2rem;
+  }
+  .main .form-card .form .input-texts {
+    margin-top: 1rem;
+  }
+  .main .form-card .btn-forms {
+    margin-top: 3.2rem;
+    gap: 10px;
+  }
+  .main .form-card .div-link {
+    margin-top: 2.4rem;
+    text-align: center;
+  }
+  .main .form-card .div-link a {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1700px) {
+  .main .form-card {
+    min-height: 990px;
+  }
+}/*# sourceMappingURL=FormsSignIn.module.css.map */

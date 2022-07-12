@@ -1,27 +1,26 @@
-import styles from "../../Signin/Forms/Style/FormsSignIn.module.scss";
+import styles from "./Style/FormsSignIn.module.scss";
 import InputText from "../../Generics/InputText/InputText";
+import {FaArrowLeft } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+//import { axios} from "axios";
 
 export default function Forms(){
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
+        console.log("teste");
+        
     }
 
-    // const [ImgPass, setImgPass] = useState(false);
-    // const [ImgConfirm, setImgConfirm] = useState(false);
-
-    // const toggleBtn = () => {
-
-    //     setImgPass(prevState => !prevState)
-    // }
-    // const toggleBtnConfirm = () => {
-    //     setImgConfirm(prevState => !prevState)
-    // }
 
     return(
         <>
          <div className={styles.main}>
+            <Link  to="/" className={styles["link-arrow"]}>
+            <FaArrowLeft /> 
+            </Link>
          <div className={styles['form-card']}>
          <h2>Quero me cadastrar</h2>
          <form onSubmit={handleSubmit} className={styles.form}>
@@ -37,16 +36,16 @@ export default function Forms(){
             <div className={styles['div-half-cell']}>
                 <div className={styles['cell']}>
                 <InputText
-                name = 'cpf'
-                id='cpf'
-                label='CPF'
+                name = 'cep'
+                id='cep'
+                label='CEP'
                 type={"number"}
                 />
                 </div>
                 <div className={styles['cell']}>
                 <InputText
-                name = 'phone'
-                id='phone'
+                name = 'telephone'
+                id='telephone'
                 label='Telefone'
                 type={"number"}
                 />
@@ -121,13 +120,7 @@ export default function Forms(){
                 label='Senha'
                 type={"password"}
                 />
-                {/* type={ImgConfirm ? "text" : "password"} 
-                <button className="btn-input-eye" onClick={toggleBtn}>
-                {ImgPass ? 
-                <FaEyeSlash/> :
-                <FaEye/>
-                }
-                </button> */}
+              
                 </div>
                 <div className={styles["space-between"]}>
             <InputText
@@ -136,13 +129,7 @@ export default function Forms(){
                 label='Confirmação de senha'
                 type={"password"}
                 />
-                {/* type={ImgConfirm ? "text" : "password"}
-                 <button className="btn-input-eye" onClick={toggleBtnConfirm}>
-                {ImgConfirm ? 
-                <FaEyeSlash/> :
-                <FaEye/>
-                }
-                </button> */}
+               
                 </div>
             </div>
             <div className={styles['btn-forms']}>
@@ -156,7 +143,7 @@ export default function Forms(){
                 />
             </div>
             <div className={styles['div-link']}>
-            <a>Já tenho uma conta!</a>
+            <Link to="/Login">Já tenho uma conta!</Link>
             </div>
          </form>
         </div>

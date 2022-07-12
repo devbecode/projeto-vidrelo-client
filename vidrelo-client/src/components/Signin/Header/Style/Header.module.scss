@@ -43,18 +43,40 @@
     }
 }
 
+//responsive part for the arrow button to come off
+@media (min-width: 600px){
+    .header{
+        .link-arrow{
+            display: none;
+        }
+
+    }
+}
+
 //Responsive Part
 @media (max-width: $medium-2) {
     .header {
+        .link-arrow{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white-1);
+            width: 30%;
+        }
+
         .div-logo {
             justify-content: center;
+            width: 30%;
 
             img {
                 text-align: center;
             }
         }
         .div-button {
-            display: none;
+            width: 30%;
+            a{
+                display: none;
+            }
         }
     }
 }
