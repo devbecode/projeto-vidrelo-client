@@ -9,9 +9,22 @@ body {
     width: 100%;
     font-family: "mavenpro-regular";
     margin: 3rem auto;
+    position: relative;
+
+    .link-arrow{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin-top: 3.5rem;
+            color: var(--purple-2);
+            left: 10rem;
+            text-align: center;
+    }
+
+
 
     .form-card {
-        margin: 5rem auto;
+        margin: 3.5rem auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -81,7 +94,6 @@ body {
         .form-card {
             min-width: 325px;
             max-width: 345px;
-            //background-color: blue;
             h2 {
                 margin-top: 2rem;
                 font-size: 1.7rem;
@@ -98,7 +110,6 @@ body {
         .form-card {
             min-width: 285px;
             max-width: 300px;
-            //background-color: aqua;
             min-height: 1000px;
             h2 {
                 margin-top: 2rem;
@@ -114,6 +125,9 @@ body {
 //half screen part
 @media (max-width: $medium-2) {//600px
     .main {
+        .link-arrow{
+            display: none;
+        }
         .form-card {
             min-height: 1130px;
             max-width: 420px;
@@ -153,8 +167,8 @@ body {
             margin-top: 4.3rem;
             min-width: 580px;
             max-width: 600px;
-            min-height: 840px;
-            max-height: 850px;
+            min-height: 865px;
+            max-height: 880px;
 
             h2 {
                 margin-top: 3rem;

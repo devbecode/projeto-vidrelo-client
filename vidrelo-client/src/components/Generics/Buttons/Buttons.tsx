@@ -10,7 +10,7 @@ export default function InputText({id, text}: ButtonProps){
     
     return(
         <>
-         <button className="btn" id={id}>{text}</button>
+         <button className="btn" id={id} type="submit">{text}</button>
         </>
     )
 }
