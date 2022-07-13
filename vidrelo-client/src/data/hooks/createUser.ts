@@ -1,76 +1,104 @@
-import axios from "axios";
-import { useEffect } from "react";
-import { convertToObject, EnumDeclaration } from "typescript";
-import { toJSON } from "flatted";
-export function Usefetch(event: React.FormEvent<HTMLFormElement>) {
-  //   interface User {
-  //     profile: string;
-  //     name: string;
-  //     email: string;
-  //     password: string;
-  //     telephone: string;
-  //     cep: string;
-  //     state: string;
-  //     city: string;
-  //     district: string;
-  //     street: string;
-  //     number: string;
-  //     complement: string;
-  //   }
+import { ApiAuth } from "./Services/AuthService";
+import { ApiUser } from "./Services/UserService";
 
+export function Usefetch(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
 
-  const ApiUser = axios.create({
-    baseURL: "http://localhost:3005/v1/user",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  const ApiAuth = axios.create({
-    baseURL: "http://localhost:3005/v1/user",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const dataToSend = {
+    profile: "",
+    name: "",
+    email: "",
+    password: "",
+    telephone: "",
+    cep: "",
+    state: "",
+    city: "",
+    district: "",
+    street: "",
+    number: "",
+    complement: "",
+  };
 
+  for (let index = 0; index < event.currentTarget.elements.length; index++) {
+    let actualId = (event.currentTarget.elements[index] as HTMLInputElement).id;
+    let actualValue = (event.currentTarget.elements[index] as HTMLInputElement)
+      .value;
+    switch (actualId) {
+      case "name":
+        dataToSend.name = actualValue;
+        break;
+      case "cep":
+        dataToSend.cep = actualValue;
+        break;
+      case "telephone":
+        dataToSend.telephone = actualValue;
+        break;
+      case "state":
+        dataToSend.state = actualValue;
+        break;
+      case "city":
+        dataToSend.city = actualValue;
+        break;
+      case "street":
+        dataToSend.street = actualValue;
+        break;
+      case "district":
+        dataToSend.district = actualValue;
+        break;
+      case "number":
+        dataToSend.number = actualValue;
+        break;
+      case "complement":
+        dataToSend.complement = actualValue;
+        break;
+      case "email":
+        dataToSend.email = actualValue;
+        break;
+      case "password":
+        dataToSend.password = actualValue;
+        break;
+      default:
+        break;
+    }
+  }
   ApiUser.post(
-    "http://localhost:3005/v1/user",
+    "/user/",
     JSON.stringify({
-      name: (event.currentTarget.elements[0] as HTMLInputElement).value,
+      name: dataToSend.name,
       profile: "client",
-      email: (event.currentTarget.elements[9] as HTMLInputElement).value,
-      password: (event.currentTarget.elements[10] as HTMLInputElement).value,
-      telephone: (event.currentTarget.elements[2] as HTMLInputElement).value,
-      cep: (event.currentTarget.elements[1] as HTMLInputElement).value,
-      state: (event.currentTarget.elements[3] as HTMLInputElement).value,
-      city: (event.currentTarget.elements[4] as HTMLInputElement).value,
-      district: (event.currentTarget.elements[6] as HTMLInputElement).value,
-      street: (event.currentTarget.elements[5] as HTMLInputElement).value,
-      number: (event.currentTarget.elements[7] as HTMLInputElement).value,
-      complement: (event.currentTarget.elements[8] as HTMLInputElement).value,
+      email: dataToSend.email,
+      password: dataToSend.password,
+      telephone: dataToSend.telephone,
+      cep: dataToSend.cep,
+      state: dataToSend.state,
+      city: dataToSend.city,
+      district: dataToSend.district,
+      street: dataToSend.street,
+      number: dataToSend.number,
+      complement: dataToSend.complement,
     })
   )
-    .then(() => {
-      console.log("funcionou");
-    })
     .catch(function (error) {
       if (error) {
         console.log(error);
       }
+    })
+    .then(() => {
+      console.log("funcionou");
     });
   ApiAuth.post(
-    "http://localhost:3006/v1/auth/createUser/",
+    "/createUser",
     JSON.stringify({
-      name: (event.currentTarget.elements[0] as HTMLInputElement).value,
+      email: (event.currentTarget.elements[9] as HTMLInputElement).value,
       password: (event.currentTarget.elements[10] as HTMLInputElement).value,
     })
   )
-    .then(() => {
-      console.log("funcionou");
-    })
     .catch(function (error) {
       if (error) {
         console.log(error);
       }
+    })
+    .then(() => {
+      console.log("funcionou");
     });
 }
