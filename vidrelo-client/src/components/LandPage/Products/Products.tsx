@@ -13,32 +13,32 @@ interface Products {
     img: string,
     name: string,
     description: string
-}
+}   
 //Mock 
 const productList: Array<Products> = [
     {
         id: 1,
         img: Box,
         name: "Box",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"  
     },
     {
         id: 2,
         img: Espelho,
         name: "Espelho",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"    
     },
     {
         id: 3,
         img: Prateleira,
         name: "Prateleira",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"    
     },
     {
         id: 4,
         img: Mesa,
         name: "Mesas",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"   
     },
     {
         id: 5,

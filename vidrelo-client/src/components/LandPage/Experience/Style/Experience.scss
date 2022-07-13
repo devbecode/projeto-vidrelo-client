@@ -1,58 +1,60 @@
-section#experience{
+section#experience {
     display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-    height: 62.2rem;
-    width: 80%;
-    margin: 5% auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    width: 90%;
+    height: 100%;
     z-index: 1000;
-    h2{
+    h2 {
         font-family: "mavenpro-semibold";
-        font-size: 3.8rem;
+        font-size: 4.8rem;
         color: var(--gray-1);
         text-align: center;
     }
 
-    h4{
+    h4 {
         font-family: "mavenpro-bold";
         font-size: 1.8rem;
         color: var(--purple-2);
         text-align: center;
     }
-    .experience-cards{
+    .experience-cards {
         display: flex;
-        justify-content: center;
-		gap: 8.4rem;
-        height: 35rem;
+        justify-content: space-evenly;
+        width: 80%;
+        height: 100%;
         margin-top: 10%;
         z-index: 100;
-        .experience-card{
-            width: 23%;
+        .experience-card {
+            width: 30%;
             padding: 2%;
+            max-width: 35rem;
+            max-height: 35rem;
             box-shadow: 0px 0px 1.5rem #00000033;
             border-radius: 4.5rem;
             background: var(--white-1);
-            .card-title{
+            .card-title {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding: 3% 0%;
                 gap: 2.2rem;
-                    .experience-icon{
-                        display: flex;
+                .experience-icon {
+                    align-items: center;
+                    img {
+                        width: 100%;
                         align-items: center;
-                        img{
-                            width: 100%;
-                            align-items: center; 
-                        }    
                     }
-                } 
-            p{
-                margin-top: 5%;
+                }
+            }
+            p {
+                padding-top: 5%;
                 color: var(--purple-2);
                 font-family: "mavenpro-regular";
                 text-align: center;
-                font-size: 1.8rem;  
+                font-size: 1.8rem;
             }
         }
     }

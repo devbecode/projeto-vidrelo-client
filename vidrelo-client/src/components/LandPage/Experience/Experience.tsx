@@ -2,12 +2,12 @@ import Digital from "../../../assets/images/Icons/digital-icon.svg"
 import Transparent from "../../../assets/images/Icons/transparent-icon.svg"
 import Bestexp from "../../../assets/images/Icons/best-exp-icon.svg"
 import './Style/Experience.scss'
-export default function Experience(){
-    return(
-        
+import './Style/ExperienceResonsive.scss'
+export default function Experience() {
+    return (
+
         <section id="experience">
             <h2>Do orçamento à instalação, com segurança e agilidade</h2>
-
             <div className="experience-cards">
                 <div className="experience-card">
                     <div className="card-title">

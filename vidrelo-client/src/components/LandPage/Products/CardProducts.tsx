@@ -4,7 +4,8 @@ import { SwiperSlide } from "swiper/react"
 import './Style/CardProducts.scss'
 
 export default function CardProducts(
-    { nameProduct, descriptionProduct, imgProduct }: { nameProduct: string, descriptionProduct: string, imgProduct: string }
+    { nameProduct, descriptionProduct, imgProduct,}: { nameProduct: string, descriptionProduct: string, imgProduct: string, 
+}
 ): JSX.Element {
 
     return (

@@ -16,11 +16,7 @@
             span {
                 color: var(--purple-1);
             }
-        }
-        
-        
-        
-        
+        }            
         .swiper {
             width: 100%;
             .swiper-pagination{
@@ -40,11 +36,12 @@
             }
             .swiper-button-next {
                 color: var(--white-1);
+                width: 3%;
                 background: var(--blue-2) 0% 0% no-repeat padding-box;
                 box-shadow: 0px 2px 2px #00000073;
                 border: 30px solid var(--blue-2);
                 border-radius: 4rem;
-                right: 210px;
+                right: 13%;
                 &:after{
                     font-size: 30px;
                 }
@@ -56,7 +53,7 @@
                 box-shadow: 0px 2px 2px #00000073;
                 border: 30px solid var(--blue-2);
                 border-radius: 4rem;
-                left: 210px;
+                left: 13%;
                 &:after{
                     font-size: 30px;
                 }
