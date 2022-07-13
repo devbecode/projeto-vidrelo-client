@@ -94,7 +94,10 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
         password: dataToSend.password,
       })
     );
-    cookies.set("token", response.data);
+    const date = new Date();
+    const nextDay = date.setDate(date.getDate() + 1);
+    const expireLeft = new Date(nextDay);
+    cookies.set("token", response.data, { expires: expireLeft });
   } catch (error) {
     if (error) {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
