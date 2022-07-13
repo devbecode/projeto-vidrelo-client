@@ -98,7 +98,9 @@ body {
 //cellphone parts
 @media (max-width: $small-medium) {// 380px
     .main {
+        .card-card-form{
         .form-card {
+           // background-color: red;
             min-width: 325px;
             max-width: 345px;
             h2 {
@@ -110,11 +112,14 @@ body {
             }
         }
     }
+    }
 }
 
 @media (max-width: $small-2) {// 340px
     .main {
+        .card-card-form{
         .form-card {
+            //background-color: blue;
             min-width: 285px;
             max-width: 300px;
             min-height: 1000px;
@@ -125,6 +130,7 @@ body {
             .form {
                 margin-top: 1.2rem;
             }
+        }
         }
     }
 }
@@ -153,9 +159,9 @@ body {
     }
     .card-card-form{
         .form-card {
-            min-height: 1130px;
-            max-width: 420px;
-            min-width: 400px;
+            // min-height: 1130px;
+            // max-width: 420px;
+            // min-width: 400px;
             .form {
                 .input-texts {
                     .div-half-cell {
@@ -192,9 +198,9 @@ body {
 // desktop parts
 @media (min-width: $large) {//1280px
     .main {
+        .card-card-form{
         .form-card {
-            margin-top: 4.3rem;
-            min-width: 580px;
+            min-width: 590px;
             max-width: 600px;
             min-height: 865px;
             max-height: 880px;
@@ -224,15 +230,16 @@ body {
             }
         }
     }
+    }
 }
 
 @media (min-width: $extra-large) {//1536px
     .main {
+        .card-card-form{
         .form-card {
-            margin-top: 6.5rem;
-            min-height: 960px;
-            // min-width: 590px;
-            // max-width: 600px;
+            min-height: 970px;
+            min-width: 600px;
+            max-width: 610px;
 
             h2 {
                 margin-top: 3rem;
@@ -258,13 +265,17 @@ body {
             }
         }
     }
+    }
 }
 
 @media (min-width: $extra-large-2) {
     //1700px
     .main {
+        .card-card-form{
         .form-card {
+            min-width: 615px;
             min-height: 990px;
     }
+}
 }
 }

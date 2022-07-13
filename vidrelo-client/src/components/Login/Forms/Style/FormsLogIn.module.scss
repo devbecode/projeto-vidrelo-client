@@ -19,7 +19,6 @@
     margin: 3rem auto;
     
     .arrow-card{
-        display: none;
         width: 20%;
 
         .link-arrow{
@@ -136,7 +135,6 @@
         }
     }
     .space-card{
-        display: none;
         width: 20%;
     }
 }
@@ -173,8 +171,7 @@
                 .card-card-form{
                     
                 .form-card{
-                    background-color: red;
-                    min-width: 285px;
+                    min-width: 285px !important;
                     max-width: 300px;
                     h2{
                         margin-top: 1.5rem;
@@ -189,7 +186,6 @@
                     .card-card-form{
                         .form-card{
                             min-width: 325px;
-                            background-color: lightcoral;
                             max-width: 350px;
                 
                         }
