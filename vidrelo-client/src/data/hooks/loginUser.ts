@@ -1,8 +1,9 @@
 import { ApiAuth } from "./Services/AuthService";
+import Cookies from "universal-cookie";
 
-export function loginUser(event: React.FormEvent<HTMLFormElement>) {
+export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
-
+  const cookies = new Cookies();
   const dataToSend = {
     email: "",
     password: "",
@@ -24,19 +25,16 @@ export function loginUser(event: React.FormEvent<HTMLFormElement>) {
     }
   }
 
-  ApiAuth.post(
-    "/",
-    JSON.stringify({
-      email: dataToSend.email,
-      password: dataToSend.password,
-    })
-  )
-    .catch(function (error) {
-      if (error) {
-        console.log(error);
-      }
-    })
-    .then(() => {
-      console.log("funcionou");
-    });
+  try {
+    const response = await ApiAuth.post(
+      "/",
+      JSON.stringify({
+        email: dataToSend.email,
+        password: dataToSend.password,
+      })
+    );
+    cookies.set("token", response.data);
+  } catch (error) {
+    console.log(error);
+  }
 }

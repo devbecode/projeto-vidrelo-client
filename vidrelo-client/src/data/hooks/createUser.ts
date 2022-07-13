@@ -1,8 +1,10 @@
 import { ApiAuth } from "./Services/AuthService";
 import { ApiUser } from "./Services/UserService";
+import Cookies from "universal-cookie";
 
-export function createUser(event: React.FormEvent<HTMLFormElement>) {
+export async function createUser(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
+  const cookies = new Cookies();
 
   const dataToSend = {
     profile: "",
@@ -61,44 +63,42 @@ export function createUser(event: React.FormEvent<HTMLFormElement>) {
         break;
     }
   }
-  ApiUser.post(
-    "/user/",
-    JSON.stringify({
-      name: dataToSend.name,
-      profile: "client",
-      email: dataToSend.email,
-      password: dataToSend.password,
-      telephone: dataToSend.telephone,
-      cep: dataToSend.cep,
-      state: dataToSend.state,
-      city: dataToSend.city,
-      district: dataToSend.district,
-      street: dataToSend.street,
-      number: dataToSend.number,
-      complement: dataToSend.complement,
-    })
-  )
-    .catch(function (error) {
-      if (error) {
-        console.log(error);
-      }
-    })
-    .then(() => {
-      console.log("funcionou");
-    });
-  ApiAuth.post(
-    "/createUser",
-    JSON.stringify({
-      email: dataToSend.email,
-      password: dataToSend.password,
-    })
-  )
-    .catch(function (error) {
-      if (error) {
-        console.log(error);
-      }
-    })
-    .then(() => {
-      console.log("funcionou");
-    });
+  try {
+    ApiUser.post(
+      "/user-form/",
+      JSON.stringify({
+        name: dataToSend.name,
+        profile: "client",
+        email: dataToSend.email,
+        password: dataToSend.password,
+        telephone: dataToSend.telephone,
+        cep: dataToSend.cep,
+        state: dataToSend.state,
+        city: dataToSend.city,
+        district: dataToSend.district,
+        street: dataToSend.street,
+        number: dataToSend.number,
+        complement: dataToSend.complement,
+      })
+    );
+  } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    console.log(error);
+  }
+
+  try {
+    const response = await ApiAuth.post(
+      "/createUser",
+      JSON.stringify({
+        email: dataToSend.email,
+        password: dataToSend.password,
+      })
+    );
+    cookies.set("token", response.data);
+  } catch (error) {
+    if (error) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      console.log(error);
+    }
+  }
 }

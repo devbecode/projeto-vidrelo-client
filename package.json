@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@types/js-cookie": "^3.0.2",
     "axios": "^0.27.2",
-    "flatted": "^3.2.6"
+    "flatted": "^3.2.6",
+    "universal-cookie": "^4.0.4"
   }
 }
