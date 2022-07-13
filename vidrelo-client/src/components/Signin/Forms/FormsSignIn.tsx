@@ -3,8 +3,7 @@ import InputText from "../../Generics/InputText/InputText";
 import { FaArrowLeft } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { Usefetch } from "../../../data/hooks/createUser";
+import { createUser } from "../../../data/hooks/createUser";
 //import { axios} from "axios";
 
 export default function Forms() {
@@ -17,7 +16,7 @@ export default function Forms() {
                 </Link>
                 <div className={styles['form-card']}>
                     <h2>Quero me cadastrar</h2>
-                    <form onSubmit={Usefetch} className={styles.form}>
+                    <form onSubmit={createUser} className={styles.form}>
                         <div className={styles['input-texts']}>
                             <div className={styles["space-between"]}>
                                 <InputText

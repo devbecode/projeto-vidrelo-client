@@ -1,7 +1,7 @@
 import { ApiAuth } from "./Services/AuthService";
 import { ApiUser } from "./Services/UserService";
 
-export function Usefetch(event: React.FormEvent<HTMLFormElement>) {
+export function createUser(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
 
   const dataToSend = {
@@ -89,8 +89,8 @@ export function Usefetch(event: React.FormEvent<HTMLFormElement>) {
   ApiAuth.post(
     "/createUser",
     JSON.stringify({
-      email: (event.currentTarget.elements[9] as HTMLInputElement).value,
-      password: (event.currentTarget.elements[10] as HTMLInputElement).value,
+      email: dataToSend.email,
+      password: dataToSend.password,
     })
   )
     .catch(function (error) {
