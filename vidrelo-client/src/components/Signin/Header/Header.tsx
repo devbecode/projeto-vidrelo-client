@@ -7,9 +7,12 @@ export default function Header(){
     return(
         <>
         <div className={styles.header}>
-        <Link  to="/" className={styles["link-arrow"]}>
-            <FaArrowLeft/> 
+            <div className={styles["div-arrow"]}>
+            <Link  to="/" className={styles["link-arrow"]}>
+            <FaArrowLeft id={styles["arrow-header"]}/> 
             </Link>
+            </div>
+
             <div className={styles['div-logo']}>
                 <img src={logo} alt="Logo" />
             </div>

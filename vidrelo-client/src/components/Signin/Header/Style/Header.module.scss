@@ -25,6 +25,7 @@
         width: 40%;
         justify-content: end;
 
+
         a {
             margin-right: 3rem;
             border: 2px solid var(--white-1);
@@ -44,36 +45,64 @@
 }
 
 //responsive part for the arrow button to come off
-@media (min-width: 600px){
+@media (min-width: $medium-medium){//850px
     .header{
-        .link-arrow{
-            display: none;
+        .div-arrow{
+            .link-arrow{
+                display: none;
+            }
+    
         }
 
     }
 }
 
+@media (max-width: $medium-medium){//850px
+    .header{
+
+            justify-content: space-evenly;
+            .div-arrow{
+                    width: 30%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+
+                .link-arrow{
+                    margin-left: 3rem;
+                    color:var(--white-1);
+                }
+            }
+
+            .div-logo {
+                width: 30%;
+                justify-content: start;
+
+                img {
+                    text-align: center;
+                }
+            }
+    
+            .div-button {
+                width: 30%;
+            }
+        }
+    
+}
+
 //Responsive Part
 @media (max-width: $medium-2) {
     .header {
-        .link-arrow{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white-1);
-            width: 30%;
+        .div-arrow{
+            .link-arrow{
+                color: var(--white-1);
+                justify-content: center;
+            }
         }
 
         .div-logo {
             justify-content: center;
-            width: 30%;
-
-            img {
-                text-align: center;
-            }
         }
         .div-button {
-            width: 30%;
             a{
                 display: none;
             }

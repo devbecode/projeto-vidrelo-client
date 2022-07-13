@@ -11,9 +11,12 @@ export default function Forms() {
     return (
         <>
             <div className={styles.main}>
+                <div className={styles["arrow-card"]}>
                 <Link to="/" className={styles["link-arrow"]}>
                     <FaArrowLeft />
                 </Link>
+                </div>
+                <div className={styles["card-card-form"]}>
                 <div className={styles['form-card']}>
                     <h2>Quero me cadastrar</h2>
                     <form onSubmit={createUser} className={styles.form}>
@@ -129,16 +132,21 @@ export default function Forms() {
                             <Buttons
                                 id='btn-Cancel'
                                 text="Cancelar"
+                                path="/Cadastro"
                             />
                             <Buttons
                                 id='btn-signIn'
                                 text="Cadastrar"
+                                path="/"
                             />
                         </div>
                         <div className={styles['div-link']}>
                             <Link to="/Login">Já tenho uma conta!</Link>
                         </div>
                     </form>
+                </div>
+                </div>
+                <div className={styles["space-card"]}>
                 </div>
             </div>
         </>

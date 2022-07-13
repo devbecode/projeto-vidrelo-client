@@ -72,22 +72,27 @@ body {
 
 .main {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   font-family: "mavenpro-regular";
   margin: 3rem auto;
-  position: relative;
 }
-.main .link-arrow {
+.main .arrow-card {
+  width: 20%;
+}
+.main .arrow-card .link-arrow {
   display: flex;
   justify-content: center;
-  position: relative;
   margin-top: 3.5rem;
   color: var(--purple-2);
-  left: 10rem;
   text-align: center;
 }
-.main .form-card {
+.main .card-card-form {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+.main .card-card-form .form-card {
   margin: 3.5rem auto;
   display: flex;
   flex-direction: column;
@@ -103,42 +108,45 @@ body {
   min-height: 815px;
   max-height: 850px;
 }
-.main .form-card h2 {
+.main .card-card-form .form-card h2 {
   margin-top: 2.5rem;
   font-size: 1.8rem;
 }
-.main .form-card .form {
+.main .card-card-form .form-card .form {
   margin-top: 2rem;
 }
-.main .form-card .form .input-texts .space-between {
+.main .card-card-form .form-card .form .input-texts .space-between {
   margin-top: 2rem;
 }
-.main .form-card .form .input-texts .div-half-cell {
+.main .card-card-form .form-card .form .input-texts .div-half-cell {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
 }
-.main .form-card .form .input-texts .div-half-cell .cell {
+.main .card-card-form .form-card .form .input-texts .div-half-cell .cell {
   width: 48%;
 }
-.main .form-card .btn-forms {
+.main .card-card-form .form-card .btn-forms {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
   margin-top: 2rem;
 }
-.main .form-card .div-link {
+.main .card-card-form .form-card .div-link {
   margin-top: 1.9rem;
   text-align: center;
 }
-.main .form-card .div-link a {
+.main .card-card-form .form-card .div-link a {
   color: var(--purple-2);
   font-weight: 600;
   font-size: 1.3rem;
   cursor: pointer;
+}
+.main .space-card {
+  width: 20%;
 }
 
 @media (max-width: 380px) {
@@ -168,32 +176,43 @@ body {
     margin-top: 1.2rem;
   }
 }
-@media (max-width: 600px) {
-  .main .link-arrow {
+@media (max-width: 850px) {
+  .main .arrow-card {
     display: none;
   }
-  .main .form-card {
+  .main .space-card {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .main .arrow-card .link-arrow {
+    display: none;
+  }
+  .main .card-card-form .form-card {
     min-height: 1130px;
     max-width: 420px;
     min-width: 400px;
   }
-  .main .form-card .form .input-texts .div-half-cell {
+  .main .card-card-form .form-card .form .input-texts .div-half-cell {
     flex-direction: column;
   }
-  .main .form-card .form .input-texts .div-half-cell .cell {
+  .main .card-card-form .form-card .form .input-texts .div-half-cell .cell {
     margin-top: 0;
     width: 100%;
   }
-  .main .form-card .form .btn-forms {
+  .main .card-card-form .form-card .form .btn-forms {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .main .form-card .form .btn-forms button {
+  .main .card-card-form .form-card .form .btn-forms button {
     margin: 0.08rem;
     max-width: none;
     width: 100% !important;
+  }
+  .main .space-card {
+    display: none;
   }
 }
 @media (min-width: 1280px) {

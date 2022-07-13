@@ -9,18 +9,48 @@
     min-height: 50px;
     max-height: 75px;
     background-color: transparent;
+    .div-arrow{
+        .link-arrow{
+        color: var(--white-1);
+        }
+    }
+    .img-div{
+        margin-left: 5%;
+        img{
+            width: 13rem;
+           }
+    }
 
-   img{
-    margin-left: 5%;
-    width: 13rem;
-   }
 }
-
+@media (min-width: $medium-2){//600px
+    .header{
+        .div-arrow{
+            display: none;
+    
+        }
+        .div-space{
+            display: none;
+        }
+    }
+}
 @media (max-width: $medium-2)  {//600px
     .header{
         justify-content: center;
         background: var(--purple-2);
-            margin-bottom: 2rem;
+        margin-bottom: 2rem;
+
+        .div-arrow{
+            width: 30%;
+            .link-arrow{
+                margin-left: 1rem;
+            }
+        }
+        .img-div{
+            width: 30%;
+        }
+        .div-space{
+            width: 30%;
+        }
     }  
 }
 

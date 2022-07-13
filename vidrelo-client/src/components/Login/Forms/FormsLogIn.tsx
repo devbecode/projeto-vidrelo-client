@@ -1,16 +1,24 @@
-import styles from "../../Login/Forms/Style/FormsLogIn.module.scss";
+import styles from "./Style/FormsLogIn.module.scss";
 //importando os icons
-import { FaEye, FaEyeDropper, FaEyeSlash, FaFacebookF } from "react-icons/fa";
+import { FaEye, FaEyeDropper, FaEyeSlash, FaFacebookF, FaArrowLeft } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import InputText from "../../Generics/InputText/InputText";
 import Buttons from "../../Generics/Buttons/Buttons"
 import { loginUser } from "../../../data/hooks/loginUser";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Forms() {
 
     return (
         <>
             <div className={styles.main}>
+            <div className={styles["arrow-card"]}>
+                <Link to="/" className={styles["link-arrow"]}>
+                    <FaArrowLeft />
+                </Link>
+                </div>
+                <div className={styles['card-card-form']}>
                 <div className={styles['form-card']}>
                     <h2>Já tenho cadastro</h2>
                     <form onSubmit={loginUser} className={styles.form}>
@@ -34,10 +42,12 @@ export default function Forms() {
                             <Buttons
                                 id='btn-In'
                                 text="Entrar"
+                                path="/"
                             />
                             <Buttons
                                 id='btn-signIn'
                                 text="Cadastrar"
+                                path="/Cadastro"
                             />
                         </div>
 
@@ -54,7 +64,9 @@ export default function Forms() {
                         </div>
                     </form>
                 </div>
+                </div>
             </div>
+
         </>
     )
 }
