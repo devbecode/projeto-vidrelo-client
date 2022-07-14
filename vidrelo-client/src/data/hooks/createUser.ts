@@ -65,7 +65,7 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
     }
   }
   try {
-    ApiUser.post(
+    const response = await ApiUser.post(
       "/user-form/",
       JSON.stringify({
         name: dataToSend.name,
@@ -83,6 +83,10 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
       })
     );
     createdUser = true;
+    const date = new Date();
+    const nextDay = date.setDate(date.getDate() + 1);
+    const expireLeft = new Date(nextDay);
+    cookies.set("userData", response.data, { expires: expireLeft });
   } catch (error) {
     console.log(error);
   }
@@ -99,11 +103,18 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
     const nextDay = date.setDate(date.getDate() + 1);
     const expireLeft = new Date(nextDay);
     cookies.set("token", response.data, { expires: expireLeft });
-    createdUserAuth = false;
+    createdUserAuth = true;
   } catch (error) {
     console.log(error);
   }
   if (createdUserAuth && createdUser) {
     window.location.href = "/";
+  } else {
+    if (cookies.get("token")) {
+      cookies.remove("token");
+    }
+    if (cookies.get("userData")) {
+      cookies.remove("userData");
+    }
   }
 }
