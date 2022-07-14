@@ -13,16 +13,16 @@ export default function Header() {
                     <nav>
                         <ul>
                             <li>
-                                <a href="#home">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <a href="#produtos">Produtos</a>
+                                <a href="#products">Produtos</a>
                             </li>
                             <li>
-                                <a href="#como-funciona">Como Funciona?</a>
+                                <a href="#video-vidrelo">Como Funciona?</a>
                             </li>
                             <li>
-                                <a href="#fale-conosco">Fale Conosco</a>
+                                <a href="#contacts-section">Fale Conosco</a>
                             </li>
                         </ul>
                     </nav>

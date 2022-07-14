@@ -1,5 +1,5 @@
 import { SwiperProps, SwiperSlide} from "swiper/react";
-import Slider from "../../Generic/Swiper/Slider";
+import Slider from "../../Generics/Swiper/Slider";
 import CarouselStep from "./CarouselStep";
 import "./Style/Step.scss"
 //Import Images
