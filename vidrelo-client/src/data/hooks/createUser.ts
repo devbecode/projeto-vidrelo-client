@@ -5,7 +5,8 @@ import Cookies from "universal-cookie";
 export async function createUser(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
   const cookies = new Cookies();
-
+  let createdUser,
+    createdUserAuth = false;
   const dataToSend = {
     profile: "",
     name: "",
@@ -81,8 +82,8 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
         complement: dataToSend.complement,
       })
     );
+    createdUser = true;
   } catch (error) {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     console.log(error);
   }
 
@@ -98,10 +99,11 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
     const nextDay = date.setDate(date.getDate() + 1);
     const expireLeft = new Date(nextDay);
     cookies.set("token", response.data, { expires: expireLeft });
+    createdUserAuth = false;
   } catch (error) {
-    if (error) {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      console.log(error);
-    }
+    console.log(error);
+  }
+  if (createdUserAuth && createdUser) {
+    window.location.href = "/";
   }
 }
