@@ -19,6 +19,10 @@ body {
             margin-top: 3.5rem;
             color: var(--purple-2);
             text-align: center;
+            #icon{
+                width: 30px;
+                height: 30px;
+            }
     }
 }
 .card-card-form{
@@ -94,61 +98,6 @@ body {
 }
 
 //Responsive Parts
-
-//cellphone parts
-@media (max-width: $small-medium) {// 380px
-    .main {
-        .card-card-form{
-        .form-card {
-           // background-color: red;
-            min-width: 325px;
-            max-width: 345px;
-            h2 {
-                margin-top: 2rem;
-                font-size: 1.7rem;
-            }
-            .form {
-                margin-top: 1.2rem;
-            }
-        }
-    }
-    }
-}
-
-@media (max-width: $small-2) {// 340px
-    .main {
-        .card-card-form{
-        .form-card {
-            //background-color: blue;
-            min-width: 285px;
-            max-width: 300px;
-            min-height: 1000px;
-            h2 {
-                margin-top: 2rem;
-                font-size: 1.7rem;
-            }
-            .form {
-                margin-top: 1.2rem;
-            }
-        }
-        }
-    }
-}
-
-
-@media(max-width: $medium-medium){
-    .main{
-
-        .arrow-card{
-            display: none;
-        }
-
-        .space-card{
-            display: none;
-        }
-    }
-}
-
 //half screen part
 @media (max-width: $medium-2) {//600px
     .main {
@@ -159,19 +108,29 @@ body {
     }
     .card-card-form{
         .form-card {
-            // min-height: 1130px;
-            // max-width: 420px;
-            // min-width: 400px;
+            min-height: 1220px;
+            max-width: 420px;
+            min-width: 380px;
             .form {
                 .input-texts {
+
                     .div-half-cell {
                         flex-direction: column;
 
                         .cell {
                             margin-top: 0;
                             width: 100%;
+
+                            &:nth-child(2n) {
+                                margin-top: 2rem ;
+                            }
                         }
+
+                        
                     }
+                    .space-between{
+                         margin-top: 2.5rem;
+                     }
                 }
                 .btn-forms {
                     display: flex;
@@ -192,6 +151,68 @@ body {
         display: none;
     }
         
+    }
+}
+
+//cellphone parts
+@media(max-width: $small){// 425px
+    .main{
+        .card-card-form{
+            .form-card {
+                min-height: 1220px;
+                max-width: 360px ;
+                min-width: 355px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: $small-medium) {// 380px
+    .main {
+        .card-card-form{
+        .form-card {
+            min-width: 325px !important;
+            min-height: 1180px !important;
+            max-width: 345px;
+            h2 {
+                margin-top: 2rem;
+                font-size: 1.7rem;
+            }
+            .form {
+                margin-top: 1.2rem;
+            }
+        }
+    }
+    }
+}
+
+@media (max-width: $small-2) {// 340px
+    .main {
+        .card-card-form{
+        .form-card {
+            min-width: 285px !important;
+            max-width: 300px ;
+            h2 {
+                margin-top: 2rem;
+                font-size: 1.7rem;
+            }
+            .form {
+                margin-top: 1.2rem;
+            }
+        }
+        }
+    }
+}
+
+@media(max-width: $medium-medium){//850px
+    .main{
+
+        .arrow-card{
+            display: none;
+        }
+        .space-card{
+            display: none;
+        }
     }
 }
 
@@ -268,8 +289,7 @@ body {
     }
 }
 
-@media (min-width: $extra-large-2) {
-    //1700px
+@media (min-width: $extra-large-2) {//1700px
     .main {
         .card-card-form{
         .form-card {

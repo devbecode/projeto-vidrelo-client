@@ -12,7 +12,7 @@ export default function InputText({ name, label, ...rest }: InputProps) {
         <>
             <div className="input-part">
                 <label htmlFor={name}>{label}</label>
-                <input id={name} {...rest} />
+                <input required id={name} {...rest} />
             </div>
         </>
     )

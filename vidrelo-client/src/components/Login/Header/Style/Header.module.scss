@@ -11,7 +11,11 @@
     background-color: transparent;
     .div-arrow{
         .link-arrow{
-        color: var(--white-1);
+            color: var(--white-1);
+            #icon{
+                width: 25px;
+                height: 25px;
+            }
         }
     }
     .img-div{
@@ -42,7 +46,7 @@
         .div-arrow{
             width: 30%;
             .link-arrow{
-                margin-left: 1rem;
+                margin-left: 2.5rem;
             }
         }
         .img-div{
@@ -54,16 +58,16 @@
     }  
 }
 
-@media (min-width: 1400px){
+@media (min-width: $large){
 
     .header{
         height: 12vh;
         min-height: 50px;
-        background-color: transparent;
     
        img{
+        margin-top: 1rem;
         margin-left: 5%;
-        width: 18rem;
+        min-width: 18rem;
        }
     }
 }
