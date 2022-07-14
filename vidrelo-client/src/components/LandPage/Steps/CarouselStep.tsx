@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import './Style/CarouselStep.scss'
-import './Style/CarouselStepResponsive.scss'
 
 export default function CarouselStep({numberStep ,titleStep, descriptionStep , imgStep }:{numberStep:string ,titleStep:string, descriptionStep:string, imgStep:string}): JSX.Element {
     return (

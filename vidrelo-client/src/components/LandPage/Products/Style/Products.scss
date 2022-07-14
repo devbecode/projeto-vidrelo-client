@@ -1,3 +1,4 @@
+@import "../../../../styles/globals.scss";
 #products {
     width: 100%;
     display: flex;
@@ -61,6 +62,42 @@
             &:after {
                 font-size: 3rem;
                 color: var(--green-1);
+            }
+        }
+    }
+    @media screen and(max-width: $extra-large) {
+        .products-title{
+            padding: 0 10%;
+        }
+    }
+    @media screen and(max-width: $large) {
+        .products-title{
+            padding: 0 20%;
+            h4, h3{
+                font-size: 3.6rem;
+            }
+        }
+    }
+    @media screen and(max-width: $intermediate) {
+        .swiper {
+            width: 80%;
+        }
+        .products-title{
+            padding: 0 10%;
+            h4, h3{
+                font-size: 3.6rem;
+            }
+        }
+    }
+
+    @media screen and(max-width: $small) {
+        .products-title{
+            padding: 0 10%;
+            h4, h3{
+                font-size: 2.4rem;
+            }
+            h4 span{
+                font-size: 3.6rem;
             }
         }
     }

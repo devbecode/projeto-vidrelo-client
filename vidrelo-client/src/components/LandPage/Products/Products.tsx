@@ -6,8 +6,7 @@ import Mesa from '../../../assets/images/products/product-table.png'
 import './Style/Products.scss'
 
 import Slider from "../../Generics/Swiper/Slider";
-import { SwiperProps, SwiperSlide } from "swiper/react";
-import { FaEye,FaEyeSlash } from "react-icons/fa";
+import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 interface Products {
     id: number;
     img: string,
@@ -54,8 +53,59 @@ export default function Products() {
         slidesPerView: 4,
         navigation: {
             enabled: true,
-            prevEl:"#button-prev",
-            nextEl:"#button-next"
+            prevEl: "#button-prev",
+            nextEl: "#button-next"
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            200: {
+                slidesPerView: 1,
+                navigation: {
+                    enabled: true,
+                    prevEl: "#button-prev",
+                    nextEl: "#button-next"
+                },
+            },
+            320: {
+                slidesPerView: 1,
+                navigation: {
+                    enabled: true,
+                    prevEl: "#button-prev",
+                    nextEl: "#button-next"
+                },
+            },
+            600: {
+                slidesPerView: 1,
+                navigation: {
+                    enabled: true,
+                    prevEl: "#button-prev",
+                    nextEl: "#button-next"
+                },
+            },
+            1024: {
+                slidesPerView: 2,
+                navigation: {
+                    enabled: true,
+                    prevEl: "#button-prev",
+                    nextEl: "#button-next"
+                },
+            },
+            1200: {
+                slidesPerView: 4,
+                navigation: {
+                    enabled: true,
+                    prevEl: "#button-prev",
+                    nextEl: "#button-next"
+                },
+            },
+            1920: {
+                slidesPerView: 4,
+                navigation: {
+                    enabled: true,
+                    prevEl: "#button-prev",
+                    nextEl: "#button-next"
+                },
+            }
         }
     }
     return (
@@ -69,7 +119,7 @@ export default function Products() {
                 </h3>
             </div>
             <div className="products-carousel">
-                <div id ="button-prev" className="swiper-button-prev" ></div>
+                <div id="button-prev" className="swiper-button-prev" ></div>
                 <Slider settings={settings}>
                     {
                         productList.map((product) => {
@@ -83,7 +133,7 @@ export default function Products() {
                             </SwiperSlide>
                         }
                         )}
-                </Slider> 
+                </Slider>
                 <div id="button-next" className="swiper-button-next"></div>
             </div>
         </section>
