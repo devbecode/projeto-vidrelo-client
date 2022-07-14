@@ -1,17 +1,17 @@
-import { InputHTMLAttributes } from "react"
+import { ButtonHTMLAttributes, InputHTMLAttributes } from "react"
 import { Link } from "react-router-dom";
-import "./Style/Buttons.scss"
+//import "./Style/Buttons.scss"
 
-interface ButtonProps extends InputHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     text: string,
     id: any
 }
 
-export default function Buttons({id, text}: ButtonProps){
+export default function Buttons({id, text, ...rest}: ButtonProps){
     
     return(
         <>
-            <button className="btn" id={id} type="submit">{text}</button>
+            <button {...rest} id={id} type="submit">{text}</button>
         </>
     )
 }

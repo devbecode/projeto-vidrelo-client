@@ -8,6 +8,7 @@ import { loginUser } from "../../../data/hooks/loginUser";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LinkTo from "../../Generics/LinkTo/LinkTo";
+import stylesBtn  from"../../Generics/Buttons/Style/BtnStyles.module.scss"
 
 export default function Forms() {
 
@@ -43,11 +44,12 @@ export default function Forms() {
                             <Buttons
                                 id={styles['btn-In']}
                                 text="Entrar"
+                                className={stylesBtn.btn1}
                             />
                             <LinkTo
                                 id={styles['sign-In']}
                                 text="Cadastrar"
-                                className="{styles.btn2}"
+                                className={stylesBtn.btn2}
                                 path="/Cadastro"
                             />
                         </div>

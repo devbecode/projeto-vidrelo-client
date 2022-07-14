@@ -4,6 +4,8 @@ import { FaArrowLeft, FaAngleLeft  } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
 import { Link } from "react-router-dom";
 import { createUser } from "../../../data/hooks/createUser";
+import LinkTo from "../../Generics/LinkTo/LinkTo";
+import stylesBtn from "../../Generics/Buttons/Style/BtnStyles.module.scss"
 //import { axios} from "axios";
 
 export default function Forms() {
@@ -129,13 +131,16 @@ export default function Forms() {
                                 </div>
                             </div>
                             <div className={styles['btn-forms']}>
-                                <Buttons
-                                    id='btn-Cancel'
-                                    text="Cancelar"
-                                />
+                            <LinkTo
+                                id={styles['cancel-btn']}
+                                text="Cancelar"
+                                className={stylesBtn.btn2}
+                                path="/"
+                            />
                                 <Buttons
                                     id='btn-signIn'
                                     text="Cadastrar"
+                                    className={stylesBtn.btn1}
                                 />
                             </div>
                             <div className={styles['div-link']}>
