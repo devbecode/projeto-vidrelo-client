@@ -8,11 +8,11 @@ interface ButtonProps extends InputHTMLAttributes<HTMLButtonElement>{
     path: string,
 }
 
-export default function LinkTo({path, id, text}: ButtonProps){
+export default function LinkTo2({path, id, text}: ButtonProps){
     
     return(
         <>
-         <Link to={path} className={styles.btn2} id={id}>{text}</Link>
+         <Link to={path} className={styles.btn1} id={id}>{text}</Link>
         </>
     )
 }

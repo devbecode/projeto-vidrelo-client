@@ -5,6 +5,7 @@ import Buttons from "../../Generics/Buttons/Buttons";
 import { Link } from "react-router-dom";
 import { createUser } from "../../../data/hooks/createUser";
 import LinkTo from "../../Generics/LinkTo/LinkTo";
+import LinkTo2 from "../../Generics/LinkTo/LinkTo2";
 import stylesBtn from "../../Generics/Buttons/Style/BtnStyles.module.scss"
 //import { axios} from "axios";
 
@@ -131,16 +132,16 @@ export default function Forms() {
                                 </div>
                             </div>
                             <div className={styles['btn-forms']}>
-                            <LinkTo
-                                id={styles['cancel-btn']}
+                            <LinkTo2
+                                id={stylesBtn['cancel-btn']}
                                 text="Cancelar"
-                                className={stylesBtn.btn2}
+                                className={stylesBtn.btn1}
                                 path="/"
                             />
                                 <Buttons
                                     id='btn-signIn'
                                     text="Cadastrar"
-                                    className={stylesBtn.btn1}
+                                    className={stylesBtn.btn2}
                                 />
                             </div>
                             <div className={styles['div-link']}>
