@@ -158,7 +158,12 @@
                                     align-items: center;
                                     width: 100%;
                 
-                                button{
+                                #btn-In{
+                                    margin: 0.08rem;
+                                    max-width: none;
+                                    width: 100% !important;
+                                }
+                                #sign-In{
                                     margin: 0.08rem;
                                     max-width: none;
                                     width: 100% !important;

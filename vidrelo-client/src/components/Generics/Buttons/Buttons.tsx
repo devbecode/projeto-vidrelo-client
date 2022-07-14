@@ -7,7 +7,7 @@ interface ButtonProps extends InputHTMLAttributes<HTMLButtonElement>{
     id: any
 }
 
-export default function InputText({id, text}: ButtonProps){
+export default function Buttons({id, text}: ButtonProps){
     
     return(
         <>
