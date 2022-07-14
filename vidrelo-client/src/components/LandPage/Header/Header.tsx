@@ -4,7 +4,6 @@ import Carrinho from '../../../assets/images/Icons/carrinho-icon.svg'
 import './Style/Header.scss'
 export default function Header() {
     return (
-//NAO MECHER ESTOU REFATORANDO
         <header>
             <div id='header-content'>
                 <div className='logo'>

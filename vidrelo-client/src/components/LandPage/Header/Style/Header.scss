@@ -3,16 +3,15 @@ header {
     height: 12rem;
     box-shadow: 0px 3px 6px #00000029;
     #header-content {
-        width: 90%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        margin: 0 auto;
+        padding: 0% 5%;
         .logo{
-            width: 30%;
+            width: 20%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             img#logo {
                 align-items: center;
                 width: 100;
@@ -42,7 +41,6 @@ header {
                 }
             }
         }
-        
         .header-buttons{
             width: 30%;
             display: flex;
@@ -52,9 +50,9 @@ header {
                 ul {
                     display: flex;
                     align-items: center;
-                    font-family: "mavenpro-semibold";
                     gap: 2rem;
-                    li:nth-child(1) a {
+                    li a {
+                        font-family: "mavenpro-semibold";
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -72,14 +70,7 @@ header {
                         }
                     }
                     li:nth-child(2) a {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border: 1px solid var(--blue-2);
-                        border-radius: 1.2rem;
-                        height: 5rem;
-                        width: 14rem;
-                        transition: all 0.2s;
+                        color: var(--purple-2);
                         background-color: var(--white-1);
                         font-size: 1.8rem;
                         &:hover {
@@ -108,4 +99,3 @@ header {
         }
     }
 }
-//NÂO MECHER ESTOU REFATORANDO E COLOCANDO O MENU MOBILE

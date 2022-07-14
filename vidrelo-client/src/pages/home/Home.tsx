@@ -12,7 +12,7 @@ import Footer from "../../components/LandPage/Footer/Footer"
 export default function Home() {
     return (
         <>
-            {/* 
+            <Header />
             <main>
                 <Banner />
                 <Experience />
@@ -22,9 +22,8 @@ export default function Home() {
                 <ClientFeedback />
                 <Contacts />
                 <Footer />
-            </main> */}
+            </main>
             
-            <Header />
         </>
     )
 }
