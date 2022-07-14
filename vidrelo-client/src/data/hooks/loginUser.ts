@@ -33,10 +33,12 @@ export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
         password: dataToSend.password,
       })
     );
+
     const date = new Date();
     const nextDay = date.setDate(date.getDate() + 1);
     const expireLeft = new Date(nextDay);
     cookies.set("token", response.data, { expires: expireLeft });
+    window.location.href = "/";
   } catch (error) {
     console.log(error);
   }
