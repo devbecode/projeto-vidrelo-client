@@ -1,12 +1,11 @@
 import styles from "./Style/FormsSignIn.module.scss";
 import InputText from "../../Generics/InputText/InputText";
-import { FaArrowLeft, FaAngleLeft  } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
 import { Link } from "react-router-dom";
 import { createUser } from "../../../data/hooks/createUser";
-import LinkTo from "../../Generics/LinkTo/LinkTo";
-import LinkTo2 from "../../Generics/LinkTo/LinkTo2";
-import stylesBtn from "../../Generics/Buttons/Style/BtnStyles.module.scss"
+import React, { useCallback } from "react";
+import { cepMask, telephoneMask, numberMask } from "../../Masks/Masks";
 //import { axios} from "axios";
 
 export default function Forms() {
@@ -16,7 +15,7 @@ export default function Forms() {
             <div className={styles.main}>
                 <div className={styles["arrow-card"]}>
                     <Link to="/" className={styles["link-arrow"]}>
-                        <FaAngleLeft id={styles.icon}/> 
+                        <FaArrowLeft />
                     </Link>
                 </div>
                 <div className={styles["card-card-form"]}>
@@ -38,7 +37,8 @@ export default function Forms() {
                                             name='cep'
                                             id='cep'
                                             label='CEP'
-                                            type={"number"}
+                                            type={"text"}
+                                            onKeyUp={cepMask}
                                         />
                                     </div>
                                     <div className={styles['cell']}>
@@ -46,7 +46,8 @@ export default function Forms() {
                                             name='telephone'
                                             id='telephone'
                                             label='Telefone'
-                                            type={"number"}
+                                            type={"text"}
+                                            onKeyUp={telephoneMask}
                                         />
                                     </div>
                                 </div>
@@ -92,7 +93,8 @@ export default function Forms() {
                                             name='number'
                                             id='number'
                                             label='Número'
-                                            type={"number"}
+                                            type={"text"}
+                                            onKeyUp={numberMask}
                                         />
                                     </div>
                                     <div className={styles['cell']}>
@@ -132,16 +134,13 @@ export default function Forms() {
                                 </div>
                             </div>
                             <div className={styles['btn-forms']}>
-                            <LinkTo2
-                                id={stylesBtn['cancel-btn']}
-                                text="Cancelar"
-                                className={stylesBtn.btn1}
-                                path="/"
-                            />
+                                <Buttons
+                                    id='btn-Cancel'
+                                    text="Cancelar"
+                                />
                                 <Buttons
                                     id='btn-signIn'
                                     text="Cadastrar"
-                                    className={stylesBtn.btn2}
                                 />
                             </div>
                             <div className={styles['div-link']}>
