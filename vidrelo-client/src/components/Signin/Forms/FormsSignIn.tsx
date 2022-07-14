@@ -4,9 +4,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
 import { Link } from "react-router-dom";
 import { createUser } from "../../../data/hooks/createUser";
-import React, { useCallback } from "react";
 import { cepMask, telephoneMask, numberMask } from "../../Masks/Masks";
-//import { axios} from "axios";
 
 export default function Forms() {
 
