@@ -24,11 +24,44 @@
         }
     }
 
-    .swiper {
-        display: flex;
+    .products-carousel {
         width: 70%;
-        justify-content: center;
-        overflow: hidden;
-        padding-bottom: 1%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        .swiper {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            overflow: hidden;
+            padding: 1% 0;
+        }
+        #button-next {
+            position: unset;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            box-shadow: 0px 2px 2px rgb(0 0 0 / 45%);
+            border: 1px solid #000000;
+            border-radius: 50%;
+            &:after {
+                font-size: 3rem;
+                text-align: center;
+                color: var(--blue-1);
+            }
+        }
+        #button-prev {
+            position: unset;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            box-shadow: 0px 2px 2px rgb(0 0 0 / 45%);
+            border: 1px solid #000000;
+            border-radius: 50%;
+            &:after {
+                font-size: 3rem;
+                color: var(--green-1);
+            }
+        }
     }
 }

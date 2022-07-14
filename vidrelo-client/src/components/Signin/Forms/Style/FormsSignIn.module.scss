@@ -1,15 +1,12 @@
 @import "../../../../styles/globals.scss";
 
-body {
-    background-color: #f5f8fa;
-}
 .main {
     display: flex;
     justify-content: center;
     width: 100%;
     font-family: "mavenpro-regular";
-    margin: 3rem auto;
-
+    padding: 3rem 0;
+    background-color: #f5f8fa;
     .form-card {
         margin: 5rem auto;
         display: flex;

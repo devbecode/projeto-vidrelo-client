@@ -5,40 +5,40 @@ import Prateleira from '../../../assets/images/products/product-prateleira.png'
 import Mesa from '../../../assets/images/products/product-table.png'
 import './Style/Products.scss'
 
-import Slider from "../../Generic/Swiper/Slider";
+import Slider from "../../Generics/Swiper/Slider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
-
+import { FaEye,FaEyeSlash } from "react-icons/fa";
 interface Products {
     id: number;
     img: string,
     name: string,
     description: string
-}   
+}
 //Mock 
 const productList: Array<Products> = [
     {
         id: 1,
         img: Box,
         name: "Box",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"  
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
     },
     {
         id: 2,
         img: Espelho,
         name: "Espelho",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"    
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
     },
     {
         id: 3,
         img: Prateleira,
         name: "Prateleira",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"    
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
     },
     {
         id: 4,
         img: Mesa,
         name: "Mesas",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"   
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla massa, accumsan id lacus nec, sagittis aliquet lacus... ver mais"
     },
     {
         id: 5,
@@ -52,7 +52,11 @@ const productList: Array<Products> = [
 export default function Products() {
     const settings: SwiperProps = {
         slidesPerView: 4,
-        navigation:true
+        navigation: {
+            enabled: true,
+            prevEl:"#button-prev",
+            nextEl:"#button-next"
+        }
     }
     return (
         <section id='products'>
@@ -64,20 +68,24 @@ export default function Products() {
                     Transparência na experiência, agilidade na solução
                 </h3>
             </div>
-            <Slider settings={settings}>
-                {
-                    productList.map((product) => {
-                        return <SwiperSlide>
-                            <CardProducts
-                                key={product.id}
-                                imgProduct={product.img}
-                                nameProduct={product.name}
-                                descriptionProduct={product.description}
-                            />
-                        </SwiperSlide>
-                    }
-                    )}
-            </Slider>
+            <div className="products-carousel">
+                <div id ="button-prev" className="swiper-button-prev" ></div>
+                <Slider settings={settings}>
+                    {
+                        productList.map((product) => {
+                            return <SwiperSlide>
+                                <CardProducts
+                                    key={product.id}
+                                    imgProduct={product.img}
+                                    nameProduct={product.name}
+                                    descriptionProduct={product.description}
+                                />
+                            </SwiperSlide>
+                        }
+                        )}
+                </Slider> 
+                <div id="button-next" className="swiper-button-next"></div>
+            </div>
         </section>
     )
 }
