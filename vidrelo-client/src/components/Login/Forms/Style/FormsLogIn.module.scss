@@ -26,6 +26,11 @@
             justify-content: center;
             color: var(--white-1);
             text-align: center;
+
+            #icon{
+                width: 30px;
+                height: 30px;
+            }
     }
     }
 
@@ -218,18 +223,30 @@
         
     }
 
-//responsive parts for laptop screens
-        @media (min-width: $large-2)  { // 1024px 
-        @media(min-height: 800px){
+// respponsive parts for the arrow
+        @media(max-width: 780px){
+            .main{
+                .arrow-card{
+                    .link-arrow{
+                        justify-content: start;
+                        margin-left: 3rem;
+
+                    }
+                }
+            }
+    }
+
+    @media(max-width: 700px){
         .main{
-        .card-card-form{
-        .form-card{
-            margin-top: 3%;
+            .arrow-card{
+                .link-arrow{
+                    margin-left: 2rem;
+
+                }
+            }
         }
-    }
 }
-    }
-    }
+
     
 //responsive parts for big screens
         @media (min-width: $large)  { // 1280px
@@ -265,8 +282,7 @@
         }
         }
     }
-    }
-  
+    } 
 // extra-large 1536
         @media (min-width: $extra-large){ // 1536px
         .main{
@@ -323,8 +339,7 @@
             }
         }
     
-    }
-    
+    }  
  // extra extra large
         @media (min-width: $extra-large-2){ // 1700px
     .main{

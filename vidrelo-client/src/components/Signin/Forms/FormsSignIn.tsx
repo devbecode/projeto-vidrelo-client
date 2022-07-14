@@ -1,6 +1,6 @@
 import styles from "./Style/FormsSignIn.module.scss";
 import InputText from "../../Generics/InputText/InputText";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaAngleLeft } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
 import { Link } from "react-router-dom";
 import { createUser } from "../../../data/hooks/createUser";
@@ -13,7 +13,7 @@ export default function Forms() {
             <div className={styles.main}>
                 <div className={styles["arrow-card"]}>
                 <Link to="/" className={styles["link-arrow"]}>
-                    <FaArrowLeft />
+                    <FaAngleLeft id={styles.icon}/>
                 </Link>
                 </div>
                 <div className={styles["card-card-form"]}>
@@ -132,12 +132,10 @@ export default function Forms() {
                             <Buttons
                                 id='btn-Cancel'
                                 text="Cancelar"
-                                path="/Cadastro"
                             />
                             <Buttons
                                 id='btn-signIn'
                                 text="Cadastrar"
-                                path="/"
                             />
                         </div>
                         <div className={styles['div-link']}>

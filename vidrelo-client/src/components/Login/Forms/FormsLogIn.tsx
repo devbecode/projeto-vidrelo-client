@@ -1,6 +1,6 @@
 import styles from "./Style/FormsLogIn.module.scss";
 //importando os icons
-import { FaEye, FaEyeDropper, FaEyeSlash, FaFacebookF, FaArrowLeft } from "react-icons/fa";
+import { FaEye, FaEyeDropper, FaEyeSlash, FaFacebookF, FaArrowLeft, FaAngleLeft } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import InputText from "../../Generics/InputText/InputText";
 import Buttons from "../../Generics/Buttons/Buttons"
@@ -15,7 +15,7 @@ export default function Forms() {
             <div className={styles.main}>
             <div className={styles["arrow-card"]}>
                 <Link to="/" className={styles["link-arrow"]}>
-                    <FaArrowLeft />
+                    <FaAngleLeft id={styles.icon}/>
                 </Link>
                 </div>
                 <div className={styles['card-card-form']}>
@@ -42,12 +42,10 @@ export default function Forms() {
                             <Buttons
                                 id='btn-In'
                                 text="Entrar"
-                                path="/"
                             />
                             <Buttons
                                 id='btn-signIn'
                                 text="Cadastrar"
-                                path="/Cadastro"
                             />
                         </div>
 

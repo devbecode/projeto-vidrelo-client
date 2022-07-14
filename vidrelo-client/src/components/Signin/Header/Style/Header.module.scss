@@ -1,7 +1,7 @@
 @import "../../../../styles/globals.scss";
 .header {
-    min-height: 60px;
-    max-height: 70px;
+    min-height: 70px;
+    max-height: 80px;
     height: 13%;
     width: 100%;
     background-color: var(--purple-2);
@@ -70,6 +70,10 @@
                 .link-arrow{
                     margin-left: 3rem;
                     color:var(--white-1);
+                    #icon{
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
             }
 

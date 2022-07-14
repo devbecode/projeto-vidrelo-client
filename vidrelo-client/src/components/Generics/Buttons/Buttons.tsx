@@ -5,14 +5,13 @@ import "./Style/Buttons.scss"
 interface ButtonProps extends InputHTMLAttributes<HTMLButtonElement>{
     text:string,
     id: any
-    path: string
 }
 
-export default function InputText({path, id, text}: ButtonProps){
+export default function InputText({id, text}: ButtonProps){
     
     return(
         <>
-         <Link to={path} className="btn" id={id} type="submit">{text}</Link>
+         <button className="btn" id={id} type="submit">{text}</button>
         </>
     )
 }
