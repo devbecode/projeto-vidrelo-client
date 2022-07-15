@@ -1,4 +1,6 @@
+import Elo4 from '../../../assets/images/illustrations/secao-4.svg'
 
+import Elo6 from '../../../assets/images/illustrations/secao-6.svg'
 import { url } from "inspector";
 import MyVideo from "../../../assets/Video/tutorial.mp4"
 import Poster from "../../../assets/images/Thumbnaills/poster-tutorial.png"
@@ -21,6 +23,7 @@ export default function Video() {
                     poster={Poster}
                 />
             </div>
+            {/* <div className="elo-vid"><img src={Elo4} alt="" /></div> */}
         </section>
     )
 

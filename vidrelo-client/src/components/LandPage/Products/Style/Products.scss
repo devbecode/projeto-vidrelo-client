@@ -1,3 +1,4 @@
+@import "../../../../styles/globals.scss";
 #products {
     width: 100%;
     display: flex;
@@ -24,15 +25,96 @@
         }
     }
 
-    .ver-mais-link {
+    .ver-mais-link{
         color: red;
     }
-
-    .swiper {
-        display: flex;
+    
+    .products-carousel {
         width: 70%;
-        justify-content: center;
-        overflow: hidden;
-        padding-bottom: 1%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        .swiper {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            overflow: hidden;
+            padding: 1% 0;
+        }
+        #button-next {
+            position: unset;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            box-shadow: 0px 2px 2px rgb(0 0 0 / 45%);
+            border: 1px solid #000000;
+            border-radius: 50%;
+            &:after {
+                font-size: 3rem;
+                text-align: center;
+                color: var(--blue-1);
+            }
+        }
+        #button-prev {
+            position: unset;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            box-shadow: 0px 2px 2px rgb(0 0 0 / 45%);
+            border: 1px solid #000000;
+            border-radius: 50%;
+            &:after {
+                font-size: 3rem;
+                color: var(--green-1);
+            }
+        }
+    }
+
+    @media screen and(max-width: $extra-large) {
+        .products-title {
+            padding: 10%;
+        }
+    }
+    @media screen and(max-width: $large) {
+        .products-title {
+            padding: 6% 20%;
+            h4,
+            h3 {
+                font-size: 3.6rem;
+            }
+        }
+    }
+    @media screen and(max-width: $intermediate) {
+        .swiper {
+            width: 80%;
+        }
+        .products-title {
+            padding: 6% 10%;
+            h4,
+            h3 {
+                font-size: 3.6rem;
+            }
+        }
+    }
+
+    @media screen and(max-width: $small) {
+        .products-carousel {
+            width: 80%;
+        }
+        .products-title {
+            padding: 10%;
+            h4,
+            h3 {
+                font-size: 2.4rem;
+            }
+            h4 span {
+                font-size: 3.6rem;
+            }
+        }
+    }
+    .elo-products{
+        position: absolute;
+        left: 10%;
+        top: 248%;
     }
 }

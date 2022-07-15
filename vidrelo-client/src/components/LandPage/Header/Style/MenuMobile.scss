@@ -1,0 +1,57 @@
+@import "../../../../styles/globals.scss";
+#menu-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 40rem;
+    height: auto;
+    background-color: var(--purple-1);
+    border-radius: 0 0 0 2rem;
+    @media screen and (max-width: $small) {
+        width: 100%;
+    }
+    .container-img {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2.4rem auto;
+        #back {
+            margin: 0 0 0 1rem;
+            cursor: pointer;
+        }
+        #logo {
+            width: 42%;
+            margin: 0rem 2rem 0 0;
+        }
+    }
+    nav {
+        width: 100%;
+        margin: 4rem;
+        display: flex;
+        align-items: flex-start;
+        ul {
+            display: flex;
+            gap: 5rem;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: center;
+            font-family: "Aller_Rg";
+
+            li a {
+                font-size: 2.4rem;
+                color: var(--white-2);
+                transition: all 0.2s;
+            }
+
+            li .btn-menu {
+                margin-top: 1rem;
+                display: inline-flex;
+                border: 2px solid var(--white-2);
+                border-radius: 2.4rem;
+                padding: 1.7rem 8rem;
+                transition: all 0.2s;
+            }
+        }
+    }
+}
