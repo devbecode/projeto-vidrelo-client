@@ -1,5 +1,5 @@
 import { ApiAuth } from "./Services/AuthService";
-import { ApiUser } from "./Services/UserService";
+import { userApi } from "./Services/UserService";
 import Cookies from "universal-cookie";
 
 export async function createUser(event: React.FormEvent<HTMLFormElement>) {
@@ -65,7 +65,8 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
     }
   }
   try {
-    const response = await ApiUser.post(
+    const userAPI = userApi();
+    const response = await userAPI.post(
       "/user-form/",
       JSON.stringify({
         name: dataToSend.name,

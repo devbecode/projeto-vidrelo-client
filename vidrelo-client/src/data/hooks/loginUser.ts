@@ -1,8 +1,11 @@
 import { ApiAuth } from "./Services/AuthService";
+import { userApi } from "./Services/UserService";
 import Cookies from "universal-cookie";
 
 export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
+  let userToken,
+    userData = false;
   const cookies = new Cookies();
   const dataToSend = {
     email: "",
@@ -33,13 +36,24 @@ export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
         password: dataToSend.password,
       })
     );
-
+    userToken = true;
     const date = new Date();
     const nextDay = date.setDate(date.getDate() + 1);
     const expireLeft = new Date(nextDay);
     cookies.set("token", response.data, { expires: expireLeft });
-    window.location.href = "/";
   } catch (error) {
     console.log(error);
+  }
+  if (userToken) {
+    let token = cookies.get("token");
+
+    const userAPI = userApi(token.accessToken);
+    const response = await userAPI.get(`/user/${token.userId}`);
+
+    const date = new Date();
+    const nextDay = date.setDate(date.getDate() + 1);
+    const expireLeft = new Date(nextDay);
+    cookies.set("userData", response.data, { expires: expireLeft });
+    window.location.href = "/";
   }
 }

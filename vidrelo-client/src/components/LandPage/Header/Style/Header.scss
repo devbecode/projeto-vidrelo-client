@@ -79,6 +79,18 @@ header {
                             background-color: var(--purple-2);
                         }
                     }
+                    .disabled{
+                        display: none !important;
+                    }
+                    .enabled{
+                        display: flex;
+                    }
+                    #userLoggedLogo{
+                        //  background: url('../../../../assets/images/Icons/user-logged.svg') 0% 0% no-repeat;
+                        // background-size: 1%;
+                        height: 50px;
+                        width: 50px;
+                    }
                     li:nth-child(2) a {
                         color: var(--purple-2);
                         background-color: var(--white-1);
