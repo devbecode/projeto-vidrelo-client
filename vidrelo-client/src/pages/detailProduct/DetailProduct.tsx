@@ -1,15 +1,31 @@
-import Description from '../../components/DetailProduct/ProductionDescription/ProductionDescription'
-import Information from '../../components/DetailProduct/ProductionInformation/ProductionInformation';
-import Bg from '../../components/DetailProduct/BannerProductionDetail/BannerProductionDetail';
-
+import ProductDescription from "../../components/DetailProduct/ProductionDescription/ProductionDescription";
+import ProductInformation from "../../components/DetailProduct/ProductionInformation/ProductionInformation";
+import BannerProductionDetail from "../../components/DetailProduct/BannerProductionDetail/BannerProductionDetail";
+import Header from "../../components/LandPage/Header/Header";
+import Contacts from "../../components/LandPage/Contacts/Contacts";
+import Footer from "../../components/LandPage/Footer/Footer";
+import GoToTop from "../../components/Generics/GoToTop/GoToTop";
 export default function DetailProduct() {
   return (
     <>
-      <Description />
+      {/* <section className="container-productdetail">
+        <Header />
+        <ProductDescription />
+        <ProductInformation />
+        <BannerProductionDetail />
+        <Contacts/>
+        <Footer/>
+      </section> */}
 
-      <Information />
-      <Bg />
-
+      <main>
+        <Header />
+        <ProductDescription />
+        <ProductInformation />
+        <BannerProductionDetail />
+        <Contacts />
+        <Footer />
+        {/* <GoToTop /> */}
+      </main>
     </>
-  )
+  );
 }

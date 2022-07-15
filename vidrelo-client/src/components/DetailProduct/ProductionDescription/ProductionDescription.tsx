@@ -1,9 +1,17 @@
 import './style/productionDescription.scss'
+import espelho from '../../../assets/images/products/espelho.svg'
+import polygon from '../../../assets/images/Icons/polygon.svg'
+import { useNavigate, Link } from 'react-router-dom';
 
 import espelho from '../../../assets/images/products/espelho.svg'
 import polygon from '../../../assets/images/Icons/polygon.svg'
 
 export default function Description() {
+//useNavigate
+  // const navigate = useNavigate();
+  // function checkPrice() {
+  //     navigate('/')
+  // }
   return (
     <>
       <section className='container_product'>
@@ -23,7 +31,9 @@ export default function Description() {
           <div className='container_btn'>
             <img className='polygon' src={polygon} alt='' />
             <img className='polygon2' src={polygon} alt='' />
-            <button className='product_btn'>Iniciar orçamento</button>
+            {/* useNavigate 
+            <button className='product_btn' onClick={checkPrice}>Iniciar orçamento</button> */}
+            <Link to='/' ><button className='product_btn'>Iniciar Orçamento</button></Link> 
           </div>
         </div>
       </section>
