@@ -1,0 +1,88 @@
+@import "../../../../styles/globals.scss";
+
+section#experience {
+    @media screen and(max-width: $extra-large) {
+        h2{
+            font-size: 3.5rem;
+        }
+        h4 {
+            font-size: 1.8rem;
+        }
+        .experience-cards{
+            width: 80%;
+            .experience-card{
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $large) {
+        h4{
+            font-size: 1.7rem;
+        }
+        .experience-cards{
+            .experience-card{   
+                min-width: 22rem;
+                max-height: 35rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @media screen and (max-width: $medium) {
+        h2{
+            font-size: 2.5rem;
+        }
+        h4 {
+            font-size: 2.1rem;
+        }
+        .experience-cards {
+            flex-direction: column;
+            align-items: center;
+            .experience-card {
+                width: 100%;
+                min-height: 35rem;
+                margin-bottom: 10%;
+                padding-bottom: 5%;
+                .card-title {
+                    margin-top: 5%;
+                }
+                p {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $small) {
+        h2{
+            width: 80%;
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 1.3rem;
+        }
+        .experience-cards {
+            flex-direction: column;
+            align-items: center;
+            .experience-card {
+                min-height: 22rem;
+                max-width: 23rem;
+                margin-bottom: 10%;
+                padding-bottom: 5%;
+                .card-title {
+                    margin-top: 5%;
+                    .experience-icon{
+                        img{
+                            width: 6rem;
+                        }
+                    }
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
