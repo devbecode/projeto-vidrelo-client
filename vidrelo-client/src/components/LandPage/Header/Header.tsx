@@ -14,13 +14,13 @@ export default function Header() {
                     <img src={Logo} alt="Logo" id='logo' />
                 </div>
                 <div className={`menu-icon`} onClick={() => { setShowMenu(!showMenu); console.log(showMenu) }}>
-                    <FaBars size={35} id="menu"/>
+                    <FaBars size={35} id="menu" />
                 </div>
                 <div className='sections-header'>
                     <nav>
                         <ul>
                             <li>
-                                <a href="/">Home</a>
+                                <Link to={"/"}>Home</Link>
                             </li>
                             <li>
                                 <a href="#products">Produtos</a>

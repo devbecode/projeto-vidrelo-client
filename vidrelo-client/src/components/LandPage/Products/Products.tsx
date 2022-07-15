@@ -144,6 +144,7 @@ export default function Products() {
                                     imgProduct={product.img}
                                     nameProduct={product.name}
                                     descriptionProduct={product.description}
+                                    readMore={"Detalhes-produto"}
                                 />
                             </SwiperSlide>
                         }
