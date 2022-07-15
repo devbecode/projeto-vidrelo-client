@@ -1,7 +1,7 @@
 import './style/productionDescription.scss'
 
-import espelho from '../../../assets/images/produtos/espelho.svg'
-import polygon from '../../../assets/images/icons/polygon.svg'
+import espelho from '../../../assets/images/products/espelho.svg'
+import polygon from '../../../assets/images/Icons/polygon.svg'
 
 export default function Description() {
   return (
