@@ -3,9 +3,6 @@ import espelho from '../../../assets/images/products/espelho.svg'
 import polygon from '../../../assets/images/Icons/polygon.svg'
 import { useNavigate, Link } from 'react-router-dom';
 
-import espelho from '../../../assets/images/products/espelho.svg'
-import polygon from '../../../assets/images/Icons/polygon.svg'
-
 export default function Description() {
 //useNavigate
   // const navigate = useNavigate();
