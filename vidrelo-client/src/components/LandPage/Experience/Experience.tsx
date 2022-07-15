@@ -1,12 +1,15 @@
 import Digital from "../../../assets/images/Icons/digital-icon.svg"
 import Transparent from "../../../assets/images/Icons/transparent-icon.svg"
 import Bestexp from "../../../assets/images/Icons/best-exp-icon.svg"
+import Elo2 from "../../../assets/images/illustrations/secao1-2.svg"
+import Elo3 from "../../../assets/images/illustrations/secao-2.svg"
 import './Style/Experience.scss'
 import './Style/ExperienceResonsive.scss'
 export default function Experience() {
     return (
 
         <section id="experience">
+            {/* <div className="elo-left"><img src={Elo2} alt="" /></div> */}
             <h2>Do orçamento à instalação, com segurança e agilidade</h2>
             <div className="experience-cards">
                 <div className="experience-card">
@@ -37,6 +40,7 @@ export default function Experience() {
                     <p>Pensamos em todos os detalhes para que sua experiência seja àgil, fácil e inteligente</p>
                 </div>
             </div>
+            {/* <div className="elo-right"><img src={Elo3} alt="" /></div> */}
         </section>
     )
 }

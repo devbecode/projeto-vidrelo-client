@@ -6,7 +6,7 @@
     justify-content: space-between;
     #banner-content-home {
         width: 100%;
-        height: auto;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -169,6 +169,14 @@
                     margin-top: 10%;
                 }
             }
+        }   
+    }
+    .elo{
+        position: absolute;
+        width: 80%;
+        top: 12rem;
+        img {
+            width: 100%;
         }
     }
 }

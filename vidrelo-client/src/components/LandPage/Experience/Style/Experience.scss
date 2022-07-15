@@ -24,7 +24,7 @@ section#experience {
     .experience-cards {
         display: flex;
         justify-content: space-evenly;
-        width: 80%;
+        width: 70%;
         height: 100%;
         margin-top: 10%;
         z-index: 100;
@@ -58,5 +58,15 @@ section#experience {
                 font-size: 1.8rem;
             }
         }
+    }
+    .elo-right {
+        position: absolute;
+        right: 10%;
+        top: 159%;
+    }
+    .elo-left {
+        position: absolute;
+        top: 93rem;
+        left: 10%;
     }
 }

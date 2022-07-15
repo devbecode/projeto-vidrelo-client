@@ -65,6 +65,7 @@
             }
         }
     }
+
     @media screen and(max-width: $extra-large) {
         .products-title{
             padding: 0 10%;
@@ -100,5 +101,10 @@
                 font-size: 3.6rem;
             }
         }
+    }
+    .elo-products{
+        position: absolute;
+        left: 10%;
+        top: 248%;
     }
 }

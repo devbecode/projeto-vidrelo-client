@@ -3,6 +3,7 @@ import Box from '../../../assets/images/products/product-box.png'
 import Espelho from '../../../assets/images/products/product-mirror.png'
 import Prateleira from '../../../assets/images/products/product-prateleira.png'
 import Mesa from '../../../assets/images/products/product-table.png'
+import Elo3 from '../../../assets/images/illustrations/secao-3.svg'
 import './Style/Products.scss'
 
 import Slider from "../../Generics/Swiper/Slider";
@@ -61,7 +62,7 @@ export default function Products() {
             200: {
                 slidesPerView: 1,
                 navigation: {
-                    enabled: true,
+                    enabled: false,
                     prevEl: "#button-prev",
                     nextEl: "#button-next"
                 },
@@ -69,7 +70,7 @@ export default function Products() {
             320: {
                 slidesPerView: 1,
                 navigation: {
-                    enabled: true,
+                    enabled: false,
                     prevEl: "#button-prev",
                     nextEl: "#button-next"
                 },
@@ -77,7 +78,7 @@ export default function Products() {
             600: {
                 slidesPerView: 1,
                 navigation: {
-                    enabled: true,
+                    enabled: false,
                     prevEl: "#button-prev",
                     nextEl: "#button-next"
                 },
@@ -85,7 +86,7 @@ export default function Products() {
             1024: {
                 slidesPerView: 2,
                 navigation: {
-                    enabled: true,
+                    enabled: false,
                     prevEl: "#button-prev",
                     nextEl: "#button-next"
                 },
@@ -118,6 +119,9 @@ export default function Products() {
                     Transparência na experiência, agilidade na solução
                 </h3>
             </div>
+            {/* <div className="elo-products">
+                <img src={Elo3} alt="" />
+            </div> */}
             <div className="products-carousel">
                 <div id="button-prev" className="swiper-button-prev" ></div>
                 <Slider settings={settings}>
