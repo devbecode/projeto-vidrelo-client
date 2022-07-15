@@ -5,9 +5,9 @@ export default function CarouselStep({ numberStep, titleStep, descriptionStep, i
     return (
         <div className="carousel-step-responsive" style={{
             backgroundImage: `url(${imgStep})`,
-            backgroundSize: "100% 150%",
+            backgroundSize: "100% 53%",
             backgroundRepeat: "no-repeat",
-            backgroundPositionY: "196%",
+            backgroundPositionY: "0%"
         }}>
             <div className="card-carousel-responsive" >
                 <div className="number-content-responsive">

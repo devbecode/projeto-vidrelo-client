@@ -127,9 +127,9 @@ export default function Products() {
                 <Slider settings={settings}>
                     {
                         productList.map((product) => {
-                            return <SwiperSlide>
+                            return <SwiperSlide
+                                key={product.id}>
                                 <CardProducts
-                                    key={product.id}
                                     imgProduct={product.img}
                                     nameProduct={product.name}
                                     descriptionProduct={product.description}

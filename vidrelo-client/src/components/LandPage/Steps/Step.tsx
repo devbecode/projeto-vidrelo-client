@@ -1,4 +1,4 @@
-import { SwiperProps, SwiperSlide} from "swiper/react";
+import { SwiperProps, SwiperSlide } from "swiper/react";
 import Slider from "../../Generics/Swiper/Slider";
 import CarouselStep from "./CarouselStep";
 import "./Style/Step.scss"
@@ -65,9 +65,9 @@ export default function Step() {
         };
         window.addEventListener('resize', resizeListener);
         return () => {
-          window.removeEventListener('resize', resizeListener);
+            window.removeEventListener('resize', resizeListener);
         }
-      }, [])
+    }, [])
     return (
         <>
             <section id='step'>
@@ -77,9 +77,9 @@ export default function Step() {
                         {
                             stepList.map((steps) => {
                                 if (screenWidth <= 1045) {
-                                    return <SwiperSlide>
+                                    return <SwiperSlide
+                                        key={steps.id}>
                                         <CarouselStepResponsive
-                                            key={steps.id}
                                             numberStep={steps.number}
                                             imgStep={steps.img}
                                             titleStep={steps.title}
@@ -87,9 +87,9 @@ export default function Step() {
                                     </SwiperSlide>
                                 }
                                 else if (screenWidth > 1045) {
-                                    return <SwiperSlide>
+                                    return <SwiperSlide
+                                        key={steps.id}>
                                         <CarouselStep
-                                            key={steps.id}
                                             numberStep={steps.number}
                                             imgStep={steps.img}
                                             titleStep={steps.title}
