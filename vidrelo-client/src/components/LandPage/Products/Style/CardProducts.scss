@@ -41,7 +41,12 @@
                 font-family: "mavepro-regular";
                 font-size: 1.5rem;
                 color: var(--gray-4);
+                a{
+                    font-family: mavenpro-bold;
+                    color:var(--blue-2)
+                }
             }
+          
         }
         .btn-action{
             width: 100%;

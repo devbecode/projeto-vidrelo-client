@@ -1,7 +1,7 @@
 @import "../../../../styles/globals.scss";
 .header {
-    min-height: 60px;
-    max-height: 70px;
+    min-height: 70px;
+    max-height: 80px;
     height: 13%;
     width: 100%;
     background-color: var(--purple-2);
@@ -25,6 +25,7 @@
         width: 40%;
         justify-content: end;
 
+
         a {
             margin-right: 3rem;
             border: 2px solid var(--white-1);
@@ -43,18 +44,72 @@
     }
 }
 
+//responsive part for the arrow button to come off
+@media (min-width: $medium-medium){//850px
+    .header{
+        .div-arrow{
+            .link-arrow{
+                display: none;
+            }
+    
+        }
+
+    }
+}
+
+@media (max-width: $medium-medium){//850px
+    .header{
+
+            justify-content: space-evenly;
+            .div-arrow{
+                    width: 30%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+
+                .link-arrow{
+                    margin-left: 3rem;
+                    color:var(--white-1);
+                    #icon{
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+
+            .div-logo {
+                width: 30%;
+                justify-content: start;
+
+                img {
+                    text-align: center;
+                }
+            }
+    
+            .div-button {
+                width: 30%;
+            }
+        }
+    
+}
+
 //Responsive Part
 @media (max-width: $medium-2) {
     .header {
-        .div-logo {
-            justify-content: center;
-
-            img {
-                text-align: center;
+        .div-arrow{
+            .link-arrow{
+                color: var(--white-1);
+                justify-content: center;
             }
         }
+
+        .div-logo {
+            justify-content: center;
+        }
         .div-button {
-            display: none;
+            a{
+                display: none;
+            }
         }
     }
 }

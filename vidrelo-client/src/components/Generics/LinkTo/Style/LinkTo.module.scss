@@ -1,0 +1,106 @@
+@import "../../../../styles/globals.scss";
+.btn1{
+    border: 2px solid var(--purple-2);
+    border-radius: 20px;
+    width: 45%;
+    height: 7.2vh;
+    min-width: 160px;
+    max-width: 200px;
+    min-height: 35px;
+    max-height: 38px;
+    background: var(--white-1);
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: var(--purple-2);
+    transition: all .6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #ece9fb;
+    }
+
+
+}
+
+.btn2{
+    border: 2px solid var(--purple-2);
+    border-radius: 20px;
+    width: 45%;
+    height: 7.2vh;
+    min-width: 160px;
+    max-width: 200px;
+    min-height: 35px;
+    max-height: 38px;
+    font-size: 1.35rem;
+    font-weight: bold;
+    transition: all .6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--purple-2);
+    color: var(--white-1);
+
+        &:hover{
+            border: 2px solid #3c2c74;
+            background-color: #3c2c74;
+            color: var(--white-1)
+        }
+    
+}
+//responsive part for mobile
+@media (max-width: $medium-2)  {
+
+    .btn1{
+                margin: 0.1rem;
+                min-width: 100% !important;
+            }
+            .btn2{
+                margin: 0.1rem;
+                min-width: 100% !important;
+            }
+            
+    
+}
+
+//responsive part for big screens
+@media (min-width: $large){ //1280px
+
+    .btn1{
+    border-radius: 30px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 40px;
+    max-height: 45px;
+    font-size: 1.8rem;
+} 
+.btn2{
+    border-radius: 30px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 40px;
+    max-height: 45px;
+    font-size: 1.8rem;
+} 
+}
+
+@media (min-width: $extra-large){ //1280px
+
+    .btn1{
+    border-radius: 30px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 45px;
+    max-height: 50px;
+} 
+.btn2{
+    border-radius: 30px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 45px;
+    max-height: 50px;
+}
+}
