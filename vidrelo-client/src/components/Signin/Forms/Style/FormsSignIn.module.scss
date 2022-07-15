@@ -5,13 +5,32 @@ body {
 }
 .main {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     font-family: "mavenpro-regular";
     margin: 3rem auto;
 
+    .arrow-card{
+        width: 20%;
+
+    .link-arrow{
+            display: flex;
+            justify-content: center;
+            margin-top: 3.5rem;
+            color: var(--purple-2);
+            text-align: center;
+            #icon{
+                width: 30px;
+                height: 30px;
+            }
+    }
+}
+.card-card-form{
+    width: 45%;
+    display: flex;
+    justify-content: center;
     .form-card {
-        margin: 5rem auto;
+        margin: 3.5rem auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -21,36 +40,32 @@ body {
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 
         // parte medidas
-        width: 43%;
+        width: 48%;
         height: 100vh;
-        min-width: 365px;
+        min-width: 500px;
         max-width: 460px;
-        max-height: 500px;
-        min-height: 470px;
+        min-height: 815px;
+        max-height: 850px;
 
         h2 {
-            margin-top: 2rem;
-            font-size: 1.6rem;
+            margin-top: 2.5rem;
+            font-size: 1.8rem;
         }
         .form {
+            margin-top: 2rem;
             .input-texts {
-                .div-cpf-cell {
+                .space-between{
+                    margin-top: 2rem;
+                }
+                .div-half-cell {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
-                    margin-top: 1.6%;
+                    margin-top: 2rem;
 
-                    .cpf-cell {
-                        display: flex;
-                        flex-direction: column;
-                        width: 40%;
-                    }
-
-                    .phone-cell {
-                        display: flex;
-                        flex-direction: column;
-                        width: 55%;
+                    .cell {
+                        width: 48%;
                     }
                 }
             }
@@ -61,7 +76,7 @@ body {
             align-items: center;
             justify-content: space-evenly;
             width: 100%;
-            margin-top: 1.8rem;
+            margin-top: 2rem;
         }
 
         .div-link {
@@ -77,65 +92,45 @@ body {
     }
 }
 
+    .space-card{
+        width: 20%;
+    }
+}
+
 //Responsive Parts
-
-//cellphone parts
-@media (max-width: $small-medium) {
-    // 380px
-    .main {
-        .form-card {
-            min-width: 325px;
-            max-width: 345px;
-            h2 {
-                margin-top: 2rem;
-                font-size: 1.7rem;
-            }
-            .form {
-                margin-top: 1.2rem;
-            }
-        }
-    }
-}
-
-@media (max-width: $small-2) {
-    // 340px
-    .main {
-        .form-card {
-            min-width: 285px;
-            max-width: 300px;
-            min-height: 580px;
-            max-height: 600px;
-            h2 {
-                margin-top: 2rem;
-                font-size: 1.7rem;
-            }
-            .form {
-                margin-top: 1.2rem;
-            }
-        }
-    }
-}
-
 //half screen part
-@media (max-width: $small) {
-    //425px
+@media (max-width: $medium-2) {//600px
     .main {
+        .arrow-card{
+        .link-arrow{
+            display: none;
+        }
+    }
+    .card-card-form{
         .form-card {
-            min-height: 580px;
+            min-height: 1220px;
+            max-width: 420px;
+            min-width: 380px;
             .form {
                 .input-texts {
-                    .div-cpf-cell {
+
+                    .div-half-cell {
                         flex-direction: column;
 
-                        .cpf-cell {
+                        .cell {
                             margin-top: 0;
                             width: 100%;
+
+                            &:nth-child(2n) {
+                                margin-top: 2rem ;
+                            }
                         }
 
-                        .phone-cell {
-                            width: 100%;
-                        }
+                        
                     }
+                    .space-between{
+                         margin-top: 2.5rem;
+                     }
                 }
                 .btn-forms {
                     display: flex;
@@ -152,18 +147,84 @@ body {
             }
         }
     }
+    .space-card{
+        display: none;
+    }
+        
+    }
+}
+
+//cellphone parts
+@media(max-width: $small){// 425px
+    .main{
+        .card-card-form{
+            .form-card {
+                min-height: 1220px;
+                max-width: 360px ;
+                min-width: 355px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: $small-medium) {// 380px
+    .main {
+        .card-card-form{
+        .form-card {
+            min-width: 325px !important;
+            min-height: 1180px !important;
+            max-width: 345px;
+            h2 {
+                margin-top: 2rem;
+                font-size: 1.7rem;
+            }
+            .form {
+                margin-top: 1.2rem;
+            }
+        }
+    }
+    }
+}
+
+@media (max-width: $small-2) {// 340px
+    .main {
+        .card-card-form{
+        .form-card {
+            min-width: 285px !important;
+            max-width: 300px ;
+            h2 {
+                margin-top: 2rem;
+                font-size: 1.7rem;
+            }
+            .form {
+                margin-top: 1.2rem;
+            }
+        }
+        }
+    }
+}
+
+@media(max-width: $medium-medium){//850px
+    .main{
+
+        .arrow-card{
+            display: none;
+        }
+        .space-card{
+            display: none;
+        }
+    }
 }
 
 // desktop parts
-@media (min-width: $large) {
-    //1280px
+@media (min-width: $large) {//1280px
     .main {
+        .card-card-form{
         .form-card {
-            margin-top: 4.3rem;
-            min-height: 590px;
-            max-height: 600px;
-            min-width: 580px;
-            max-width: 590px;
+            min-width: 590px;
+            max-width: 600px;
+            min-height: 865px;
+            max-height: 880px;
 
             h2 {
                 margin-top: 3rem;
@@ -190,16 +251,16 @@ body {
             }
         }
     }
+    }
 }
 
-@media (min-width: $extra-large) {
-    //1536px
+@media (min-width: $extra-large) {//1536px
     .main {
+        .card-card-form{
         .form-card {
-            margin-top: 6.5rem;
-            height: 100%;
-            min-height: 660px;
+            min-height: 970px;
             min-width: 600px;
+            max-width: 610px;
 
             h2 {
                 margin-top: 3rem;
@@ -225,4 +286,16 @@ body {
             }
         }
     }
+    }
+}
+
+@media (min-width: $extra-large-2) {//1700px
+    .main {
+        .card-card-form{
+        .form-card {
+            min-width: 615px;
+            min-height: 990px;
+    }
+}
+}
 }
