@@ -89,6 +89,7 @@
         background-position: 80% 18%;
         min-height: 830px;
         #banner-content-home {
+            height: auto;
             background: url("../../../../assets/images/illustrations/img_waves.svg") no-repeat;
             background-position-y: 128%;
             background-size: 100% 30%;
@@ -169,9 +170,9 @@
                     margin-top: 10%;
                 }
             }
-        }   
+        }
     }
-    .elo{
+    .elo {
         position: absolute;
         width: 80%;
         top: 12rem;
