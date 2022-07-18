@@ -4,7 +4,6 @@ import Logo from '../../../assets/images/illustrations/vidrelo-logo-branca.svg'
 import Carrinho from '../../../assets/images/Icons/carrinho-icon.svg'
 import './Style/MenuMobile.scss'
 export default function MenuMobile({ showMenu, setShowMenu }: { showMenu: Boolean, setShowMenu: React.Dispatch<React.SetStateAction<boolean>>; }) {
-    console.log(showMenu)
     return (
         <div id='menu-mobile' className={`${showMenu ? "active" : "inative"}`}>
             <div className='container-img'>
