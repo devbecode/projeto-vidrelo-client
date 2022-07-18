@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft, FaAngleLeft } from "react-icons/fa";
 
 export default function Header(){
+
     return(
         <>
         <div className={styles.header}>
