@@ -1,23 +1,22 @@
-import { HTMLAttributes } from "react"
+import { DetailedHTMLProps, HTMLAttributes } from "react"
 
 interface ModalProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    classNameModal: string,
+    status: string,
 }
 
-export default function ModalLogged(classNameModal: ModalProps) {
-    console.log('modal clicado!')
+export default function ModalLogged({ status, ...rest }: ModalProps) {
     return (
-        <div className={classNameModal} >
+        <div {...rest} className={status} >
             <div className="modalContainer">
                 <ul>
-                    <li>Meu perfil</li>
-                    <li>Pedidos</li>
+                    <li><a href=''><span>Meu perfil</span></a></li>
+                    <li><a href=''><span>Pedidos</span></a></li>
                     <li><hr /></li>
-                    <li>Como funciona?</li>
-                    <li>Fale conosco</li>
-                    <li>Sair</li>
+                    <li><a href=''><span>Como funciona?</span></a></li>
+                    <li><a href=''><span>Fale conosco</span></a></li>
+                    <li><button><span>Sair</span></button></li>
                 </ul>
             </div>
-        </div >
+        </div>
     )
 }

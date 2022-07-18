@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, InputHTMLAttributes } from "react"
 import { Link } from "react-router-dom";
-//import "./Style/Buttons.scss"
+import "./Style/Buttons.scss"
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     id: any,

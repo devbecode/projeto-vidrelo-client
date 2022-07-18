@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 import Logo from '../../../assets/images/illustrations/logo.svg'
 import Carrinho from '../../../assets/images/Icons/carrinho-icon.svg'
 import './Style/Header.scss'
-import { FaBars, FaUserShield } from 'react-icons/fa'
+import { FaBars, FaUser, FaUserShield } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import MenuMobile from './MenuMobile'
 import ButtonHeaderLogged from '../../Generics/Buttons/ButtonHeaderLogged'
 import UserIcon from '../../../assets/images/Icons/user-logged.svg'
 import Cookies from "universal-cookie";
-import { ModalLogged } from '../Modal/Modal'
+import ModalLogged from '../Modal/Modal'
 
 export default function Header() {
     const [showMenu, setShowMenu] = useState(false)
@@ -25,6 +25,11 @@ export default function Header() {
 
     function showModal() {
         setToActived(true)
+        const modal = document.getElementsByClassName('')
+        // modal
+    }
+    function hideModal() {
+        setToActived(false)
     }
 
     return (
@@ -67,9 +72,10 @@ export default function Header() {
                                 <ButtonHeaderLogged
                                     id={'x'}
                                     onClick={showModal}
+                                // onBlur={hideModal}
                                 >
                                     {/* <img src={UserIcon} alt="user icon" id={'userLoggedLogo'} /> */}
-                                    <FaUserShield id='userLoggedLogo'></FaUserShield>
+                                    <FaUser id='userLoggedLogo'></FaUser>
                                 </ButtonHeaderLogged>
                             </li>
 
@@ -81,7 +87,7 @@ export default function Header() {
                 </div>
             </div>
             <MenuMobile showMenu={showMenu} setShowMenu={setShowMenu} />
-            <ModalLogged className={isActive ? 'enabled' : 'disabled'} />
+            <ModalLogged id="loggedModal" onFocus={showModal} status={isActive ? 'enabled' : 'disabled'} />
         </header>
     )
 }
