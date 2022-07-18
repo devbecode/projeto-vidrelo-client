@@ -109,7 +109,7 @@
                     //width: 100%;
 
                     p{
-                        font-size:c1rem;
+                        font-size: 1rem;
                         font-weight: bold;
                     }
 
@@ -256,14 +256,14 @@
 //responsive parts for big screens
         @media (min-width: $large)  { // 1280px
 
-        @media(min-height: 800px) {
         .main{
             .card-card-form{
             .form-card{
+                
                 //margin-top: 4rem;
                 height: 87vh;
-                min-height: 480px;
-                max-height: 485px;
+                min-height: 485px;
+                max-height: 487px;
                 min-width: 600px;
 
                 h2{
@@ -276,6 +276,9 @@
                         margin-top: 2rem;
                     }
                     .share-main{
+                        p{
+                            font-size: 1.1rem;
+                        }
     
                             button {
                                 width: 3.1rem;
@@ -284,7 +287,6 @@
                         }
                     }
             }
-        }
         }
     }
     } 
