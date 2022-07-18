@@ -45,15 +45,21 @@ export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
     console.log(error);
   }
   if (userToken) {
-    let token = cookies.get("token");
+    try {
+      let token = cookies.get("token");
 
-    const userAPI = userApi(token.accessToken);
-    const response = await userAPI.get(`/user/${token.userId}`);
+      const userAPI = userApi(token.accessToken);
+      const response = await userAPI.get(`/user/${token.userId}`);
 
-    const date = new Date();
-    const nextDay = date.setDate(date.getDate() + 1);
-    const expireLeft = new Date(nextDay);
-    cookies.set("userData", response.data, { expires: expireLeft });
-    window.location.href = "/";
+      const date = new Date();
+      const nextDay = date.setDate(date.getDate() + 1);
+      const expireLeft = new Date(nextDay);
+      cookies.set("userData", response.data, { expires: expireLeft });
+      window.location.href = "/";
+    } catch (error) {
+      console.log(error);
+      cookies.remove("userData");
+      cookies.remove("token");
+    }
   }
 }
