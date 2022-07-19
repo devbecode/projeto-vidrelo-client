@@ -4,7 +4,7 @@ import { FaAngleLeft } from "react-icons/fa";
 import Buttons from "../../Generics/Buttons/Buttons";
 import { Link } from "react-router-dom";
 import { createUser } from "../../../data/hooks/createUser";
-import { cepMask, telephoneMask, numberMask } from "../../Masks/Masks";
+import { cepMask, telephoneMask, numberMask, stateMask } from "../../Masks/Masks";
 import LinkTo2 from "../../Generics/LinkTo/LinkTo2";
 import stylesBtn from "../../Generics/Buttons/Style/BtnStyles.module.scss"
 
@@ -58,6 +58,8 @@ export default function Forms() {
                                             id='state'
                                             label='Estado'
                                             type={"text"}
+                                            maxLength={2}
+                                            onChange={stateMask}
                                         />
                                     </div>
                                     <div className={styles['cell']}>
