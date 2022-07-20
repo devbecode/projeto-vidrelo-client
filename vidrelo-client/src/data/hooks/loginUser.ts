@@ -29,7 +29,8 @@ export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
   }
 
   try {
-    const response = await ApiAuth.post(
+    const apiAuth = ApiAuth();
+    const response = await apiAuth.post(
       "/",
       JSON.stringify({
         email: dataToSend.email,
@@ -55,11 +56,14 @@ export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
       const nextDay = date.setDate(date.getDate() + 1);
       const expireLeft = new Date(nextDay);
       cookies.set("userData", response.data, { expires: expireLeft });
-      window.location.href = "/";
+      userData = true;
     } catch (error) {
       console.log(error);
       cookies.remove("userData");
       cookies.remove("token");
     }
+  }
+  if (userData && userToken) {
+    window.location.href = "/";
   }
 }
