@@ -87,9 +87,9 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
       const token = cookies.get("token");
       const userAPI = userApi();
       const response = await userAPI.post(
-        "",
+        "/user",
         JSON.stringify({
-          optionalId: token.userId,
+          optionalId: token.id,
           name: dataToSend.name,
           profile: "client",
           email: dataToSend.email,
@@ -114,7 +114,7 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
       try {
         const token = cookies.get("token");
         const apiAuth = ApiAuth(token.accessToken);
-        const response = await apiAuth.delete(`/deleteUser/${token.userId}`);
+        const response = await apiAuth.delete(`/deleteUser/${token.id}`);
         console.log(response.data);
       } catch (error) {
         console.log(error);
