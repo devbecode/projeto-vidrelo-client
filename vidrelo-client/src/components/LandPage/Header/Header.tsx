@@ -2,35 +2,31 @@ import { Link } from 'react-router-dom'
 import Logo from '../../../assets/images/illustrations/logo.svg'
 import Carrinho from '../../../assets/images/Icons/carrinho-icon.svg'
 import './Style/Header.scss'
-import { FaBars, FaUser, FaUserShield } from 'react-icons/fa'
+import { FaBars, FaUser } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import MenuMobile from './MenuMobile'
 import ButtonHeaderLogged from '../../Generics/Buttons/ButtonHeaderLogged'
-import UserIcon from '../../../assets/images/Icons/user-logged.svg'
 import Cookies from "universal-cookie";
 import ModalLogged from '../Modal/Modal'
+import { useModalSelector } from "../../../redux/hooks/useModalSelector"
+import { useDispatch } from "react-redux";
+import { setLoggedStatus } from "../../../redux/reducers/isUserLogged";
 
 export default function Header() {
     const [showMenu, setShowMenu] = useState(false)
-    const [isLogged, setLoginStatus] = useState(false)
-    const [isActive, setToActived] = useState(false)
-    window.onload = () => {
-        console.log('oi')
-        const cookies = new Cookies()
-        if (cookies.get('userData') && cookies.get('token')) {
-            console.log('Cookies ativados')
-            setLoginStatus(true)
-        }
-    };
 
-    function showModal() {
-        setToActived(true)
-        const modal = document.getElementsByClassName('')
-        // modal
-    }
-    function hideModal() {
-        setToActived(false)
-    }
+    const userLogged = useModalSelector((state) => state.isLogged)
+    const dispatch = useDispatch();
+    const changeUserLogin = (newLoginStatus: boolean) => dispatch(setLoggedStatus(newLoginStatus))
+    const cookies = new Cookies()
+
+    useEffect(() => {
+        if (cookies.get('userData') && cookies.get('token')) {
+            changeUserLogin(true)
+        } else {
+            changeUserLogin(false)
+        }
+    }, [cookies])
 
     return (
         <header>
@@ -63,18 +59,13 @@ export default function Header() {
                     <nav >
                         <ul>
                             <li>
-                                <Link className={isLogged ? 'disabled' : 'enabled'} to="/login">Entrar</Link>
+                                <Link className={userLogged.status ? 'disabled' : 'enabled'} to="/login">Entrar</Link>
                             </li>
                             <li>
-                                <Link className={isLogged ? 'disabled' : 'enabled'} to="/Cadastro">Cadastrar</Link>
+                                <Link className={userLogged.status ? 'disabled' : 'enabled'} to="/Cadastro">Cadastrar</Link>
                             </li>
-                            <li className={isLogged ? 'enabled' : 'disabled'}>
-                                <ButtonHeaderLogged
-                                    id={'x'}
-                                    onClick={showModal}
-                                // onBlur={hideModal}
-                                >
-                                    {/* <img src={UserIcon} alt="user icon" id={'userLoggedLogo'} /> */}
+                            <li className={userLogged.status ? 'enabled' : 'disabled'}>
+                                <ButtonHeaderLogged id={'genericId'}>
                                     <FaUser id='userLoggedLogo'></FaUser>
                                 </ButtonHeaderLogged>
                             </li>
@@ -87,7 +78,7 @@ export default function Header() {
                 </div>
             </div>
             <MenuMobile showMenu={showMenu} setShowMenu={setShowMenu} />
-            <ModalLogged id="loggedModal" onFocus={showModal} status={isActive ? 'enabled' : 'disabled'} />
+            <ModalLogged />
         </header>
     )
 }

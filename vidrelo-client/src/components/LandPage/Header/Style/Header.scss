@@ -10,6 +10,10 @@ header {
     .enabled {
         display: flex;
     }
+    .modalFather{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     .modalContainer{
         z-index: 1;
         display: flex;
