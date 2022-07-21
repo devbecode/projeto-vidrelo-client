@@ -152,25 +152,38 @@
                 .arrow-card{
                     display: none;
                 }
-            .btn-forms{
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    width: 100%;
-                
-                                #btn-In{
-                                    margin: 0.08rem;
-                                    max-width: none;
-                                    width: 100% !important;
-                                }
-                                #sign-In{
-                                    margin: 0.08rem;
-                                    max-width: none;
-                                    width: 100% !important;
-                                }
-         }
+            
           .space-card{
              display: none;
+        }
+    }
+}
+
+@media(max-width: $medium-medium){
+    .main{
+        .card-card-form{
+
+            .form-card{
+                min-height: 435px;
+                .btn-forms{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+        
+                #btn-In{
+                    margin: 0.08rem;
+                    max-width: none;
+                    width: 100% !important;
+                }
+                #sign-In{
+                    margin: 0.08rem;
+                    max-width: none;
+                    width: 100% !important;
+                }
+                }
+            }
+
         }
     }
 }
