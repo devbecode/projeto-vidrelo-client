@@ -1,5 +1,5 @@
 import { ApiAuth } from "./Services/AuthService";
-import { ApiUser } from "./Services/UserService";
+import { userApi } from "./Services/UserService";
 import Cookies from "universal-cookie";
 
 export async function createUser(event: React.FormEvent<HTMLFormElement>) {
@@ -64,48 +64,74 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
         break;
     }
   }
+
   try {
-    const response = await ApiUser.post(
-      "/user-form/",
+    const apiAuth = ApiAuth();
+    const response = await apiAuth.post(
+      "/createUser",
       JSON.stringify({
-        name: dataToSend.name,
-        profile: "client",
         email: dataToSend.email,
         password: dataToSend.password,
-        telephone: dataToSend.telephone,
-        cep: dataToSend.cep,
-        state: dataToSend.state,
-        city: dataToSend.city,
-        district: dataToSend.district,
-        street: dataToSend.street,
-        number: dataToSend.number,
-        complement: dataToSend.complement,
       })
     );
-    createdUser = true;
     const date = new Date();
     const nextDay = date.setDate(date.getDate() + 1);
     const expireLeft = new Date(nextDay);
-    cookies.set("userData", response.data, { expires: expireLeft });
+    cookies.set("token", response.data, { expires: expireLeft });
+    createdUserAuth = true;
   } catch (error) {
     console.log(error);
   }
-  if (createdUser) {
+  if (createdUserAuth) {
     try {
-      const response = await ApiAuth.post(
-        "/createUser",
+      const token = cookies.get("token");
+      const userAPI = userApi();
+      const response = await userAPI.post(
+        "/user",
         JSON.stringify({
+          optionalId: token.id,
+          name: dataToSend.name,
+          profile: "client",
           email: dataToSend.email,
           password: dataToSend.password,
+          telephone: dataToSend.telephone,
+          cep: dataToSend.cep,
+          state: dataToSend.state,
+          city: dataToSend.city,
+          district: dataToSend.district,
+          street: dataToSend.street,
+          number: dataToSend.number,
+          complement: dataToSend.complement,
         })
       );
+      createdUser = true;
       const date = new Date();
       const nextDay = date.setDate(date.getDate() + 1);
       const expireLeft = new Date(nextDay);
-      cookies.set("token", response.data, { expires: expireLeft });
-      createdUserAuth = true;
+      cookies.set("userData", response.data, { expires: expireLeft });
     } catch (error) {
       console.log(error);
+      try {
+        const token = cookies.get("token");
+        const apiAuth = ApiAuth(token.accessToken);
+        const response = await apiAuth.delete(`/deleteUser/${token.id}`);
+        console.log(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
+
+  if (
+    createdUserAuth &&
+    createdUser &&
+    cookies.get("token") &&
+    cookies.get("userData")
+  ) {
+    window.location.href = "/";
+  } else {
+    if (cookies.get("token")) {
+      cookies.remove("token");
     }
     if (createdUserAuth && createdUser) {
       window.location.href = "/";
@@ -117,5 +143,6 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
         cookies.remove("userData");
       }
     }
+    console.log("Houve um problem na hora de criar a conta");
   }
 }

@@ -20,4 +20,13 @@ export function numberMask(e: React.FormEvent<HTMLInputElement>) {
   e.currentTarget.value = value;
 }
 
-export default { cepMask, telephoneMask, numberMask };
+export function stateMask(e: React.FormEvent<HTMLInputElement>) {
+  let value = e.currentTarget.value;
+  value = value.toLocaleUpperCase();
+  value = value.replace(" ", "");
+  value = value.replace(/^[0-9]$/, "");
+  value = value.replace(/^([A-Z]){3}$/g, "");
+  e.currentTarget.value = value;
+}
+
+export default { cepMask, telephoneMask, numberMask, stateMask };
