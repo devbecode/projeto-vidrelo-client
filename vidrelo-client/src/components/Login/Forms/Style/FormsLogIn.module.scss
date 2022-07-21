@@ -152,25 +152,38 @@
                 .arrow-card{
                     display: none;
                 }
-            .btn-forms{
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    width: 100%;
-                
-                                #btn-In{
-                                    margin: 0.08rem;
-                                    max-width: none;
-                                    width: 100% !important;
-                                }
-                                #sign-In{
-                                    margin: 0.08rem;
-                                    max-width: none;
-                                    width: 100% !important;
-                                }
-         }
+            
           .space-card{
              display: none;
+        }
+    }
+}
+
+@media(max-width: $medium-medium){
+    .main{
+        .card-card-form{
+
+            .form-card{
+                min-height: 435px;
+                .btn-forms{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+        
+                #btn-In{
+                    margin: 0.08rem;
+                    max-width: none;
+                    width: 100% !important;
+                }
+                #sign-In{
+                    margin: 0.08rem;
+                    max-width: none;
+                    width: 100% !important;
+                }
+                }
+            }
+
         }
     }
 }
@@ -262,8 +275,8 @@
                 
                 //margin-top: 4rem;
                 height: 87vh;
-                min-height: 485px;
-                max-height: 487px;
+                min-height: 500px;
+                max-height: 505px;
                 min-width: 600px;
 
                 h2{
@@ -354,11 +367,11 @@
         .form-card{
             border-radius: 25px;
             //margin-top: 4rem;
-            min-height: 600px;
+            min-height: 680px;
             min-width: 750px;
 
             h2{
-                margin-top: 6%;
+                margin-top: 8%;
                 font-size: 2.3rem;
             }
 
