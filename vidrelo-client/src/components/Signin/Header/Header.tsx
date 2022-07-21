@@ -14,7 +14,9 @@ export default function Header(){
             </div>
 
             <div className={styles['div-logo']}>
+                <Link to="/">
                 <img src={logo} alt="Logo" />
+                </Link>
             </div>
             <div className={styles['div-button']}>
                 <Link to="/login" className={styles['btn-header']}>Entrar</Link>

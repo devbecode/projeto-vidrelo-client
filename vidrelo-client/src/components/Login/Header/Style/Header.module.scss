@@ -20,9 +20,12 @@
     }
     .img-div{
         margin-left: 5%;
-        img{
-            width: 13rem;
-           }
+        a{
+            img{
+                width: 13rem;
+               }
+        }
+
     }
 
 }
@@ -58,7 +61,7 @@
     }  
 }
 
-@media (min-width: $large){
+@media (min-width: $large){//1280px
 
     .header{
         height: 12vh;

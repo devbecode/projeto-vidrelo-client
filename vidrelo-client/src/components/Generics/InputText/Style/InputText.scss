@@ -21,7 +21,22 @@
             }
         }   
 
-        
+        @media (min-width: $large){
+
+            .input-part{
+                margin-top: 4%;
+
+            input{
+                font-size: 1.35rem;
+                padding: 1rem;
+            }
+
+            label{
+                font-size: 1.35rem;
+            }
+        }
+    }
+
         @media (min-width: $extra-large){
 
             .input-part{

@@ -90,31 +90,32 @@ export async function createUser(event: React.FormEvent<HTMLFormElement>) {
   } catch (error) {
     console.log(error);
   }
-
-  try {
-    const response = await ApiAuth.post(
-      "/createUser",
-      JSON.stringify({
-        email: dataToSend.email,
-        password: dataToSend.password,
-      })
-    );
-    const date = new Date();
-    const nextDay = date.setDate(date.getDate() + 1);
-    const expireLeft = new Date(nextDay);
-    cookies.set("token", response.data, { expires: expireLeft });
-    createdUserAuth = true;
-  } catch (error) {
-    console.log(error);
-  }
-  if (createdUserAuth && createdUser) {
-    window.location.href = "/";
-  } else {
-    if (cookies.get("token")) {
-      cookies.remove("token");
+  if (createdUser) {
+    try {
+      const response = await ApiAuth.post(
+        "/createUser",
+        JSON.stringify({
+          email: dataToSend.email,
+          password: dataToSend.password,
+        })
+      );
+      const date = new Date();
+      const nextDay = date.setDate(date.getDate() + 1);
+      const expireLeft = new Date(nextDay);
+      cookies.set("token", response.data, { expires: expireLeft });
+      createdUserAuth = true;
+    } catch (error) {
+      console.log(error);
     }
-    if (cookies.get("userData")) {
-      cookies.remove("userData");
+    if (createdUserAuth && createdUser) {
+      window.location.href = "/";
+    } else {
+      if (cookies.get("token")) {
+        cookies.remove("token");
+      }
+      if (cookies.get("userData")) {
+        cookies.remove("userData");
+      }
     }
   }
 }

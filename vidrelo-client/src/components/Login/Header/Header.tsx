@@ -14,7 +14,9 @@ export default function Header(){
                     </Link>
                 </div>
                 <div className={styles["img-div"]}>
+                    <Link to="/">
                     <img src={logo} alt="Logo" />
+                    </Link>
                 </div>
                 <div className={styles['div-space']}>
                 </div>
