@@ -48,7 +48,7 @@ export default function ClientFeedback() {
                             })
                         }
                     </div>
-                    <h2>O elo que <span>agiliza e descomplica</span></h2>
+                    <h2>O elo que <span>agiliza e descomplica.</span></h2>
                 </div>
             </section>
         </>

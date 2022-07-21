@@ -1,6 +1,6 @@
 .card-feedback {
-    width: 31%;
-    height: 45rem;
+    width: 33rem;
+    height: 39rem;
     background: var(--whte-1) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000059;
     border: 3px solid #291868;
@@ -13,7 +13,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
         h4 {
             font-family: "mavenpro-bold";
             color: var(--purple-1);
@@ -25,6 +24,8 @@
             color: var(--blue-1);
             text-align: center;
             font-size: 2.2rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
         }
         p {
             font-family: "mavenpro-regular";

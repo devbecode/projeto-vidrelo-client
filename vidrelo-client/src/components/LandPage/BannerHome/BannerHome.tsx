@@ -15,9 +15,9 @@ export default function Banner() {
                 <div className='banner-content-img'>
                     <img src={ImgBanner} alt="imagem banner" />
                 </div>
-                {/* <div className="elo">
+                <div className="elo">
                     <img src={Elo} alt="" />
-                </div> */}
+                </div>
             </div>
         </section>
     )

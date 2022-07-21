@@ -10,13 +10,21 @@
             font-family: "mavenpro-bold";
             font-size: 3.8rem;
             max-width: 96.6rem;
-            margin: 0 auto 3.7rem auto;
+            margin: 0 auto;
             text-align: center;
             color: var(--gray-1);
 
             span {
+                font-family: "mavenpro-bold";
                 color: var(--purple-1);
             }
+        }
+        h4{
+            font-family: "mavenpro-regular";
+            font-size: 2rem;
+            text-align: center;
+            margin: 0 auto 3.7rem auto;
+            color: var(--gray-1);
         }
         .swiper {
             width: 100%;

@@ -73,6 +73,7 @@ export default function Step() {
             <section id='step'>
                 <div className="step-content">
                     <h3>Tudo pronto em <span>4 passos</span></h3>
+                    <h4>Veja as etapas até ter tudo instalado na sua casa</h4>
                     <Slider settings={settings}>
                         {
                             stepList.map((steps) => {

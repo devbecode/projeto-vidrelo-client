@@ -80,11 +80,13 @@ header {
                         }
                     }
                     li:nth-child(2) a {
-                        color: var(--purple-2);
+                        color: var(--blue-2);
                         background-color: var(--white-1);
                         font-size: 1.8rem;
+                        
                         &:hover {
                             border-color: var(--purple-2);
+                            color: var(--purple-2);
                         }
                     }
                     li:nth-child(3) {
