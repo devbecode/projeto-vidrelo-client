@@ -71,7 +71,7 @@ export default function Header() {
                             </li>
 
                             <li>
-                                <Link to="/Carrinho"><img src={Carrinho} alt="carrinho" /></Link>
+                                <Link className='btnsHeader' to="/Carrinho" ><img src={Carrinho} alt="carrinho" /></Link>
                             </li>
                         </ul>
                     </nav>

@@ -157,6 +157,12 @@ header {
                             background-color: var(--purple-2);
                         }
                     }
+                    li{
+                        .btnsHeader {
+                            max-width: 70px;
+                            min-height: 50px;
+                        }
+                    }
                     #userLoggedLogo{
                         color: white;
                         height: 50px;
