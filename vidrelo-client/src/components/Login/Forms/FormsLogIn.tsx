@@ -1,16 +1,58 @@
 import styles from "./Style/FormsLogIn.module.scss";
 //importando os icons
-import { FaEye, FaEyeDropper, FaEyeSlash, FaFacebookF, FaArrowLeft, FaAngleLeft  } from "react-icons/fa";
+import { FaFacebookF, FaAngleLeft  } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import InputText from "../../Generics/InputText/InputText";
 import Buttons from "../../Generics/Buttons/Buttons"
 import { loginUser } from "../../../data/hooks/loginUser";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import LinkTo from "../../Generics/LinkTo/LinkTo";
-import stylesBtn  from"../../Generics/Buttons/Style/BtnStyles.module.scss"
+import stylesBtn  from "../../Generics/Buttons/Style/BtnStyles.module.scss"
+import { useForm } from "react-hook-form";
+import { useState, useEffect } from "react";
 
 export default function Forms() {
+
+    // const [email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
+
+    // const {
+    //     register,
+    //     handleSubmit,
+    //     reset,
+    //     formState: { errors, isSubmitSuccessful },
+    //   } = useForm({ defaultValues: { emailValue: "", passwordValue: ""} });
+
+    //   console.log(errors);
+
+    //   // const para pegar os valores do input 
+    //   const changeEmail = (e: any) => {
+    //     setEmail(e.target.value);
+    //   };
+
+    //   const changePassword = (e: any) => {
+    //     setPassword(e.target.value);
+    //   };
+
+    //   useEffect(() => {
+    //     reset({
+    //         emailValue: "",
+    //         passwordValue: ""
+    //     });
+    //   }, [isSubmitSuccessful, reset]);
+
+    // //   const exibirErros =  Object.keys(errors).map(key => {
+    // //     // console.log(key); // name
+    // //     console.log(errors[key].message);
+      
+    // //     return (
+    // //         <>
+    // //         <p>{errors[key].message}</p>
+    // //         </>
+    // //     );
+    // //   });
+    // //   console.log(exibirErros);
+
 
     return (
         <>
@@ -30,14 +72,25 @@ export default function Forms() {
                                     id='email'
                                     label='E-mail'
                                     type={"email"}
+                                    // {...register("userEMail", { 
+                                    //     required: true,
+                                    //     minLength: { value: 2, message: "O tamanho mínimo do filme é de 2 dígitos" }})}
                                 />
-                                <div className="password-input">
+                                <div className={styles['error']}>
+                                {/* {errors.userEMail?.type === "required" &&
+                                 "É necessário informar um e-mail para continuar!"} */}
+                                 erros aqui
+                                </div>
                                     <InputText
                                         name='password'
                                         id='password'
                                         label='Senha'
                                         type={"password"}
                                     />
+                                <div className={styles['error']}>
+                                {/* {errors.userPassword?.type === "required" &&
+                                 "É necessário informar uma senha para continuar!"} */}
+                                 erros aqui
                                 </div>
                             </div>
                             <div className={styles['btn-forms']}>
@@ -54,7 +107,7 @@ export default function Forms() {
                             />
                         </div>
                             <div className={styles['informations-main']}>
-                                <a>Esqueci minha senha</a>
+                                <Link to="/ForgotPassword">Esqueci minha senha</Link>
                                 <div className={styles['space-between']}></div>
                                 <div className={styles['share-main']}>
                                     <p>Ou entre agora com:</p>

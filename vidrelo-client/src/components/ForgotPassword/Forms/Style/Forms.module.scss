@@ -1,0 +1,391 @@
+@import "../../../../styles/globals.scss";
+
+*{
+    font-family: "mavenpro-regular";
+        -webkit-touch-callout: none;  
+        -webkit-user-select: none;    
+        -khtml-user-select: none;   
+        -moz-user-select: none;      
+        -ms-user-select: none;       
+        user-select: none;     
+    
+}
+.main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    font-family: "mavenpro-regular";
+    
+    .arrow-card{
+        margin-top: 20%;
+        width: 20%;
+    
+    }
+
+// parte forms card
+.card-card-form{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-card{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-1);
+    border-radius: 2rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+    // parte width e height do forms
+    //45 ou 40
+    width: 40rem;
+    min-width: 370px;
+    max-width: 420px;
+    min-height: 370px;
+    max-height: 390px;
+    
+
+        h2{
+            margin-top: 12%;
+            font-size: 1.8rem;
+        }
+        .form{
+            padding: 0.5rem 1.5rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 2%;
+
+            .input-texts{
+                width: 98%;
+                margin-top: 3%;
+                margin-bottom: 1%;
+
+                .error{
+                    color: rgb(223, 3, 3);
+                    height: auto; 
+                    //height: 20px;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    margin-left: 1.5rem;
+                }
+
+            }
+
+            .btn-forms{
+                margin-top: 8%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                    #btn-In{
+                        width: 98% ;
+                    }
+                }
+
+            }
+            .informations-main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 1.8rem;
+
+                .space-between{
+                    margin-top: 1.6rem;
+                    background-color: var(--purple-2);
+                    width:4.5rem;
+                    height: 0.3rem;
+                    border-radius: 5rem;
+                }
+                h3{
+                    color: var(--purple-2);
+                    margin-top: 6%;
+                    font-size: 1.4rem;
+                }
+
+            }
+        }
+    }
+    .space-card{
+        width: 20%;
+    }
+}
+
+
+// //responsive part for buttons
+        @media (max-width: $medium-2){//600px
+
+            .main{
+                .arrow-card{
+                    display: none;
+                }
+            
+          .space-card{
+             display: none;
+        }
+    }
+}
+
+// @media(max-width: $medium-medium){//850px
+//     .main{
+//         .card-card-form{
+
+//             .form-card{
+//                 min-height: 435px;
+//                 .btn-forms{
+//                     display: flex;
+//                     flex-direction: column;
+//                     align-items: center;
+//                     width: 100%;
+        
+//                 #btn-In{
+//                     margin: 0.08rem;
+//                     max-width: none;
+//                     width: 100% !important;
+//                 }
+//                 #sign-In{
+//                     margin: 0.08rem;
+//                     max-width: none;
+//                     width: 100% !important;
+//                 }
+//                 }
+//             }
+
+//         }
+//     }
+// }
+                    
+// //responsive parts for cellphones
+//         @media (max-width: $small-2)  { // 340px
+//             .main{
+//                 .card-card-form{
+                    
+//                 .form-card{
+//                     min-width: 285px !important;
+//                     max-width: 300px;
+//                     h2{
+//                         margin-top: 1.5rem;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//         @media (max-width: $small-medium){ // 380px
+//                 .main{
+//                     .card-card-form{
+//                         .form-card{
+//                             min-width: 325px;
+//                             max-width: 350px;
+                
+//                         }
+//                     }
+//                 }
+       
+//     }
+
+//         @media (max-width: $small)  { // 425px
+//             .main{
+//                 .card-card-form{
+//                 .form-card{
+//                     min-height: 420px;
+//                     max-height: 430px;
+//             }
+//         }
+//         }
+//         @media(min-height: 700px){
+//             .main{
+//             .card-card-form{
+//             .form-card{
+//                 margin-top: 3rem;
+//                 min-height: 440px;
+//                 max-height: 445px;
+    
+//             }
+//         }
+//     }
+//         }
+        
+//     }
+
+// // respponsive parts for the arrow
+//         @media(max-width: 780px){
+//             .main{
+//                 .arrow-card{
+//                     .link-arrow{
+//                         justify-content: start;
+//                         margin-left: 3rem;
+
+//                     }
+//                 }
+//             }
+//     }
+
+//     @media(max-width: 700px){
+//         .main{
+//             .arrow-card{
+//                 .link-arrow{
+//                     margin-left: 2rem;
+
+//                 }
+//             }
+//         }
+// }
+
+    
+// //responsive parts for big screens
+//         @media (min-width: $large)  { // 1280px
+
+//         .main{
+//             .card-card-form{
+//             .form-card{
+                
+//                 //margin-top: 4rem;
+//                 height: 87vh;
+//                 min-height: 500px;
+//                 max-height: 505px;
+//                 min-width: 600px;
+
+//                 h2{
+//                     margin-top: 6%;
+//                     font-size: 2.1rem;
+//                 }
+//                 .form{
+        
+//                     .informations-main{
+//                         margin-top: 2rem;
+//                     }
+//                     .share-main{
+//                         p{
+//                             font-size: 1.1rem;
+//                         }
+    
+//                             button {
+//                                 width: 3.1rem;
+//                                 height: 3.1rem;
+//                             }
+//                         }
+//                     }
+//             }
+//         }
+//     }
+//     } 
+// // extra-large 1536
+//         @media (min-width: $extra-large){ // 1536px
+//         .main{
+//             .card-card-form{
+//             .form-card{
+//                 //margin-top: 4rem;
+//                 height: 87vh;
+//                 min-height: 580px;
+//                 min-width: 700px;
+
+//                 h2{
+//                     margin-top: 6%;
+//                     font-size: 2.2rem;
+//                 }
+
+//                 .form{
+
+//                     .input-texts{
+//                         width: 95%;
+//                         margin-top: 3.4%;
+//                     }
+//                     .informations-main{
+//                         margin-top: 4rem;
+
+//                         a{
+//                             font-size: 1.5rem;
+//                         }
+        
+//                         .space-between{
+//                             margin-top: 2.5rem;
+//                             width:4.3rem;
+//                         }
+        
+//                         .share-main{
+        
+//                             margin-top: 2.5rem;
+        
+//                             p{
+//                                 font-size:1.3rem;
+//                             }
+        
+//                             .img-share{
+//                                 margin-top: 2rem;
+        
+//                                 button {
+//                                     width: 3.2rem;
+//                                     height: 3.2rem;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             }
+//         }
+    
+//     }  
+//  // extra extra large
+//         @media (min-width: $extra-large-2){ // 1700px
+//     .main{
+//         .card-card-form{
+//         .form-card{
+//             border-radius: 25px;
+//             //margin-top: 4rem;
+//             min-height: 680px;
+//             min-width: 750px;
+
+//             h2{
+//                 margin-top: 8%;
+//                 font-size: 2.3rem;
+//             }
+
+//             .form{
+//                 .informations-main{
+//                     margin-top: 3.5rem;
+
+//                     a{
+//                         font-size: 1.8rem;
+//                     }
+    
+//                     .space-between{
+//                         margin-top: 2.5rem;
+//                         width:4.3rem;
+//                     }
+    
+//                     .share-main{
+    
+//                         margin-top: 2.5rem;
+    
+//                         p{
+//                             font-size:1.4rem;
+//                         }
+    
+//                         .img-share{
+//                             margin-top: 1.5rem;
+    
+//                             button {
+//                                 width: 3.2rem;
+//                                 height: 3.2rem;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//         }
+//     }
+
+//     // padding for big heights
+//     @media(min-height: 1000px){
+//         .form-card{
+//             margin-top: 10rem;
+//         }
+//     }
+
+// }
