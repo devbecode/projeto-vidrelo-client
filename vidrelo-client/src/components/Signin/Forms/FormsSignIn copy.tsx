@@ -13,38 +13,15 @@ import {
 import LinkTo2 from '../../Generics/LinkTo/LinkTo2';
 import stylesBtn from '../../Generics/Buttons/Style/BtnStyles.module.scss';
 import { useState } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
-interface IFormInputs {
-  profile: string;
-  name: string;
-  email: string;
-  password: any;
-  telephone: number;
-  cep: number;
-  state: string;
-  city: string;
-  district: string;
-  street: string;
-  number: number;
-  complement: string;
-  uf: string;
-  label: string;
-}
-const schema = yup.object().shape({
-  email: yup.string().email().required(),
-  password: yup.string().min(4).max(20).required(),
-});
 
 export default function Forms() {
   //   const [data, setData] = useState('');
 
   //tambem tem a errors mas n utilizei
-  const { register, handleSubmit, setValue, setFocus } = useForm<IFormInputs>({
-    resolver: yupResolver(schema),
-  });
+  const { register, handleSubmit, setValue, setFocus } = useForm();
 
   const checkCEP = (e: React.FormEvent<HTMLInputElement>) => {
     const cep = e.currentTarget.value.replace(/\D/g, '');
@@ -55,7 +32,7 @@ export default function Forms() {
           console.log(data);
           //   setData(data);
           setValue('street', data.logradouro);
-          setValue('district', data.bairro);
+          setValue('distric', data.bairro);
           setValue('city', data.localidade);
           setValue('uf', data.uf);
           setFocus('number');
@@ -64,10 +41,6 @@ export default function Forms() {
     } else {
       alert('Informe um número de cep válido!');
     }
-  };
-
-  const formSubmitHandler: SubmitHandler<IFormInputs> = (data: IFormInputs) => {
-    console.log('form data is', data);
   };
 
   return (
@@ -81,14 +54,11 @@ export default function Forms() {
         <div className={styles['card-card-form']}>
           <div className={styles['form-card']}>
             <h2>Quero me cadastrar</h2>
-            <form
-              onSubmit={handleSubmit(formSubmitHandler)}
-              className={styles.form}
-            >
+            <form className={styles.form}>
               {/* <form onSubmit={createUser} className={styles.form}> */}
               <div className={styles['input-texts']}>
                 <div className={styles['space-between']}>
-                  <input name="name" id="name" label="Nome" type={'text'} />
+                  <InputText name="name" id="name" label="Nome" type={'text'} />
                 </div>
                 <div className={styles['div-half-cell']}>
                   <div className={styles['cell']}>
@@ -149,7 +119,7 @@ export default function Forms() {
                   <div className={styles['cell']}>
                     <InputText
                       //   name="district"
-                      {...register('district')}
+                      {...register('distric')}
                       id="district"
                       label="Bairro"
                       type={'text'}
