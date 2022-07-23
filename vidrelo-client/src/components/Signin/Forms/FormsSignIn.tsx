@@ -88,118 +88,93 @@ export default function Forms() {
               {/* <form onSubmit={createUser} className={styles.form}> */}
               <div className={styles['input-texts']}>
                 <div className={styles['space-between']}>
-                  <input name="name" id="name" label="Nome" type={'text'} />
+                  <div className="input-part">
+                    <label htmlFor="name">Name</label>
+                    <input name="name" id="name" type={'text'} />
+                  </div>
                 </div>
                 <div className={styles['div-half-cell']}>
                   <div className={styles['cell']}>
                     {/* INICIO 2222222222222222*/}
 
-                    <InputText
-                      //   name="cep"
-                      {...register('cep')}
-                      //   id="cep"
-                      label="CEP"
-                      type={'text'}
-                      onChange={cepMask}
-                      onBlur={checkCEP}
-                    />
+                    <div className="input-part">
+                      <label htmlFor="cep">CEP</label>
+                      <input name="cep" id="cep" type={'text'} />
+                    </div>
                   </div>
                   <div className={styles['cell']}>
-                    <InputText
-                      name="telephone"
-                      id="telephone"
-                      label="Telefone"
-                      type={'text'}
-                      onChange={telephoneMask}
-                    />
+                    <div className="input-part">
+                      <label htmlFor="telephone">Telefone</label>
+                      <input name="telephone" id="telephone" type={'text'} />
+                    </div>
                   </div>
                 </div>
                 <div className={styles['div-half-cell']}>
                   <div className={styles['cell']}>
-                    <InputText
-                      //   name="state"
-                      {...register('uf')}
-                      //   id="state"
-                      label="Estado"
-                      type={'text'}
-                      maxLength={2}
-                      onChange={stateMask}
-                    />
+                    <div className="input-part">
+                      <label htmlFor="state">Estado</label>
+                      <input name="state" id="state" type={'text'} />
+                    </div>
                   </div>
                   <div className={styles['cell']}>
-                    <InputText
-                      //   name="city"
-                      {...register('city')}
-                      id="city"
-                      label="Cidade"
-                      type={'text'}
-                    />
+                    <div className="input-part">
+                      <label htmlFor="city">Cidade</label>
+                      <input name="city" id="city" type={'text'} />
+                    </div>
                   </div>
                 </div>
                 <div className={styles['div-half-cell']}>
                   <div className={styles['cell']}>
-                    <InputText
-                      //   name="street"
-                      {...register('street')}
-                      //   id="street"
-                      label="Rua"
-                      type={'text'}
-                    />
+                    <div className="input-part">
+                      <label htmlFor="street">Rua</label>
+                      <input name="street" id="street" type={'text'} />
+                    </div>
                   </div>
                   <div className={styles['cell']}>
-                    <InputText
-                      //   name="district"
-                      {...register('district')}
-                      id="district"
-                      label="Bairro"
-                      type={'text'}
-                    />
+                    <div className="input-part">
+                      <label htmlFor="district">Bairro</label>
+                      <input name="district" id="district" type={'text'} />
+                    </div>
                   </div>
                 </div>
                 <div className={styles['div-half-cell']}>
                   <div className={styles['cell']}>
-                    <InputText
-                      //   name="number"
-                      {...register('number')}
-                      id="number"
-                      label="Número"
-                      type={'text'}
-                      onChange={numberMask}
-                    />
+                    <div className="input-part">
+                      <label htmlFor="number">Número</label>
+                      <input name="number" id="number" type={'text'} />
+                    </div>
                   </div>
                   <div className={styles['cell']}>
-                    <InputText
-                      name="complement"
-                      id="complement"
-                      label="Complemento"
-                      type={'text'}
-                    />
+                    <div className="input-part">
+                      <label htmlFor="complement">Complemento</label>
+                      <input name="complement" id="complement" type={'text'} />
+                    </div>
                   </div>
                   {/* FIM  2222222222222222222222222 */}
                 </div>
                 <div className={styles['space-between']}>
-                  <InputText
-                    name="email"
-                    id="email"
-                    label="E-mail"
-                    type={'email'}
-                  />
+                  <div className="input-part">
+                    <label htmlFor="email">E-mail</label>
+                    <input name="email" id="email" type={'email'} />
+                  </div>
                 </div>
                 <div className={styles['space-between']}>
-                  <InputText
-                    name="password"
-                    id="password"
-                    label="Senha"
-                    type={'password'}
-                  />
+                  <div className="input-part">
+                    <label htmlFor="password">Senha</label>
+                    <input name="password" id="password" type={'password'} />
+                  </div>
                 </div>
                 <div className={styles['space-between']}>
-                  <InputText
-                    name="confirmpassword"
-                    id="confirmpassword"
-                    label="Confirmação de senha"
-                    type={'password'}
-                  />
+                  <div className="input-part">
+                    <label htmlFor="confirmpassword">
+                      Confirmação de Senha
+                    </label>
+                    <input
+                      name="confirmpassword"
+                      id="confirmpassword"
+                      type={'password'}
+                    />
+                  </div>
                 </div>
               </div>
               <div className={styles['btn-forms']}>
