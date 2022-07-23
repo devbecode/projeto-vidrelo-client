@@ -32,6 +32,7 @@ interface IFormInputs {
   complement: string;
   uf: string;
   label: string;
+  confirmpassword: string;
 }
 const schema = yup.object().shape({
   email: yup.string().email().required(),
@@ -39,12 +40,22 @@ const schema = yup.object().shape({
 });
 
 export default function Forms() {
-  //   const [data, setData] = useState('');
+  const [data, setData] = useState('');
 
-  //tambem tem a errors mas n utilizei
-  const { register, handleSubmit, setValue, setFocus } = useForm<IFormInputs>({
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    setFocus,
+    watch,
+    formState: { errors },
+  } = useForm<IFormInputs>({
     resolver: yupResolver(schema),
   });
+
+  const formSubmitHandler: SubmitHandler<IFormInputs> = (data: IFormInputs) => {
+    console.log('form data is', data);
+  };
 
   const checkCEP = (e: React.FormEvent<HTMLInputElement>) => {
     const cep = e.currentTarget.value.replace(/\D/g, '');
@@ -53,11 +64,11 @@ export default function Forms() {
       fetch(`https://viacep.com.br/ws/${cep}/json/`).then((res) =>
         res.json().then((data) => {
           console.log(data);
-          //   setData(data);
+          setData(data);
           setValue('street', data.logradouro);
           setValue('district', data.bairro);
           setValue('city', data.localidade);
-          setValue('uf', data.uf);
+          setValue('state', data.uf);
           setFocus('number');
         })
       );
@@ -66,9 +77,8 @@ export default function Forms() {
     }
   };
 
-  const formSubmitHandler: SubmitHandler<IFormInputs> = (data: IFormInputs) => {
-    console.log('form data is', data);
-  };
+  console.log('errors', errors);
+  console.log('watch variable email', watch('email'));
 
   return (
     <>
@@ -90,7 +100,7 @@ export default function Forms() {
                 <div className={styles['space-between']}>
                   <div className="input-part">
                     <label htmlFor="name">Name</label>
-                    <input name="name" id="name" type={'text'} />
+                    <input {...register('name')} id="name" type={'text'} />
                   </div>
                 </div>
                 <div className={styles['div-half-cell']}>
@@ -99,13 +109,22 @@ export default function Forms() {
 
                     <div className="input-part">
                       <label htmlFor="cep">CEP</label>
-                      <input name="cep" id="cep" type={'text'} />
+                      <input
+                        {...register('cep')}
+                        id="cep"
+                        type={'text'}
+                        onBlur={checkCEP}
+                      />
                     </div>
                   </div>
                   <div className={styles['cell']}>
                     <div className="input-part">
                       <label htmlFor="telephone">Telefone</label>
-                      <input name="telephone" id="telephone" type={'text'} />
+                      <input
+                        {...register('telephone')}
+                        id="telephone"
+                        type={'text'}
+                      />
                     </div>
                   </div>
                 </div>
@@ -113,13 +132,13 @@ export default function Forms() {
                   <div className={styles['cell']}>
                     <div className="input-part">
                       <label htmlFor="state">Estado</label>
-                      <input name="state" id="state" type={'text'} />
+                      <input {...register('state')} id="state" type={'text'} />
                     </div>
                   </div>
                   <div className={styles['cell']}>
                     <div className="input-part">
                       <label htmlFor="city">Cidade</label>
-                      <input name="city" id="city" type={'text'} />
+                      <input {...register('city')} id="city" type={'text'} />
                     </div>
                   </div>
                 </div>
@@ -127,13 +146,21 @@ export default function Forms() {
                   <div className={styles['cell']}>
                     <div className="input-part">
                       <label htmlFor="street">Rua</label>
-                      <input name="street" id="street" type={'text'} />
+                      <input
+                        {...register('street')}
+                        id="street"
+                        type={'text'}
+                      />
                     </div>
                   </div>
                   <div className={styles['cell']}>
                     <div className="input-part">
                       <label htmlFor="district">Bairro</label>
-                      <input name="district" id="district" type={'text'} />
+                      <input
+                        {...register('district')}
+                        id="district"
+                        type={'text'}
+                      />
                     </div>
                   </div>
                 </div>
@@ -141,13 +168,21 @@ export default function Forms() {
                   <div className={styles['cell']}>
                     <div className="input-part">
                       <label htmlFor="number">Número</label>
-                      <input name="number" id="number" type={'text'} />
+                      <input
+                        {...register('number')}
+                        id="number"
+                        type={'text'}
+                      />
                     </div>
                   </div>
                   <div className={styles['cell']}>
                     <div className="input-part">
                       <label htmlFor="complement">Complemento</label>
-                      <input name="complement" id="complement" type={'text'} />
+                      <input
+                        {...register('complement')}
+                        id="complement"
+                        type={'text'}
+                      />
                     </div>
                   </div>
                   {/* FIM  2222222222222222222222222 */}
@@ -155,13 +190,21 @@ export default function Forms() {
                 <div className={styles['space-between']}>
                   <div className="input-part">
                     <label htmlFor="email">E-mail</label>
-                    <input name="email" id="email" type={'email'} />
+                    <input {...register('email')} id="email" type={'email'} />
                   </div>
                 </div>
                 <div className={styles['space-between']}>
                   <div className="input-part">
                     <label htmlFor="password">Senha</label>
-                    <input name="password" id="password" type={'password'} />
+                    <input
+                      {...register('password')}
+                      id="password"
+                      type={'password'}
+                    />
+                    <br />
+                    {errors.password && errors.password?.message && (
+                      <span>'Senha Incorreta'</span>
+                    )}
                   </div>
                 </div>
                 <div className={styles['space-between']}>
@@ -170,7 +213,7 @@ export default function Forms() {
                       Confirmação de Senha
                     </label>
                     <input
-                      name="confirmpassword"
+                      {...register('confirmpassword')}
                       id="confirmpassword"
                       type={'password'}
                     />
@@ -184,9 +227,15 @@ export default function Forms() {
                   className={stylesBtn.btn1}
                   path="/"
                 />
-                <Buttons
+                {/* <Buttons
                   id="btn-signIn"
                   text="Cadastrar"
+                  className={stylesBtn.btn2}
+                /> */}
+                <input
+                  type="submit"
+                  value="Submit"
+                  id="btn-signIn"
                   className={stylesBtn.btn2}
                 />
               </div>
